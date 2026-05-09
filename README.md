@@ -1,7 +1,7 @@
-# AI ROUTING SYSTEM (v3.9)
+# AI ROUTING SYSTEM (v4.7)
 
 ## Overview
-A high-efficiency, multi-agent orchestration system. The system implements a **Router-First** architecture where the Router is the **SOLE** point of contact for the User.
+A high-efficiency, multi-agent orchestration system implementing a **Router-First** Clean Architecture.
 
 ## 🚀 Session Initialization & Cognitive Flow
 ```text
@@ -24,23 +24,25 @@ A high-efficiency, multi-agent orchestration system. The system implements a **R
        |
        v
 6. [ STRATEGY ]       <-- Router delegates planning to STRATEGIST [BE]
-       |                  Strategist updates admin/state.md
-       v
-7. [ ORCHESTRATION ]  <-- Router executes Strategist's plan via Team:
-       |
-       +-----> [ BACK-END TEAM ] (Strategist, Maintainer, Researcher, Reviewer)
-       |
-       +-----> [ FRONT-END TEAM ] (Router, Implementer)
        |
        v
-8. [ CHECKPOINT ]     <-- Router presents Structured Decisions
+7. [ EXECUTION ]      <-- Router executes via Team + REVIEWER [BE-Quality]
        |
        v
-9. [ COMMIT ]         <-- Pushed to GitHub via gh CLI
+8. [ ALIGNMENT ]      <-- AUDITOR [BE-Quality] verifies intent match
+       |
+       v
+9. [ SYNC ]           <-- MAINTAINER [BE-Quality] executes Full-Scope Sync
+       |
+       v
+10. [ CHECKPOINT ]    <-- Router presents Structured Decisions
+       |
+       v
+11. [ COMMIT ]        <-- Pushed to GitHub via gh CLI
 ```
 
-## How I Work (Cognitive Principles)
-1. **User Bottleneck**: Only the Router [FE] interacts with you. It is the "Face" of the system.
-2. **Dedicated Planning**: The Strategist [BE] is the "Mind" that designs the mission.
-3. **Context Memory**: Every turn, we sync with `admin/state.md`.
-4. **Global Integrity**: The Maintainer [BE] ensures the system Seed (`SYSTEM_BLUEPRINT.md`) is always complete and non-truncated.
+## How I Work (Triple-Departmental Principles)
+1. **User Liaison**: Only the Router [FE] interacts with you. It is the "Face" of the system.
+2. **Dedicated Logic**: The Strategist [BE-Logic] designs the mission.
+3. **Continuous Quality**: The Reviewer [BE-Quality] vets work in real-time, and the Auditor [BE-Quality] ensures final alignment.
+4. **Full-Scope Sync**: The Maintainer [BE-Quality] ensures that Logs, Memory, State, and Manifests are always 100% consistent across every laptop.

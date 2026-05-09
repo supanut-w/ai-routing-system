@@ -17,6 +17,7 @@ LITERAL_FILES=(
     "prompts/agents/implementer.md"
     "prompts/agents/researcher.md"
     "prompts/agents/reviewer.md"
+    "prompts/agents/auditor.md"
 )
 
 SKELETAL_FILES=(
@@ -26,6 +27,7 @@ SKELETAL_FILES=(
     "agents/implementer.md"
     "agents/researcher.md"
     "agents/reviewer.md"
+    "agents/auditor.md"
     "admin/preference.md"
     "admin/state.md"
     "index/index.md"
