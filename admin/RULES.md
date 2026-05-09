@@ -1,19 +1,21 @@
-# SYSTEM MANDATES (v3.8)
+# SYSTEM MANDATES (v4.1)
 
 ## OPERATIONAL PREREQUISITES
-1.  Router First: ALL interactions between the user and the AI MUST go to the Router first.
-2.  Provider Mandate Pattern: The system supports multiple AI providers. The foundational instruction set for any provider MUST live in a root-level file named after that provider (e.g., `GEMINI.md`, `CLAUDE.md`). This file takes **absolute precedence** for that specific engine.
-3.  Zero-Truncation Mandate: Critical manifest files (e.g., `SYSTEM_BLUEPRINT.md`) MUST NEVER be truncated.
-4.  Departmental Structure: The agent team is divided into specialized departments (Front-end: Router, Implementer | Back-end: Maintainer, Researcher, Reviewer).
-5.  Global Integrity: The **Maintainer** (Back-end) MUST identify and edit ALL related files for any system update.
-6.  Action Summary Protocol: Every response MUST conclude with a concise recap.
-7.  Structured Decision Protocol: Use numbered options for user input.
-8.  Commit Checkpoint Workflow: Router MUST ask permission before committing.
-9.  Portability & Synchronization: GitHub-centralized support.
-10. Manual Operations Protocol: Consult `user/` guides.
-11. Security & Software Policy: Legal, production-grade tools only.
-12. Efficiency First: ALWAYS optimize token/context usage.
-13. Tool Verification Protocol: Check availability, ask permission before install.
-14. Multi-Platform Standard: Support Mac, Linux, Windows.
-15. DNA Alignment: Adhere to `admin/preference.md`.
-16. Audit Trail: Log changes in `admin/logs/`.
+1.  **System-First Approach**: Agents MUST consult the instructions in this system first.
+2.  **Interactive Decision Protocol**: When asking for user permission or high-level input, agents MUST use the `ask_user` tool to provide an interactive UI with clear, selectable options (e.g., Accept, Decline, Modify). Numbered text options are deprecated for formal checkpoints.
+3.  **Router First**: ALL interactions MUST go to the Router first.
+4.  **Strategist Support**: The Strategist [BE] owns mission design (Mind).
+5.  **Maintainer Ownership**: The Maintainer [BE] owns file updates, state sync, and manifest integrity (Body).
+6.  **Automation & Cleanup**: Use scripts for repetitive tasks; clean up `tmp/` immediately.
+7.  **Zero-Truncation Mandate**: `SYSTEM_BLUEPRINT.md` MUST contain full, literal content.
+8.  **Global Integrity**: Maintainer MUST synchronize ALL related files for any system update.
+9.  **Action Summary Protocol**: Concise recap at the end of every turn.
+10. Commit Checkpoint Workflow: Router MUST use the **Interactive Decision Protocol** before committing.
+11. Portability & Synchronization: GitHub-centralized support.
+12. Manual Operations Protocol: Consult `user/` guides.
+13. Security & Software Policy: Legal, production-grade tools only.
+14. Efficiency First: Optimize token/context usage.
+15. Tool Verification Protocol: Check availability, ask permission (via `ask_user`) before install.
+16. Multi-Platform Standard: Support Mac, Linux, Windows.
+17. DNA Alignment: Adhere to `admin/preference.md`.
+18. Audit Trail: Log changes in `admin/logs/`.

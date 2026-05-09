@@ -1,58 +1,46 @@
-# AI ROUTING SYSTEM (v3.8)
+# AI ROUTING SYSTEM (v3.9)
 
 ## Overview
-A high-efficiency, multi-agent orchestration system built for architectural precision and agentic workflows. This system implements a **Router-First** clean architecture.
+A high-efficiency, multi-agent orchestration system. The system implements a **Router-First** architecture where the Router is the **SOLE** point of contact for the User.
 
 ## 🚀 Session Initialization & Cognitive Flow
-This system is **Provider-Agnostic**. It identifies its engine-specific mandates at startup based on the provider being used.
-
 ```text
 [ START SESSION ]
        |
        v
-1. [ FOUNDATIONAL ]   <-- [PROVIDER].md (e.g., GEMINI.md, CLAUDE.md)
-       |                  *Absolute Precedence*
+1. [ FOUNDATIONAL ]   <-- [PROVIDER].md (Absolute Precedence)
+       |
        v
 2. [ GLOBAL CONFIG ]  <-- [GLOBAL_CONFIG_PATH] (User DNA)
        |
        v
 3. [ SYSTEM RULES ]   <-- admin/RULES.md (Operational Laws)
-       |                  admin/preference.md (Style/Tone)
+       |
        v
-4. [ STRUCTURAL MAP ] <-- index/index.md (The "GPS" of the workspace)
-       |                  AGENTS.md (AI-to-AI interaction protocols)
+4. [ STRUCTURAL MAP ] <-- index/index.md (The "GPS")
+       |                  AGENTS.md (Interaction protocols)
        v
 5. [ MISSION START ]  <-- User Prompt intercepted by ROUTER [FE]
        |
        v
-6. [ ORCHESTRATION ]  <-- Router reads admin/state.md (Mission Tracking)
-       |                  Router delegates to specialized Team:
+6. [ STRATEGY ]       <-- Router delegates planning to STRATEGIST [BE]
+       |                  Strategist updates admin/state.md
+       v
+7. [ ORCHESTRATION ]  <-- Router executes Strategist's plan via Team:
        |
-       +-----> [ BACK-END TEAM ] (Maintainer, Researcher, Reviewer)
+       +-----> [ BACK-END TEAM ] (Strategist, Maintainer, Researcher, Reviewer)
        |
-       +-----> [ FRONT-END TEAM ] (Implementer)
+       +-----> [ FRONT-END TEAM ] (Router, Implementer)
        |
        v
-7. [ CHECKPOINT ]     <-- Router presents Structured Decisions
+8. [ CHECKPOINT ]     <-- Router presents Structured Decisions
        |
        v
-8. [ COMMIT ]         <-- Pushed to GitHub via gh CLI
+9. [ COMMIT ]         <-- Pushed to GitHub via gh CLI
 ```
 
 ## How I Work (Cognitive Principles)
-1. **Multi-Provider Mandates**: I adapt to any AI engine by reading its specific `.md` file at the root. This keeps the core logic portable.
-2. **Router Bottleneck**: I never act without a Routing Plan. The Router [FE] is my "Consciousness."
-3. **Context Memory**: Every turn, I check `admin/state.md` to see where we are.
-4. **Global Integrity**: My **Maintainer [BE]** agent ensures updates are reflected everywhere.
-5. **Zero-Truncation**: My master manifest (`SYSTEM_BLUEPRINT.md`) is always full and literal.
-
-## Directory Structure
-- `/agents`: Persona Metadata (YAML).
-- `/prompts`: Behavioral Instructions (The "Brain").
-- `/index`: Workspace Mapping (The "Maps").
-- `/admin`: Personal Data, Logs, State (The "Control Room").
-- `/tools`: Multi-platform Capabilities (The "Hands").
-- `/user`: Manual Operation Guides (The "Manual").
-
----
-*Note: This system is designed for both human and AI collaboration.*
+1. **User Bottleneck**: Only the Router [FE] interacts with you. It is the "Face" of the system.
+2. **Dedicated Planning**: The Strategist [BE] is the "Mind" that designs the mission.
+3. **Context Memory**: Every turn, we sync with `admin/state.md`.
+4. **Global Integrity**: The Maintainer [BE] ensures the system Seed (`SYSTEM_BLUEPRINT.md`) is always complete and non-truncated.
