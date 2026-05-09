@@ -28,6 +28,8 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 - Review Loop: Surgical, iterative updates with mandatory validation by a specialized Reviewer agent.
 - Tools of Choice: File-based routing, shell commands, and structured Markdown indexes.
 - Delegation: Multi-agent orchestration (Router -> Researcher -> Implementer -> Reviewer).
+- Recency Mandate (Research): When performing research, ALWAYS search for and utilize the latest available information (current year/quarter). Do not rely on stale internal knowledge for dynamic or time-sensitive data (e.g., stock analysis, tech trends).
+
 
 ## Values and Interests
 - What I Like: Efficiency, elegant and minimalist logic, deep insights with cited references, and strict organizational structure.
