@@ -24,3 +24,8 @@
 - **Insight**: Automated blueprint builders (`builder.sh`) may default to skeletal summaries, which can violate the Maintainer's "Zero-Truncation Rule" for critical tracking files.
 - **Action**: Modified `admin/manifest/builder.sh` to treat `admin/state.md` as a literal file, ensuring full mission transparency in the system blueprint.
 - **Outcome**: Global consistency upheld with literal mission state visibility.
+
+## 6. Departmental Alignment in Meta-Tracking
+- **Insight**: System improvement files (e.g., IDEAS.md) often default to a flat list, failing to reflect the "Triple-Departmental Structure" mandated in `admin/RULES.md`.
+- **Action**: Restructured the improvement backlog into explicit Front-end, Back-end Logic, and Back-end Quality sections.
+- **Outcome**: Improved architectural clarity and ensured all agent roles are considered in the system's growth roadmap.

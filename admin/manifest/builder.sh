@@ -105,8 +105,13 @@ for f in "${SKELETAL_FILES[@]}"; do
         echo "Ingesting Skeletal: $f"
         echo "### [File: $f] (Skeletal)" >> "$OUTPUT"
         echo "\`\`\`markdown" >> "$OUTPUT"
-        # Extract the first section or objective
-        head -n 25 "$f" | sed '/^---/q' >> "$OUTPUT"
+        # Extract the first section, handling YAML frontmatter
+        if head -n 1 "$f" | grep -q "^---"; then
+            # If it starts with ---, print until the SECOND ---
+            head -n 25 "$f" | awk 'NR==1 {print; next} /^---/ {print; exit} {print}' >> "$OUTPUT"
+        else
+            head -n 25 "$f" | sed '/^---/q' >> "$OUTPUT"
+        fi
         echo "... [Skeletal: See source for full implementation details] ..." >> "$OUTPUT"
         echo "\`\`\`" >> "$OUTPUT"
         echo "---" >> "$OUTPUT"

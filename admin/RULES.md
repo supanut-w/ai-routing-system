@@ -1,9 +1,11 @@
-# SYSTEM MANDATES (v4.11)
+# SYSTEM MANDATES (v4.11.2)
 
 ## OPERATIONAL PREREQUISITES
 1.  **Rules Precedence Hierarchy**: Agents MUST follow the 6-tier hierarchy defined in `admin/PRECEDENCE.md`.
 2.  **System-First Approach**: Local instructions MUST be followed as the primary approach.
-3.  **Project-Scoped Outputs**: ALL reports, documents, and files generated during a mission MUST be stored within the active mission's sub-directory in `projects/`. Generic system-level folders MUST NOT be used for mission artifacts.
+3.  **Structural Isolation**: Mission artifacts and records MUST be split:
+    - **Active Artifacts** (Reports, Docs, Files): Stored in the Root Working Directory for immediate accessibility.
+    - **Mission Records** (Index, Summaries): Stored in the specific project sub-directory within `projects/` for persistence.
 4.  **Project Index & Summary**: Every mission folder MUST contain:
     - `project_index.md`: Mission scope and file registry.
     - `mission_summary.md`: High-level summary of findings and actions for future recall.

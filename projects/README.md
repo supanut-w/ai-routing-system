@@ -16,6 +16,7 @@ Projects are categorized into sub-directories based on their high-level domain:
 - `projects/content/`
 - `projects/strategy/`
 - `projects/hardware/`
+- `projects/meta-self/`
 
 ## Mission Execution Flow
 1. **Creation**: Strategist identifies category and proposes a mission folder.
