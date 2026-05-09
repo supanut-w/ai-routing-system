@@ -1,22 +1,20 @@
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Establish Continuous Learning & Validation Framework
+- **Goal**: Update README and Setup Documentation
 - **Status**: `[ACTIVE]`
-- **Progress**: 95%
+- **Progress**: 50%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Define Framework | Router | Complete | v5.0 mandates integrated. |
-| T-001 | Create Harness | Maintainer | Complete | fixtures/ and results/ live. |
-| T-002 | Refine Personas | Maintainer | Complete | Learning/Validation roles live. |
-| T-003 | Sync Blueprint | Maintainer | Complete | Manifest v5.0 non-truncated. |
-| T-004 | Commit & Push | Implementer | In Progress | Finalizing v5.0.0. |
+| T-000 | Update README.md | Router | Complete | Description & Multi-platform cloning added. |
+| T-001 | Sync Blueprint | Maintainer | In Progress | v5.1.0 manifest build. |
+| T-002 | Commit & Push | Implementer | Pending | Awaiting checkpoint. |
 
 ## Known Constraints
-- Use 'Interactive Decision Protocol' for all UI checkpoints.
-- Reviewer MUST run eval loops via fixtures/.
+- Instructions for Linux, macOS, and Windows required.
+- Maintain absolute literal logic in manifests.
 
 ## Blockers & Risks
 - [None]

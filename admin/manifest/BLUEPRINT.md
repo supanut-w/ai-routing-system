@@ -27,12 +27,52 @@ This document serves as the high-signal "System Seed." It contains the literal c
 
 ### [File: README.md]
 ```markdown
-# AI ROUTING SYSTEM (v5.0)
+# AI ROUTING SYSTEM (v5.1)
 
 ## Overview
-A high-efficiency, multi-agent orchestration system implementing a **Router-First** Clean Architecture. Version 5.0 introduces the **Continuous Learning & Validation** framework, enabling self-improving skills and automated evaluation harnesses.
+The **AI Routing System** is a high-efficiency, multi-agent orchestration platform built on a **Router-First** Clean Architecture. It operates as a sophisticated "Agentic Harness" that transforms general-purpose LLMs (the CPUs) into specialized experts using modular, file-based instructions (the OS).
 
-## 🚀 Session Initialization & Cognitive Flow
+### The Chef & Recipe Framework
+- **Agents (Chefs)**: Active entities that use their Think-Act-Observe loop to solve missions.
+- **Skills (Recipes)**: Passive, specialized instructions that guide agents through known paths.
+- **Departments**: The team is organized into **Front-end** (User Interface & Construction) and **Back-end** (Planning, Data, & Quality) departments.
+
+---
+
+## 🚀 Getting Started
+
+To use this system, ensure you have an AI provider with CLI capabilities (e.g., Gemini CLI, Claude Code).
+
+### 1. Cloning the Repository
+Use the following commands based on your operating system:
+
+#### **Linux / macOS**
+Open your terminal and run:
+```bash
+git clone https://github.com/supanut-w/ai-routing-system.git
+cd ai-routing-system
+```
+
+#### **Windows (Command Prompt / PowerShell)**
+Open PowerShell or CMD and run:
+```powershell
+git clone https://github.com/supanut-w/ai-routing-system.git
+cd ai-routing-system
+```
+
+#### **GitHub CLI (All Platforms)**
+If you have `gh` installed:
+```bash
+gh repo clone supanut-w/ai-routing-system
+cd ai-routing-system
+```
+
+### 2. Initialization
+Once inside the directory, start your session. The system will automatically perform a **Heartbeat Pulse** to synchronize mandates and mission states.
+
+---
+
+## 🧠 Session Initialization & Cognitive Flow
 ```text
 [ START SESSION ]
        |
@@ -68,10 +108,12 @@ A high-efficiency, multi-agent orchestration system implementing a **Router-Firs
 ```
 
 ## How I Work (Production-Grade Principles)
-1. **Continuous Learning**: My **Maintainer [BE]** agent refactors my Skill recipes based on mission post-mortems.
-2. **Validation First**: My **Reviewer [BE]** agent uses a dedicated `fixtures/` harness to prevent regressions.
-3. **Chef & Recipe**: I treat agents as active Chefs and skills as passive recipes, allowing for flexible problem-solving.
-4. **Zero-Truncation**: My master manifest Seed is programmatically generated to be 100% complete.
+1. **Continuous Learning**: The **Maintainer [BE]** refactors Skill recipes based on mission outcomes.
+2. **Validation First**: The **Reviewer [BE]** uses the `fixtures/` harness to prevent regressions.
+3. **Zero-Truncation**: The master manifest (`BLUEPRINT.md`) is programmatically rebuilt to ensure absolute integrity.
+
+---
+*Note: This system is designed for both human and AI collaboration.*
 
 ```
 ---
@@ -216,21 +258,20 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Refine Subagent Architecture (Security & Context)
+- **Goal**: Update README and Setup Documentation
 - **Status**: `[ACTIVE]`
-- **Progress**: 95%
+- **Progress**: 50%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Define Principles | Router | Complete | Context/Security rules live. |
-| T-001 | Update Protocols | Maintainer | Complete | AGENTS/RULES synchronized. |
-| T-002 | Sync Blueprint | Maintainer | Complete | Manifest v4.15 non-truncated. |
-| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.15.0. |
+| T-000 | Update README.md | Router | Complete | Description & Multi-platform cloning added. |
+| T-001 | Sync Blueprint | Maintainer | In Progress | v5.1.0 manifest build. |
+| T-002 | Commit & Push | Implementer | Pending | Awaiting checkpoint. |
 
 ## Known Constraints
-- Enforce 'Locked Tool Belts'.
-- Subagents must preserve main context.
+- Instructions for Linux, macOS, and Windows required.
+- Maintain absolute literal logic in manifests.
 
 ## Blockers & Risks
 - [None]
