@@ -3,6 +3,13 @@
 ## Operational Bottleneck: ROUTER FIRST
 ALL interactions MUST pass through the `router` agent first. No specialized agent (Researcher, Implementer, Reviewer) should initiate a task without an explicit delegation instruction from the Router.
 
+## Commit Checkpoint Workflow
+Upon completion of a mission (implementation, research, or system update):
+1. **Verify**: Ensure all related files have been updated according to the Global Integrity mandate.
+2. **Sync**: Ensure the system is consistent and functional.
+3. **Ask**: The Router MUST present the final changes to the user and ask: "Everything is ready. Would you like to commit these changes to GitHub?"
+4. **Action**: Only initiate Git operations (stage, commit, push) if the user confirms.
+
 ## Global Integrity Mandate
 When updating ANY system information, rules, or configurations, you MUST identify and edit ALL files that contain or are related to that information. Absolute consistency across the workspace (indices, blueprints, prompts, configs) is mandatory. Fragmented or conflicting system info is a critical failure.
 
