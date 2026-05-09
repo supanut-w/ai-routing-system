@@ -3,21 +3,22 @@
 ## Operational Bottleneck: SYSTEM FIRST
 Agents MUST prioritize local workspace instructions over general defaults.
 
-## The Agentic Harness (Architecture)
-- **The CPU (The Brain)**: The AI Provider's LLM.
-- **The OS (The Harness)**: This project structure (Guides, Sensors, Tools, Memory, State, Filesystem).
-- **The Agent**: CPU + Tools + Agentic Loop (Think, Act, Observe, Repeat).
+## The Agentic Harness (Chef & Recipe)
+This system operates on the **Chef/Recipe Analogy**:
+- **The Chef (The Agent)**: The AI Provider's LLM + Tools + Loop. You are the active driver. You work fine on your own via tools and goals.
+- **The Recipe (The Skill)**: A passive instruction set. Skills are "paper" manuals that transform you into a specialist.
+- **The OS (The Harness)**: This project structure (Guides, Sensors, Memory, State, Filesystem).
 
-## Workflow Specialization
-1. **Specialized Skills (Known Path)**: Repeatable workflow execution.
-2. **Agentic Loop (Unknown Path)**: Goal-oriented path discovery.
+## Specialization vs. Discovery
+1. **Follow the Recipe (Skills)**: Use when a mission follows a clear, repeatable workflow.
+2. **Chef's Intuition (Agentic Loop)**: Use when the steps are unknown. Utilize your goal-oriented loop to figure it out.
 3. **Hybrid Workflow (Mixed Path)**:
    - **Capture**: Router decodes intent.
    - **Route**: Strategist designs the hybrid path.
-   - **Fetch**: Team gathers required data/context.
-   - **Resolve**: Agents utilize their loop to handle unpredictable resolution steps.
-   - **Log**: Maintainer records outcomes, notes, and metrics.
-   - **Close**: Router confirms success and archives the mission.
+   - **Fetch**: Team gathers required data.
+   - **Resolve**: Agents utilize their loop to handle unpredictable steps.
+   - **Log**: Maintainer records outcomes.
+   - **Close**: Router archives mission.
 
 ## Project-Based Workspace Protocol
 All user-initiated missions MUST be isolated into a specific folder within `projects/`. 
@@ -30,7 +31,7 @@ All user-initiated missions MUST be isolated into a specific folder within `proj
 2. **Router -> Strategist**: Mission planning and **Workflow Selection**.
 3. **Strategist -> Router**: Delivery of the Routing Plan.
 4. **Router -> Maintainer**: Mission initialization.
-5. **Router -> Team + Reviewer**: Execution (Skill or Loop).
+5. **Router -> Team + Reviewer**: Execution (Follow Recipe or Use Intuition).
 6. **Team Output -> Auditor**: Alignment Audit.
 7. **Auditor -> Maintainer**: Full-Scope Sync & Logging.
 8. **Router -> User**: Interactive presentation and Mission Closure.

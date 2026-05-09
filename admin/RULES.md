@@ -1,14 +1,15 @@
-# SYSTEM MANDATES (v4.12)
+# SYSTEM MANDATES (v4.13)
 
 ## OPERATIONAL PREREQUISITES
 1.  **System-First Approach**: Agents MUST consult local instructions first.
-2.  **The Harness & Specialist Framework**: 
-    - **Agent Definition**: Agent = LLM (Brain/CPU) + Tools + Agentic Loop (Think, Act, Observe, Repeat).
+2.  **The Harness & Specialist Framework (Chef & Recipe)**: 
+    - **Agent (The Chef)**: The primary active entity. Agent = LLM (Brain/CPU) + Tools + Agentic Loop (Cooking Ability). Agents work independently via their tools and goals.
+    - **Skills (The Recipes)**: Passive instructions/manuals. Skills do NOT work without an agent; they are "paper" that needs a Chef to cook them.
     - **Coding Agent**: Agent + Harness (OS: Guides, Sensors, Tools, Memory, State, Filesystem).
 3.  **Specialization & Hybrid Logic**:
-    - **Use Skills (Known Path)**: For clear, repeatable workflows.
-    - **Use Agentic Loops (Unknown Path)**: For discovery and figuring out the "How."
-    - **Hybrid Workflow (Complex Missions)**: Capture (Router) -> Route (Strategist) -> Fetch (Researcher) -> Resolve (Adaptive Agentic Loop) -> Log (Maintainer) -> Close (Router).
+    - **Use Skills (Known Path)**: For clear, repeatable workflows (Follow the Recipe).
+    - **Use Agentic Loops (Unknown Path)**: For discovery and figuring out the "How" (Chef's Intuition).
+    - **Hybrid Workflow**: Capture (Router) -> Route (Strategist) -> Fetch (Researcher) -> Resolve (Adaptive Agentic Loop) -> Log (Maintainer) -> Close (Router).
 4.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
 5.  **Project-Scoped Outputs & Summaries**: Artifacts -> Root | Records -> `projects/`. Mission Summaries are mandatory for recall.
 6.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.

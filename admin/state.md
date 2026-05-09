@@ -1,22 +1,21 @@
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Establish Hybrid Workflow & Harness Framework
+- **Goal**: Establish Chef & Recipe Framework
 - **Status**: `[ACTIVE]`
 - **Progress**: 95%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Define Framework | Router | Complete | CPU/OS analogy integrated. |
-| T-001 | Hybrid Protocol | Router | Complete | Capture-Route-Fetch-Resolve live. |
-| T-002 | Update Strategist| Router | Complete | Workflow selection live. |
-| T-003 | Sync Blueprint | Maintainer | Complete | Manifest v4.12 non-truncated. |
-| T-004 | Commit & Push | Implementer | In Progress | Finalizing v4.12.1. |
+| T-000 | Define Framework | Router | Complete | Chef/Recipe analogy integrated. |
+| T-001 | Update Protocols | Maintainer | Complete | AGENTS/RULES synchronized. |
+| T-002 | Sync Blueprint | Maintainer | Complete | Manifest v4.13 non-truncated. |
+| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.13.0. |
 
 ## Known Constraints
-- Use Agentic Loop for unpredictable steps.
-- Maintainer must log outcomes/metrics.
+- Use 'Interactive Decision Protocol' for all UI checkpoints.
+- Agents are Chefs; Skills are Recipes.
 
 ## Blockers & Risks
 - [None]

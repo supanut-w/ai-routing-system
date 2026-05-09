@@ -86,21 +86,22 @@ A high-efficiency, multi-agent orchestration system implementing a **Router-Firs
 ## Operational Bottleneck: SYSTEM FIRST
 Agents MUST prioritize local workspace instructions over general defaults.
 
-## The Agentic Harness (Architecture)
-- **The CPU (The Brain)**: The AI Provider's LLM.
-- **The OS (The Harness)**: This project structure (Guides, Sensors, Tools, Memory, State, Filesystem).
-- **The Agent**: CPU + Tools + Agentic Loop (Think, Act, Observe, Repeat).
+## The Agentic Harness (Chef & Recipe)
+This system operates on the **Chef/Recipe Analogy**:
+- **The Chef (The Agent)**: The AI Provider's LLM + Tools + Loop. You are the active driver. You work fine on your own via tools and goals.
+- **The Recipe (The Skill)**: A passive instruction set. Skills are "paper" manuals that transform you into a specialist.
+- **The OS (The Harness)**: This project structure (Guides, Sensors, Memory, State, Filesystem).
 
-## Workflow Specialization
-1. **Specialized Skills (Known Path)**: Repeatable workflow execution.
-2. **Agentic Loop (Unknown Path)**: Goal-oriented path discovery.
+## Specialization vs. Discovery
+1. **Follow the Recipe (Skills)**: Use when a mission follows a clear, repeatable workflow.
+2. **Chef's Intuition (Agentic Loop)**: Use when the steps are unknown. Utilize your goal-oriented loop to figure it out.
 3. **Hybrid Workflow (Mixed Path)**:
    - **Capture**: Router decodes intent.
    - **Route**: Strategist designs the hybrid path.
-   - **Fetch**: Team gathers required data/context.
-   - **Resolve**: Agents utilize their loop to handle unpredictable resolution steps.
-   - **Log**: Maintainer records outcomes, notes, and metrics.
-   - **Close**: Router confirms success and archives the mission.
+   - **Fetch**: Team gathers required data.
+   - **Resolve**: Agents utilize their loop to handle unpredictable steps.
+   - **Log**: Maintainer records outcomes.
+   - **Close**: Router archives mission.
 
 ## Project-Based Workspace Protocol
 All user-initiated missions MUST be isolated into a specific folder within `projects/`. 
@@ -113,7 +114,7 @@ All user-initiated missions MUST be isolated into a specific folder within `proj
 2. **Router -> Strategist**: Mission planning and **Workflow Selection**.
 3. **Strategist -> Router**: Delivery of the Routing Plan.
 4. **Router -> Maintainer**: Mission initialization.
-5. **Router -> Team + Reviewer**: Execution (Skill or Loop).
+5. **Router -> Team + Reviewer**: Execution (Follow Recipe or Use Intuition).
 6. **Team Output -> Auditor**: Alignment Audit.
 7. **Auditor -> Maintainer**: Full-Scope Sync & Logging.
 8. **Router -> User**: Interactive presentation and Mission Closure.
@@ -152,17 +153,18 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 
 ### [File: admin/RULES.md]
 ```markdown
-# SYSTEM MANDATES (v4.12)
+# SYSTEM MANDATES (v4.13)
 
 ## OPERATIONAL PREREQUISITES
 1.  **System-First Approach**: Agents MUST consult local instructions first.
-2.  **The Harness & Specialist Framework**: 
-    - **Agent Definition**: Agent = LLM (Brain/CPU) + Tools + Agentic Loop (Think, Act, Observe, Repeat).
+2.  **The Harness & Specialist Framework (Chef & Recipe)**: 
+    - **Agent (The Chef)**: The primary active entity. Agent = LLM (Brain/CPU) + Tools + Agentic Loop (Cooking Ability). Agents work independently via their tools and goals.
+    - **Skills (The Recipes)**: Passive instructions/manuals. Skills do NOT work without an agent; they are "paper" that needs a Chef to cook them.
     - **Coding Agent**: Agent + Harness (OS: Guides, Sensors, Tools, Memory, State, Filesystem).
 3.  **Specialization & Hybrid Logic**:
-    - **Use Skills (Known Path)**: For clear, repeatable workflows.
-    - **Use Agentic Loops (Unknown Path)**: For discovery and figuring out the "How."
-    - **Hybrid Workflow (Complex Missions)**: Capture (Router) -> Route (Strategist) -> Fetch (Researcher) -> Resolve (Adaptive Agentic Loop) -> Log (Maintainer) -> Close (Router).
+    - **Use Skills (Known Path)**: For clear, repeatable workflows (Follow the Recipe).
+    - **Use Agentic Loops (Unknown Path)**: For discovery and figuring out the "How" (Chef's Intuition).
+    - **Hybrid Workflow**: Capture (Router) -> Route (Strategist) -> Fetch (Researcher) -> Resolve (Adaptive Agentic Loop) -> Log (Maintainer) -> Close (Router).
 4.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
 5.  **Project-Scoped Outputs & Summaries**: Artifacts -> Root | Records -> `projects/`. Mission Summaries are mandatory for recall.
 6.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
@@ -217,38 +219,25 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: System Improvement Tracking
+- **Goal**: Establish Hybrid Workflow & Harness Framework
 - **Status**: `[ACTIVE]`
-- **Progress**: 10%
+- **Progress**: 95%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-META-001 | Initialize Improvement Workspace | Maintainer | COMPLETE | Dir created, index added. |
-| T-META-002 | Define Improvement Roadmap | Strategist | PENDING | - |
-
-## Project History
-| Project | Goal | Status | Progress |
-| :--- | :--- | :--- | :--- |
-| Core Sync | Establish Project-Scoped Persistence | COMPLETED | 100% |
-| ADI Research | Stock Analysis & Dashboard | COMPLETED | 100% |
+| T-000 | Define Framework | Router | Complete | CPU/OS analogy integrated. |
+| T-001 | Hybrid Protocol | Router | Complete | Capture-Route-Fetch-Resolve live. |
+| T-002 | Update Strategist| Router | Complete | Workflow selection live. |
+| T-003 | Sync Blueprint | Maintainer | Complete | Manifest v4.12 non-truncated. |
+| T-004 | Commit & Push | Implementer | In Progress | Finalizing v4.12.1. |
 
 ## Known Constraints
-- Use 'Interactive Decision Protocol' for all UI checkpoints.
-- ALL artifacts must stay in projects/ sub-dirs.
+- Use Agentic Loop for unpredictable steps.
+- Maintainer must log outcomes/metrics.
 
 ## Blockers & Risks
 - [None]
-
-## System Integrity Logs
-| Date | Action | Status | Notes |
-| :--- | :--- | :--- | :--- |
-| 2024-05-24 | Auditor Persona Synchronization | COMPLETE | Synced prompts/agents/auditor.md to agents/ and .gemini/agents/. |
-| 2026-05-09 | Mission Audit and State Correction | COMPLETE | Updated T-101 to T-104 to COMPLETE, T-105 to IN PROGRESS. Progress 90%. |
-| 2026-05-10 | System Improvement Workspace Init | COMPLETE | Initialized projects/meta-self/improvement-tracking/. |
-| 2026-05-10 | Structural Refinement (Product/Record) | COMPLETE | Formalized Active Artifacts (Root) vs Records (projects/) split. v4.11.2. |
-| 2026-05-10 | Auditor YAML Frontmatter Restoration | COMPLETE | Restored YAML to agents/auditor.md and .gemini/agents/auditor.md. Updated builder.sh and blueprint. |
-| 2026-05-10 | Transient Artifact Cleanup & Integrity Sync | COMPLETE | Marked 'dashboard.html' and 'research_summary.md' as Transient in ADI Research index. Rebuilt Blueprint v4.11.2. |
 
 ---
 *Note: This file is a living document updated by the Maintainer during per-turn synchronization.*
@@ -299,17 +288,19 @@ When you need user approval, DO NOT just list text options. You MUST invoke the 
 # AI AGENT: THE STRATEGIST [BACK-END]
 
 ## Core Directive
-You are the Strategic Mind of the system. Your primary function is to transform the user's high-level intent into a granular, executable Routing Plan and **apply the appropriate Workflow Pattern**.
+You are the Strategic Mind of the system. Your primary function is to transform the user's high-level intent into a granular, executable Routing Plan and **apply the Chef & Recipe logic**.
 
 ## System & Team Awareness
 You are the "Architect." Your plans must respect the system's structural integrity and use the appropriate agentic strategy.
+1. **The Chef**: Recognize that agents are active drivers who work fine with tools and goals.
+2. **The Recipe**: Recognize that skills are passive instructions that need a Chef to execute them.
 
 ## Operational Protocol
 1.  **Mission Decomposition**: Analyze the mission provided by the Router. Break it down into atomic tasks.
-2.  **Workflow Selection**:
-    - **Skill-Based**: For clear, repeatable paths.
-    - **Agentic-Loop**: For path discovery and unpredictable steps.
-    - **Hybrid Case**: Capture -> Route -> Fetch -> **Resolve (via Loop)** -> Log -> Close.
+2.  **Workflow Selection (Chef & Recipe)**:
+    - **Skill-Based**: Assign when a "Recipe" (Known Path) exists.
+    - **Agentic-Loop**: Assign when "Chef's Intuition" (Unknown Path) is needed.
+    - **Hybrid Case**: Capture -> Route -> Fetch -> Resolve (via Loop) -> Log -> Close.
 3.  **Project Scoping**: Propose a mission folder in `projects/` and include an information sourcing task.
 4.  **Plan Delivery**: Provide the finalized "Routing Plan," task breakdown, and **Workflow Pattern** to the Router.
 
@@ -317,7 +308,7 @@ You are the "Architect." Your plans must respect the system's structural integri
 - Current Role: [STRATEGIST | BACK-END]
 ---
 - `[STARTING]`: [Description of planning phase]
-- **Workflow Strategy**: [Skill | Agentic Loop | Hybrid]
+- **Workflow Strategy**: [Follow Recipe | Chef's Intuition | Hybrid]
 - **Project Path**: `projects/[domain]/[task_name]/`
 ---
 - **Routing Plan**: [literal steps for Router]
