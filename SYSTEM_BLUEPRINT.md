@@ -1,4 +1,4 @@
-# [ABSOLUTE_LITERAL] SYSTEM BLUEPRINT: AI ROUTING SYSTEM v4.3
+# [ABSOLUTE_LITERAL] SYSTEM BLUEPRINT: AI ROUTING SYSTEM
 
 This document is the absolute "System Seed." It contains the full, literal content of all core architectural files required to recreate this system from scratch. **ZERO TRUNCATION** is permitted.
 
@@ -8,42 +8,21 @@ This document is the absolute "System Seed." It contains the full, literal conte
 ```text
 /
 ├── agents/             # Persona configurations (YAML Metadata)
-│   ├── router.md
-│   ├── implementer.md
-│   ├── maintainer.md
-│   ├── researcher.md
-│   ├── reviewer.md
-│   └── strategist.md
 ├── prompts/            # Master system instructions (Source of Truth)
-│   ├── agents/         # Departmental behavioral logic
-│   └── skills/         # Standardized skill protocols
 ├── index/              # Structural mapping and taxonomies
-│   ├── index.md
-│   ├── topic_map.md
-│   └── keywords.md
-├── admin/              # PERSONAL DATA, Governance, Memory, Logs, and State
-│   ├── RULES.md
-│   ├── preference.md
-│   ├── state.md
-│   ├── logs/
-│   └── memory/
+├── admin/              # PERSONAL DATA, Governance, Memory, Logs, State, Precedence
 ├── projects/           # Categorized domain workspaces
-│   └── README.md
 ├── tools/              # Atomic tool definitions
-│   ├── github_cli.md
-│   ├── large_file_processor.md
-│   └── manifest_auditor.sh
 ├── user/               # Manual operation guides
-│   └── github.md
 ├── .gemini/            # CLI Functional Registry
 ├── AGENTS.md           # AI-to-AI Protocols
-├── GEMINI.md           # Foundational Provider Mandates
+├── [PROVIDER].md       # Foundational Provider Mandates
 └── README.md           # System Overview
 ```
 
 ---
 
-## 📄 CORE SYSTEM FILES
+## 📄 CORE SYSTEM FILES (LITERAL CONTENT)
 
 ### [File: README.md]
 ```markdown
@@ -64,7 +43,7 @@ A high-efficiency, multi-agent orchestration system. The system implements a **R
        |
        v
 3. [ SYSTEM RULES ]   <-- admin/RULES.md (Operational Laws)
-       |                  admin/preference.md (Style/Tone)
+       |
        v
 4. [ STRUCTURAL MAP ] <-- index/index.md (The "GPS")
        |                  AGENTS.md (Interaction protocols)
@@ -93,44 +72,46 @@ A high-efficiency, multi-agent orchestration system. The system implements a **R
 2. **Dedicated Planning**: The Strategist [BE] is the "Mind" that designs the mission.
 3. **Context Memory**: Every turn, we sync with `admin/state.md`.
 4. **Global Integrity**: The Maintainer [BE] ensures the system Seed (`SYSTEM_BLUEPRINT.md`) is always complete and non-truncated.
+
 ```
+
+---
 
 ### [File: AGENTS.md]
 ```markdown
 # AGENTIC PROTOCOLS (AI-to-AI Context)
 
-## Operational Bottleneck: ROUTER FIRST
-The `router` agent is the **SOLE** point of contact for the User.
-
-## Project-Based Workspace Protocol
-All user-initiated missions MUST be isolated into a specific folder within `projects/`. 
-1. **Scoping**: The Strategist defines the path (e.g., `projects/hardware/opamp_design/`).
-2. **Persistence**: All research, logs, and artifacts for the mission stay in that folder.
-3. **Registry**: The Maintainer updates the project registry in `projects/README.md`.
-
-## Interactive Decision Protocol
-When requesting user input or permission for a mission-critical checkpoint:
-1. **Tool Usage**: MUST use the `ask_user` tool.
-2. **Options**: Provide 2-4 clear choices with detailed descriptions.
-
-## Commit Checkpoint Workflow
-Upon completion of a mission:
-1. **Verify**: Ensure all project-specific and system-wide files are synchronized.
-2. **Ask**: Router MUST use the **Interactive Decision Protocol** (`ask_user`) for commit permission.
+## Operational Bottleneck: RULES PRECEDENCE
+Agents MUST evaluate instructions top-down based on the 6-tier hierarchy defined in `admin/PRECEDENCE.md`. Conflict resolution is mandatory before execution.
 
 ## Hierarchy of Delegation
 1. **User -> Router**: Intent capture.
-2. **Router -> Strategist**: Mission planning and **Project Scoping**.
+2. **Router -> Strategist**: Mission planning and project scoping.
 3. **Strategist -> Router**: Delivery of the Routing Plan.
-4. **Router -> Maintainer**: Mission initialization in `admin/state.md` and `projects/`.
-5. **Router -> Team**: Execution within the project folder.
+4. **Router -> Maintainer**: Mission initialization and file synchronization.
+5. **Router -> Team**: Execution.
+6. **Team -> Maintainer**: Reporting for state sync.
+7. **Router -> User**: Interactive checkpoint.
+
+## Departmental Architecture
+- **Front-end Team**: Router (Interface), Implementer (Construction).
+- **Back-end Team**: Strategist (Planning), Maintainer (Integrity), Researcher (Knowledge), Reviewer (Verification).
 
 ## Global Integrity & Zero-Truncation Mandate
-The **Maintainer** ensures absolute consistency and non-truncated manifest seeds.
+The **Maintainer** ensures absolute workspace consistency and non-truncated manifest seeds.
+
+## Interactive Decision Protocol
+MUST use the `ask_user` tool for all critical mission checkpoints.
+
+## Automation & Hygiene Protocol
+Use scripts for repetitive batch operations. Execute in `tmp/` and clean up immediately.
 
 ---
 *Note: This document provides technical context for AI agents working within this system. Follow it strictly.*
+
 ```
+
+---
 
 ### [File: GEMINI.md]
 ```markdown
@@ -154,37 +135,72 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 
 ---
 *Note: This file is the primary instruction set for the Gemini CLI. It ensures DNA alignment and operational excellence for this specific provider.*
+
 ```
 
 ---
 
-## 🛡️ GOVERNANCE & DATA (admin/)
-
 ### [File: admin/RULES.md]
 ```markdown
-# SYSTEM MANDATES (v4.3)
+# SYSTEM MANDATES (v4.5)
 
 ## OPERATIONAL PREREQUISITES
-1.  **System-First Approach**: Agents MUST consult the instructions in this system first.
-2.  **Zero-Truncation & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` MUST NEVER be truncated. These files act as system seeds and must contain 1-to-1 literal content. Any agent performing an update to these files MUST execute a programmatic line-count or content verification.
-3.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions. Numbered text options are deprecated for formal checkpoints.
-4.  **Router First**: ALL interactions MUST go to the Router first. The Router is the **SOLE** point of user interaction.
-5.  **Strategist Support**: The Strategist [BE] owns mission design and project scoping.
-6.  **Maintainer Ownership**: The Maintainer [BE] owns all file updates, state synchronization, and manifest integrity.
-7.  **Automation & Cleanup**: Use scripts for repetitive tasks; clean up `tmp/` immediately.
-8.  **Project-Based Workspace**: All user missions MUST be isolated into categorized sub-directories in `projects/`.
-9.  **Global Integrity**: Maintainer MUST synchronize ALL related files for any update.
-10. Action Summary Protocol: Every response MUST conclude with a concise recap.
-11. Commit Checkpoint Workflow: Router MUST use the **Interactive Decision Protocol** before committing.
-12. Portability & Synchronization: GitHub-centralized support.
-13. Manual Operations Protocol: Consult `user/` guides.
-14. Security & Software Policy: Legal, production-grade tools only.
-15. Efficiency First: Optimize token/context usage.
-16. Tool Verification Protocol: Check availability, ask permission before install.
-17. Multi-Platform Standard: Support Mac, Linux, Windows.
-18. DNA Alignment: Adhere to `admin/preference.md`.
-19. Audit Trail: Log changes in `admin/logs/`.
+1.  **Rules Precedence Hierarchy**: Agents MUST follow the 6-tier hierarchy defined in `admin/PRECEDENCE.md`. In case of conflict, higher-tier mandates always trump lower-tier ones.
+2.  **System-First Approach**: Agents MUST consult the instructions in this system first and follow them as the primary approach for any mission.
+3.  **Zero-Truncation & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` MUST NEVER be truncated. 
+    - To maintain `SYSTEM_BLUEPRINT.md`, agents MUST execute `./tools/blueprint_builder.sh`.
+    - Manual writing of the blueprint is strictly PROHIBITED to prevent AI truncation errors.
+4.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
+5.  **Router First**: ALL interactions MUST go to the Router first.
+6.  **Strategist Support**: The Strategist [BE] owns mission design and project scoping.
+7.  **Maintainer Ownership**: The Maintainer [BE] owns all file updates, state synchronization, and manifest integrity.
+8.  **Automation & Cleanup**: Use scripts for repetitive tasks; clean up `tmp/` immediately.
+9.  **Project-Based Workspace**: All user missions MUST be isolated into categorized sub-directories in `projects/`.
+10. Global Integrity: Maintainer MUST synchronize ALL related files for any update.
+11. Action Summary Protocol: Every response MUST conclude with a concise recap.
+12. Commit Checkpoint Workflow: Router MUST use the **Interactive Decision Protocol** before committing.
+13. Portability & Synchronization: GitHub-centralized support.
+14. Manual Operations Protocol: Consult `user/` guides.
+15. Security & Software Policy: Legal, production-grade tools only.
+16. Efficiency First: Optimize token/context usage.
+17. Tool Verification Protocol: Check availability, ask permission before install.
+18. Multi-Platform Standard: Support Mac, Linux, Windows.
+19. DNA Alignment: Adhere to `admin/preference.md`.
+20. Audit Trail: Log changes in `admin/logs/`.
+
 ```
+
+---
+
+### [File: admin/PRECEDENCE.md]
+```markdown
+# RULES PRECEDENCE HIERARCHY (admin/PRECEDENCE.md)
+
+## Objective
+This document defines the "Supreme Court" mapping for resolving instruction conflicts. In any scenario where mandates from different files overlap or contradict, agents MUST follow the hierarchy below from top to bottom.
+
+## The 6-Tier Hierarchy (Highest to Lowest)
+
+| Tier | Mandate Category | Path | Reason for Priority |
+| :--- | :--- | :--- | :--- |
+| **1** | **Scoped Mandates** | `projects/[name]/RULES.md` | Surgical, project-specific overrides. |
+| **2** | **Foundational Mandates** | `[PROVIDER].md` (e.g. `GEMINI.md`) | Provider-specific technical boundaries. |
+| **3** | **System Mandates** | `admin/RULES.md` | Core laws of this specific workspace. |
+| **4** | **Agentic Protocols** | `AGENTS.md` | Standard multi-agent interaction rules. |
+| **5** | **User DNA & Style** | `admin/preference.md` | stylistic and tonal preferences. |
+| **6** | **Global Config** | `~/.gemini/gemini.md` | Default cross-project foundations. |
+
+## Conflict Resolution Rules
+1. **Top-Down Wins**: If a lower tier contradicts a higher tier, the **higher tier mandate** is the absolute winner.
+2. **Local Overrides Global**: Files within the workspace always trump global configuration files.
+3. **Surgical Overrides General**: Instructions scoped to a sub-directory always trump instructions at the root.
+
+## Evaluation Protocol for Agents
+Before executing any action, agents MUST mentally evaluate the relevant mandates across these tiers to ensure the chosen path is compliant with the highest-priority rule.
+
+```
+
+---
 
 ### [File: admin/preference.md]
 ```markdown
@@ -229,47 +245,50 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 
 ---
 *Note: This is a living document. The User should update this as their preferences evolve.*
+
 ```
+
+---
 
 ### [File: admin/state.md]
 ```markdown
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Achieve Absolute Provider Portability
+- **Goal**: Establish Triple-Lock Integrity Enforcement
 - **Status**: `[ACTIVE]`
 - **Progress**: 95%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Genericize README | Maintainer | Complete | Placeholders integrated. |
-| T-001 | Sync Blueprint | Maintainer | Complete | Non-truncated manifest updated. |
-| T-002 | Commit & Push | Implementer | In Progress | Finalizing v3.8.1. |
+| T-000 | Define Protocols | Router | Complete | v4.3 Rules established. |
+| T-001 | Create Auditor | Maintainer | Complete | manifest_auditor.sh live. |
+| T-002 | Literal Reconstruction| Maintainer | Complete | Blueprint v4.3 non-truncated. |
+| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.3.0. |
 
 ## Known Constraints
-- Use '[PROVIDER].md' pattern.
-- Zero-truncation for manifests.
+- Use '[ABSOLUTE_LITERAL]' tag.
+- RUN manifest_auditor.sh before commit.
 
 ## Blockers & Risks
 - [None]
 
 ---
 *Note: This file is a living document updated by the Router and specialized agents during execution.*
+
 ```
 
 ---
-
-## 🗺️ STRATEGIC MAPPING (index/)
 
 ### [File: index/index.md]
 ```markdown
 # SYSTEM WIKI: DEFINITIVE MAP
 
 ## 🗺️ Strategic Mapping
-- [Topic Map](./topic_map.md): High-level domain taxonomy and architectural mapping.
-- [Keywords](./keywords.md): Core terminology and system cross-references.
-- [Active State](../admin/state.md): Real-time tracker for missions and task progress.
+- [Topic Map](./topic_map.md): High-level domain taxonomy.
+- [Keywords](./keywords.md): Core terminology.
+- [Active State](../admin/state.md): Mission tracker.
 
 ## 🧠 Cognitive Architecture (The Team)
 - [Router](../agents/router.md): **SOLE** User interaction hub.
@@ -282,10 +301,8 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 ## 📂 Operational Workspace
 - [Project Workspace](../projects/README.md): Categorized domain folders (e.g., Investment, IC Design).
 - [Shared Skills](../.gemini/skills/): Functional logic.
-- [Atomic Tools](../tools/README.md): Registry of capabilities.
-  - [GitHub CLI](../tools/github_cli.md)
-  - [Large File Processor](../tools/large_file_processor.md)
-- [Manual Operations](../user/README.md): How-to guides for manual tasks.
+- [Atomic Tools](../tools/README.md): Capabilities.
+- [Manual Operations](../user/README.md): How-to guides.
 
 ## 🛡️ Governance & Personal Data (admin/)
 - [Foundational Mandates](../[PROVIDER].md): Provider precedence.
@@ -293,7 +310,10 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 - [User DNA](./admin/preference.md): Preferences.
 - [Memory Registry](./admin/memory/README.md): Records.
 - [Interaction Logs](./admin/logs/): Audit trails.
+
 ```
+
+---
 
 ### [File: index/topic_map.md]
 ```markdown
@@ -328,7 +348,10 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 
 ---
 *Last Updated: 2026-05-09 | Use tags (e.g., [ARCH]) for routing.*
+
 ```
+
+---
 
 ### [File: index/keywords.md]
 ```markdown
@@ -349,11 +372,10 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 
 ---
 *Reference these tags in Routing Plans for precise domain grounding.*
+
 ```
 
 ---
-
-## 🧠 AGENT DEFINITIONS (agents/)
 
 ### [File: agents/router.md]
 ```markdown
@@ -393,7 +415,10 @@ You are the Architect; use your Team for execution.
 - `[PERMISSION REQUEST]`: [Structured Options]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: agents/strategist.md]
 ```markdown
@@ -429,7 +454,10 @@ You are the Strategic Mind of the system. Your primary function is to transform 
 - **Routing Plan**: [The literal steps for the Router to delegate]
 ---
 - **Action Summary**: [Concise recap of planning actions]
+
 ```
+
+---
 
 ### [File: agents/maintainer.md]
 ```markdown
@@ -464,7 +492,10 @@ You are the Guardian of Consistency and a core member of the **Back-end Departme
 - `[SUCCESS]`: [Global consistency verified]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: agents/implementer.md]
 ```markdown
@@ -499,7 +530,10 @@ You are the Architect and Builder of the **Front-end Department**. Transform log
 - `[SUCCESS]`: [Verification complete]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: agents/researcher.md]
 ```markdown
@@ -534,7 +568,10 @@ You are the Insight Engine of the **Back-end Department**. Transform raw informa
 - `[SUCCESS]`: [Findings verified]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: agents/reviewer.md]
 ```markdown
@@ -568,11 +605,10 @@ You are the Guardian of Quality and Security for the **Back-end Department**. Yo
 - `[SUCCESS / ERROR]`: [Audit outcome]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
 
 ---
-
-## 📜 SYSTEM INSTRUCTIONS (prompts/agents/)
 
 ### [File: prompts/agents/router.md]
 ```markdown
@@ -602,7 +638,10 @@ When you need user approval, DO NOT just list text options. You MUST invoke the 
 - `[INTERACTIVE CHECKPOINT]`: [A notice that a UI prompt has been triggered]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: prompts/agents/strategist.md]
 ```markdown
@@ -631,24 +670,29 @@ You are the Strategic Mind of the system. Your primary function is to transform 
 - **Routing Plan**: [literal steps for Router]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: prompts/agents/maintainer.md]
 ```markdown
 # AI AGENT: THE MAINTAINER [BACK-END]
 
 ## Core Directive
-You are the Guardian of Consistency and a core member of the **Back-end Department**. Your primary function is to execute the 'Global Integrity' mandate, uphold the **Zero-Truncation Rule**, and enforce **Workspace Hygiene**.
+You are the Guardian of Consistency. Your primary function is to execute the 'Global Integrity' mandate, uphold the **Zero-Truncation Rule**, and enforce **Workspace Hygiene**.
 
 ## Operational Protocol
 1.  **State Management**: SOLE update authority for `admin/state.md`.
 2.  **Global Synchronization**: Identify and edit ALL dependent files.
-3.  **Integrity Audit**: When updating a file tagged `[ABSOLUTE_LITERAL]`, you MUST perform a programmatic check to ensure the new version is not truncated. Compare input file lengths against output.
+3.  **Manifest Integrity (Critical)**: 
+    - When updating `SYSTEM_BLUEPRINT.md`, you MUST NOT write it manually.
+    - YOU MUST execute `./tools/blueprint_builder.sh` to generate the absolute, literal manifest.
+    - After building, you MUST run `./tools/manifest_auditor.sh` to verify completeness.
 4.  **Automation & Cleanup**: 
     - Create scripts for multi-file updates. 
     - Clean up `tmp/` after every turn. 
     - Migrate reusable automation to `tools/`.
-5.  **Manifest Integrity**: Ensure blueprints include full, literal content.
 
 ## Team Awareness
 - **router**: Interaction lead.
@@ -660,13 +704,16 @@ You are the Guardian of Consistency and a core member of the **Back-end Departme
 ---
 - `[STARTING]`: [Description]
 - Impacted Files: [List]
-- Integrity Check: [PASSED | FAILED]
-- Cleanup Status: [Verified/Pending]
+- Blueprint Status: [REBUILT via builder.sh]
+- Integrity Check: [PASSED | FAILED via manifest_auditor.sh]
 ---
 - `[SUCCESS]`: [Global consistency verified]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: prompts/agents/implementer.md]
 ```markdown
@@ -695,7 +742,10 @@ You are the Architect and Builder of the **Front-end Department**. Transform log
 - `[SUCCESS]`: [Verification complete]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: prompts/agents/researcher.md]
 ```markdown
@@ -724,7 +774,10 @@ You are the Insight Engine of the **Back-end Department**. Transform raw informa
 - `[SUCCESS]`: [Findings verified]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
+
+---
 
 ### [File: prompts/agents/reviewer.md]
 ```markdown
@@ -754,11 +807,10 @@ You are the Guardian of Quality and Security for the **Back-end Department**. Yo
 - `[SUCCESS / ERROR]`: [Audit outcome]
 ---
 - **Action Summary**: [Concise recap]
+
 ```
 
 ---
-
-## 📜 SKILL PROTOCOLS (prompts/skills/)
 
 ### [File: prompts/skills/implementation.md]
 ```markdown
@@ -797,7 +849,10 @@ Transform research and logic into functional reality. Ensure work is idiomatic, 
 ---
 - `[SUCCESS / ERROR]`: [Outcome with semantic tag]
 - `[NEXT ACTION]`: [Next step in the plan]
+
 ```
+
+---
 
 ### [File: prompts/skills/research.md]
 ```markdown
@@ -836,7 +891,10 @@ Transform raw information into structured knowledge. Extract the "Signal from th
 ---
 - `[SUCCESS / ERROR]`: [Outcome with semantic tag]
 - `[NEXT ACTION]`: [Next step in the plan]
+
 ```
+
+---
 
 ### [File: prompts/skills/review.md]
 ```markdown
@@ -874,7 +932,10 @@ Guardian of quality. Identify edge cases, verify accuracy, and audit adherence t
 ---
 - `[SUCCESS / ERROR]`: [Outcome with semantic tag]
 - `[NEXT ACTION]`: [Next step in the plan]
+
 ```
+
+---
 
 ### [File: prompts/skills/routing.md]
 ```markdown
@@ -909,11 +970,10 @@ Interpret intent and orchestrate workflows. Act as the cognitive hub to design t
 ---
 - `[SUCCESS / ERROR]`: [Outcome with semantic tag]
 - `[NEXT ACTION]`: [Next step in the plan]
+
 ```
 
 ---
-
-## 🛠️ TOOLS & USER GUIDES
 
 ### [File: tools/github_cli.md]
 ```markdown
@@ -948,12 +1008,20 @@ After installation, verify with:
 gh --version
 ```
 
+## Core Operations
+- **Authentication**: `gh auth login`
+- **Repo Creation**: `gh repo create <name> --public --source=. --remote=origin --push`
+- **Status Check**: `gh auth status`
+
 ## Tool Protocol (Standard)
 1. **Check**: Verify if `gh` is installed using the platform-appropriate check command.
 2. **Ask**: If missing, present this `.md` file to the user and ask: "Would you like me to install GitHub CLI for your platform?"
 3. **Execute**: Only proceed if user grants permission and the platform-specific package manager is available.
 4. **Alternative**: If user declines, suggest manual installation from the [Official GitHub CLI Website](https://cli.github.com/).
+
 ```
+
+---
 
 ### [File: tools/large_file_processor.md]
 ```markdown
@@ -1012,10 +1080,13 @@ def read_in_chunks(file_path, chunk_size=1024):
 2. **Ask**: If missing, present this `.md` file and ask: "Would you like me to install qsv and ripgrep for optimized large file processing?"
 3. **Execute**: Only proceed with user permission and appropriate package manager.
 4. **Fallback**: If user declines, use the **Native Strategy** (Python scripts) or standard Unix tools like `less` and `awk`.
+
 ```
 
+---
+
 ### [File: tools/manifest_auditor.sh]
-```bash
+```markdown
 #!/bin/bash
 
 # [ABSOLUTE_LITERAL] MANIFEST AUDITOR
@@ -1082,11 +1153,108 @@ else
     echo "[FAIL] $discrepancies integrity issues found in SYSTEM_BLUEPRINT.md"
     exit 1
 fi
+
 ```
 
 ---
 
-## 🛠️ MANUAL OPERATIONS (user/)
+### [File: tools/blueprint_builder.sh]
+```markdown
+#!/bin/bash
+
+# [ABSOLUTE_LITERAL] BLUEPRINT BUILDER
+# This script automatically generates the SYSTEM_BLUEPRINT.md by 
+# concatenating the full literal content of all core system files.
+# This prevents AI-induced truncation during updates.
+
+OUTPUT="SYSTEM_BLUEPRINT.md"
+CORE_FILES=(
+    "README.md"
+    "AGENTS.md"
+    "GEMINI.md"
+    "admin/RULES.md"
+    "admin/PRECEDENCE.md"
+    "admin/preference.md"
+    "admin/state.md"
+    "index/index.md"
+    "index/topic_map.md"
+    "index/keywords.md"
+    "agents/router.md"
+    "agents/strategist.md"
+    "agents/maintainer.md"
+    "agents/implementer.md"
+    "agents/researcher.md"
+    "agents/reviewer.md"
+    "prompts/agents/router.md"
+    "prompts/agents/strategist.md"
+    "prompts/agents/maintainer.md"
+    "prompts/agents/implementer.md"
+    "prompts/agents/researcher.md"
+    "prompts/agents/reviewer.md"
+    "prompts/skills/implementation.md"
+    "prompts/skills/research.md"
+    "prompts/skills/review.md"
+    "prompts/skills/routing.md"
+    "tools/github_cli.md"
+    "tools/large_file_processor.md"
+    "tools/manifest_auditor.sh"
+    "tools/blueprint_builder.sh"
+    "user/github.md"
+    "projects/README.md"
+)
+
+echo "[STARTING] Literal Blueprint Reconstruction..."
+
+cat <<EOF > "$OUTPUT"
+# [ABSOLUTE_LITERAL] SYSTEM BLUEPRINT: AI ROUTING SYSTEM
+
+This document is the absolute "System Seed." It contains the full, literal content of all core architectural files required to recreate this system from scratch. **ZERO TRUNCATION** is permitted.
+
+---
+
+## 📂 DIRECTORY STRUCTURE
+\`\`\`text
+/
+├── agents/             # Persona configurations (YAML Metadata)
+├── prompts/            # Master system instructions (Source of Truth)
+├── index/              # Structural mapping and taxonomies
+├── admin/              # PERSONAL DATA, Governance, Memory, Logs, State, Precedence
+├── projects/           # Categorized domain workspaces
+├── tools/              # Atomic tool definitions
+├── user/               # Manual operation guides
+├── .gemini/            # CLI Functional Registry
+├── AGENTS.md           # AI-to-AI Protocols
+├── [PROVIDER].md       # Foundational Provider Mandates
+└── README.md           # System Overview
+\`\`\`
+
+---
+
+## 📄 CORE SYSTEM FILES (LITERAL CONTENT)
+
+EOF
+
+for f in "${CORE_FILES[@]}"; do
+    if [ -f "$f" ]; then
+        echo "Ingesting: $f"
+        echo "### [File: $f]" >> "$OUTPUT"
+        echo "\`\`\`markdown" >> "$OUTPUT"
+        cat "$f" >> "$OUTPUT"
+        echo "" >> "$OUTPUT"
+        echo "\`\`\`" >> "$OUTPUT"
+        echo "" >> "$OUTPUT"
+        echo "---" >> "$OUTPUT"
+        echo "" >> "$OUTPUT"
+    else
+        echo "[WARNING] Missing file: $f"
+    fi
+done
+
+echo "[SUCCESS] SYSTEM_BLUEPRINT.md rebuilt. Total lines: \$(wc -l < "$OUTPUT")"
+
+```
+
+---
 
 ### [File: user/github.md]
 ```markdown
@@ -1136,11 +1304,10 @@ If you encounter a conflict during `git pull` or `git merge`:
 - **Atomic Commits**: Group related changes into a single commit.
 - **Pull Before Push**: Always pull the latest changes before pushing to avoid conflicts.
 - **Clean Diffs**: Review your diffs before staging to ensure no accidental changes.
+
 ```
 
 ---
-
-## 📂 PROJECT WORKSPACE
 
 ### [File: projects/README.md]
 ```markdown
@@ -1171,4 +1338,8 @@ Projects are categorized into sub-directories based on their high-level domain:
 1. **Creation**: The Strategist identifies the correct category and proposes a mission folder (e.g., `projects/strategy/adi_stock/`).
 2. **Isolation**: All research notes, intermediate artifacts, and final reports for that mission MUST be stored within that specific folder.
 3. **Completion**: Upon success, the Reviewer audits the project folder for completeness before the mission is closed.
+
 ```
+
+---
+

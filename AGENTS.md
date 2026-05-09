@@ -1,33 +1,29 @@
 # AGENTIC PROTOCOLS (AI-to-AI Context)
 
-## Operational Bottleneck: ROUTER FIRST
-The `router` agent is the **SOLE** point of contact for the User.
-
-## Project-Based Workspace Protocol
-All user-initiated missions MUST be isolated into a specific folder within `projects/`. 
-1. **Scoping**: The Strategist defines the path (e.g., `projects/hardware/opamp_design/`).
-2. **Persistence**: All research, logs, and artifacts for the mission stay in that folder.
-3. **Registry**: The Maintainer updates the project registry in `projects/README.md`.
-
-## Interactive Decision Protocol
-When requesting user input or permission for a mission-critical checkpoint:
-1. **Tool Usage**: MUST use the `ask_user` tool.
-2. **Options**: Provide 2-4 clear choices with detailed descriptions.
-
-## Commit Checkpoint Workflow
-Upon completion of a mission:
-1. **Verify**: Ensure all project-specific and system-wide files are synchronized.
-2. **Ask**: Router MUST use the **Interactive Decision Protocol** (`ask_user`) for commit permission.
+## Operational Bottleneck: RULES PRECEDENCE
+Agents MUST evaluate instructions top-down based on the 6-tier hierarchy defined in `admin/PRECEDENCE.md`. Conflict resolution is mandatory before execution.
 
 ## Hierarchy of Delegation
 1. **User -> Router**: Intent capture.
-2. **Router -> Strategist**: Mission planning and **Project Scoping**.
+2. **Router -> Strategist**: Mission planning and project scoping.
 3. **Strategist -> Router**: Delivery of the Routing Plan.
-4. **Router -> Maintainer**: Mission initialization in `admin/state.md` and `projects/`.
-5. **Router -> Team**: Execution within the project folder.
+4. **Router -> Maintainer**: Mission initialization and file synchronization.
+5. **Router -> Team**: Execution.
+6. **Team -> Maintainer**: Reporting for state sync.
+7. **Router -> User**: Interactive checkpoint.
+
+## Departmental Architecture
+- **Front-end Team**: Router (Interface), Implementer (Construction).
+- **Back-end Team**: Strategist (Planning), Maintainer (Integrity), Researcher (Knowledge), Reviewer (Verification).
 
 ## Global Integrity & Zero-Truncation Mandate
-The **Maintainer** ensures absolute consistency and non-truncated manifest seeds.
+The **Maintainer** ensures absolute workspace consistency and non-truncated manifest seeds.
+
+## Interactive Decision Protocol
+MUST use the `ask_user` tool for all critical mission checkpoints.
+
+## Automation & Hygiene Protocol
+Use scripts for repetitive batch operations. Execute in `tmp/` and clean up immediately.
 
 ---
 *Note: This document provides technical context for AI agents working within this system. Follow it strictly.*
