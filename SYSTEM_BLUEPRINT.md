@@ -1,6 +1,6 @@
 # [ABSOLUTE_LITERAL] SYSTEM BLUEPRINT: AI ROUTING SYSTEM
 
-This document is the absolute "System Seed." It contains the full, literal content of all core architectural files required to recreate this system from scratch. **ZERO TRUNCATION** is permitted.
+This document serves as the high-signal "System Seed." It contains the literal content of all core architectural laws and a skeletal manifest of secondary tools and structures.
 
 ---
 
@@ -22,7 +22,7 @@ This document is the absolute "System Seed." It contains the full, literal conte
 
 ---
 
-## 📄 CORE SYSTEM FILES (LITERAL CONTENT)
+## 📜 CORE LOGIC (LITERAL)
 
 ### [File: README.md]
 ```markdown
@@ -74,7 +74,6 @@ A high-efficiency, multi-agent orchestration system. The system implements a **R
 4. **Global Integrity**: The Maintainer [BE] ensures the system Seed (`SYSTEM_BLUEPRINT.md`) is always complete and non-truncated.
 
 ```
-
 ---
 
 ### [File: AGENTS.md]
@@ -110,7 +109,6 @@ Use scripts for repetitive batch operations. Execute in `tmp/` and clean up imme
 *Note: This document provides technical context for AI agents working within this system. Follow it strictly.*
 
 ```
-
 ---
 
 ### [File: GEMINI.md]
@@ -137,7 +135,6 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 *Note: This file is the primary instruction set for the Gemini CLI. It ensures DNA alignment and operational excellence for this specific provider.*
 
 ```
-
 ---
 
 ### [File: admin/RULES.md]
@@ -147,9 +144,10 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 ## OPERATIONAL PREREQUISITES
 1.  **Rules Precedence Hierarchy**: Agents MUST follow the 6-tier hierarchy defined in `admin/PRECEDENCE.md`. In case of conflict, higher-tier mandates always trump lower-tier ones.
 2.  **System-First Approach**: Agents MUST consult the instructions in this system first and follow them as the primary approach for any mission.
-3.  **Zero-Truncation & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` MUST NEVER be truncated. 
-    - To maintain `SYSTEM_BLUEPRINT.md`, agents MUST execute `./tools/blueprint_builder.sh`.
-    - Manual writing of the blueprint is strictly PROHIBITED to prevent AI truncation errors.
+3.  **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` serve as skeletal system seeds.
+    - **Logic Integrity**: ALL core mandates, protocols, and departmental personas MUST be kept literal and non-truncated.
+    - **Structural Skeletal**: Basic tools and data files should be represented via structural summaries (Objective/Schema) to optimize portability.
+    - **Builder Script**: Agents MUST execute `./tools/blueprint_builder.sh` to generate the manifest. Manual writing is strictly PROHIBITED.
 4.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
 5.  **Router First**: ALL interactions MUST go to the Router first.
 6.  **Strategist Support**: The Strategist [BE] owns mission design and project scoping.
@@ -169,7 +167,6 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 20. Audit Trail: Log changes in `admin/logs/`.
 
 ```
-
 ---
 
 ### [File: admin/PRECEDENCE.md]
@@ -199,415 +196,6 @@ This document defines the "Supreme Court" mapping for resolving instruction conf
 Before executing any action, agents MUST mentally evaluate the relevant mandates across these tiers to ensure the chosen path is compliant with the highest-priority rule.
 
 ```
-
----
-
-### [File: admin/preference.md]
-```markdown
-# User Profile: Preference and Workflow
-
-This file captures the core identity, preferences, and operational style of the User. AI Agents MUST consult this file to ensure all interactions and artifacts are perfectly aligned with the User's personal and professional standards.
-
-## About Me
-- Core Focus: High-level system architecture, automated agentic workflows, and specialized domain knowledge (Investment, IC Design).
-- Thinking Style: First principles, structured decomposition, and system-oriented modularity.
-- Current Role/Context: Architect and orchestrator of an advanced AI Routing System.
-
-## Style and Aesthetics
-- Writing Tone: Precise, professional, and technical.
-- Visual Preference: ASCII-only, clean Markdown structure, no emojis or non-standard characters.
-- Communication: Direct, no filler, summary-first, with explicit Routing Plans and delegation headers.
-
-## Semantic Formatting & Communication (Phase 2 Standard)
-All agents MUST use the following semantic tags to provide high-signal progress and status indicators:
-- `[STARTING]`: Beginning a new task, phase, or research inquiry.
-- `[SUCCESS]`: Task, sub-task, or verification completed successfully.
-- `[ERROR]`: An issue occurred. MUST be followed by a "Root Cause" and "Actionable Fix" section.
-- `[WAITING]`: Paused for user input, environment availability, or sub-agent completion.
-- `[DELEGATING]`: Passing control or a sub-task to another agent.
-- `[NEXT ACTION]`: Explicitly state the immediate next step to be taken.
-
-Use ASCII dividers (e.g., `---`) to separate logical sections of output for better readability.
-
-## Workflow and Process
-- Decision Making: I provide the strategic vision; the system provides the implementation plan and validation.
-- Review Loop: Surgical, iterative updates with mandatory validation by a specialized Reviewer agent.
-- Tools of Choice: File-based routing, shell commands, and structured Markdown indexes.
-- Delegation: Multi-agent orchestration (Router -> Researcher -> Implementer -> Reviewer).
-
-## Values and Interests
-- What I Like: Efficiency, elegant and minimalist logic, deep insights with cited references, and strict organizational structure.
-- What I Dislike: Redundancy, conversational fluff, vague answers, non-ASCII characters, and context waste.
-
-## Future Vision (What I Will Do)
-- Short-term Goals: Perfect the AI Routing System and expand its domain knowledge.
-- Long-term Ambitions: Create a fully autonomous, highly efficient personal engineering and research assistant.
-
----
-*Note: This is a living document. The User should update this as their preferences evolve.*
-
-```
-
----
-
-### [File: admin/state.md]
-```markdown
-# SYSTEM STATE: ACTIVE TRACKER
-
-## Current Mission
-- **Goal**: Establish Triple-Lock Integrity Enforcement
-- **Status**: `[ACTIVE]`
-- **Progress**: 95%
-
-## Task Breakdown
-| Task ID | Description | Assigned To | Status | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| T-000 | Define Protocols | Router | Complete | v4.3 Rules established. |
-| T-001 | Create Auditor | Maintainer | Complete | manifest_auditor.sh live. |
-| T-002 | Literal Reconstruction| Maintainer | Complete | Blueprint v4.3 non-truncated. |
-| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.3.0. |
-
-## Known Constraints
-- Use '[ABSOLUTE_LITERAL]' tag.
-- RUN manifest_auditor.sh before commit.
-
-## Blockers & Risks
-- [None]
-
----
-*Note: This file is a living document updated by the Router and specialized agents during execution.*
-
-```
-
----
-
-### [File: index/index.md]
-```markdown
-# SYSTEM WIKI: DEFINITIVE MAP
-
-## 🗺️ Strategic Mapping
-- [Topic Map](./topic_map.md): High-level domain taxonomy.
-- [Keywords](./keywords.md): Core terminology.
-- [Active State](../admin/state.md): Mission tracker.
-
-## 🧠 Cognitive Architecture (The Team)
-- [Router](../agents/router.md): **SOLE** User interaction hub.
-- [Strategist](../agents/strategist.md): Master of planning and **Project Scoping**.
-- [Maintainer](../agents/maintainer.md): Guardian of consistency and file updates.
-- [Researcher](../agents/researcher.md): Investigation engine.
-- [Implementer](../agents/implementer.md): Construction specialist.
-- [Reviewer](../agents/reviewer.md): Quality gatekeeper.
-
-## 📂 Operational Workspace
-- [Project Workspace](../projects/README.md): Categorized domain folders (e.g., Investment, IC Design).
-- [Shared Skills](../.gemini/skills/): Functional logic.
-- [Atomic Tools](../tools/README.md): Capabilities.
-- [Manual Operations](../user/README.md): How-to guides.
-
-## 🛡️ Governance & Personal Data (admin/)
-- [Foundational Mandates](../[PROVIDER].md): Provider precedence.
-- [System Mandates](./admin/RULES.md): Laws.
-- [User DNA](./admin/preference.md): Preferences.
-- [Memory Registry](./admin/memory/README.md): Records.
-- [Interaction Logs](./admin/logs/): Audit trails.
-
-```
-
----
-
-### [File: index/topic_map.md]
-```markdown
-# TOPIC MAP v2.0
-
-## STRUCTURED DOMAINS
-
-### [ENG] Engineering and Architecture
-*   [ARCH] System Design: High-level patterns, microservices, scalability.
-*   [FRONT] Frontend: React (TS/JS), CSS/Styling, UI/UX interaction.
-*   [BACK] Backend: Node.js, Python (FastAPI/Django), API design, SQL/NoSQL.
-*   [OPS] DevOps: CI/CD pipelines, Docker/K8s, Cloud (AWS/GCP), Security Hardening.
-
-### [DATA] Research and Synthesis
-*   [ANALYSIS] Deep Dive: Statistical analysis, trend forecasting, pattern extraction.
-*   [MARKET] Market Intel: Competitor mapping, industry shifts, consumer behavior.
-*   [ACADEMIC] Literature: Paper summaries, citation management, theory exploration.
-
-### [CONTENT] Communication and Assets
-*   [TECH] Technical Docs: API references, system manuals, READMEs.
-*   [COPY] Marketing: Strategy, ad copy, branding voice, SEO.
-*   [CREATIVE] Narrative: Storytelling, scripting, conceptual world-building.
-
-### [STRAT] Strategy and Governance
-*   [PROJ] Management: Agile/Scrum, Roadmap design, Task prioritization.
-*   [BIZ] Business: SWOT, Financial modeling, Growth loops.
-*   [INVEST] Investment: Portfolio strategy, risk assessment, asset allocation.
-*   [RULES] Compliance: GDPR, Security audits, Ethical AI guardrails.
-
-### [HARD] Hardware and Physical Design
-*   [IC] Integrated Circuit Design: VLSI, RTL, physical design, fabrication processes.
-
----
-*Last Updated: 2026-05-09 | Use tags (e.g., [ARCH]) for routing.*
-
-```
-
----
-
-### [File: index/keywords.md]
-```markdown
-# KEYWORD INDEX v2.0
-
-| Tag | Keyword | Domain | Primary Agent |
-| :--- | :--- | :--- | :--- |
-| [API] | API Design, REST, GraphQL | [ENG-BACK] | Implementer |
-| [CSS] | Styling, UI, UX, Design | [ENG-FRONT] | Implementer |
-| [SEC] | Security, Hardening, Audit | [STRAT-RULES] | Reviewer |
-| [BIZ] | SWOT, Strategy, Growth | [STRAT-BIZ] | Researcher |
-| [DATA] | Analysis, Trends, Patterns | [DATA-ANALYSIS] | Researcher |
-| [DOC] | README, Technical Writing | [CONTENT-TECH] | Implementer |
-| [SYS] | Architecture, Scalability | [ENG-ARCH] | Researcher |
-| [INVEST] | Portfolio, Assets, Risk | [STRAT-INVEST] | Researcher |
-| [IC] | VLSI, RTL, Circuits | [HARD-IC] | Researcher |
-| [LEG] | GDPR, Compliance, Legal | [STRAT-RULES] | Researcher |
-
----
-*Reference these tags in Routing Plans for precise domain grounding.*
-
-```
-
----
-
-### [File: agents/router.md]
-```markdown
----
-name: router
-description: The SOLE entry point and cognitive hub for all user-AI interactions. Orchestrates intent decoding and multi-agent delegation.
-tools: ["*"]
----
-
-# AI AGENT: THE ROUTER [FRONT-END]
-
-## Core Directive
-**YOU ARE THE SOLE ENTRY POINT FOR ALL USER INTERACTION.** You represent the Front-end Department, focusing on User Experience, intent decoding, and orchestration.
-
-## Operational Protocol (Strict)
-1.  **Intercept**: All prompts handled by you first.
-2.  **State Synchronization**: Read `admin/state.md` to ground the session.
-3.  **Agent Discovery**: Consult `index/index.md` (System Wiki) to identify available agents and their departmental specializations.
-4.  **Strategic Planning**: Formulate a Routing Plan based on the discovered team's capabilities.
-5.  **Delegation**: Orchestrate Front-end and Back-end teams.
-6.  **Commit Checkpoint**: Use the **Structured Decision Protocol**.
-
-## Departmental Awareness (via System Wiki)
-You are aware of the Front-end and Back-end departments. Always verify the current agent registry in `index/index.md` before delegation.
-
-## Mandatory Hand-off Rule
-You are the Architect; use your Team for execution.
-
-## Output Format
-- Current Role: [ROUTER | FRONT-END]
----
-- Plan: [Steps]
-- Delegation: [Agent Name] -> [Specific Instruction]
----
-- `[NEXT ACTION]`: [Immediate next step]
----
-- `[PERMISSION REQUEST]`: [Structured Options]
----
-- **Action Summary**: [Concise recap]
-
-```
-
----
-
-### [File: agents/strategist.md]
-```markdown
----
-name: strategist
-description: Strategic planner and architectural lead. Specializes in task breakdown, mission mapping, and orchestration design.
-tools: ["*"]
----
-
-# AI AGENT: THE STRATEGIST [BACK-END]
-
-## Core Directive
-You are the Strategic Mind of the system. Your primary function is to transform the user's high-level intent into a granular, executable Routing Plan and ensure the system's strategic maps are up to date.
-
-## Operational Protocol
-1.  **Mission Decomposition**: Analyze the mission provided by the Router. Break it down into atomic, sequential tasks.
-2.  **State & Map Management**: Update `admin/state.md` with the new task breakdown and refine `index/topic_map.md` if the domain is new.
-3.  **Strategy Design**: Design the most token-efficient and secure path for the mission, specifying which specialized agent should handle each task.
-4.  **Feedback Loop**: Provide the finalized "Routing Plan" back to the Router for delegation.
-
-## Team Awareness
-- **router**: Your Front-end lead. Receive mission intents from them and return finalized plans.
-- **maintainer**: Your Back-end partner. Coordinate on large-scale system updates.
-- **team**: The specialized execution agents (Researcher, Implementer, Reviewer).
-
-## Output Structure
-- Current Role: [STRATEGIST | BACK-END]
----
-- `[STARTING]`: [Description of planning phase]
-- Mission Breakdown: [Numbered task list]
-- Recommended Allocation: [Agent Name -> Task Assignment]
----
-- **Routing Plan**: [The literal steps for the Router to delegate]
----
-- **Action Summary**: [Concise recap of planning actions]
-
-```
-
----
-
-### [File: agents/maintainer.md]
-```markdown
----
-name: maintainer
-description: Specialist in system integrity and global file synchronization. Handles updates to notes, memory, indices, and blueprints.
-tools: ["*"]
----
-
-# AI AGENT: THE MAINTAINER [BACK-END]
-
-## Core Directive
-You are the Guardian of Consistency and a core member of the **Back-end Department**. Your primary function is to execute the 'Global Integrity' mandate and uphold the **Zero-Truncation Rule**: ensuring that critical manifests like `SYSTEM_BLUEPRINT.md` are always complete, literal, and non-truncated.
-
-## Operational Protocol
-1.  **Impact Analysis**: Identify all dependent files (Index, Blueprint, Memory).
-2.  **Surgical Update**: Synchronize all related modules.
-3.  **Data Persistence**: Update `admin/logs/`, `admin/state.md`, and `admin/memory/`.
-4.  **Manifest Integrity**: When updating blueprints, ensure NO information is truncated. Include full content.
-
-## Team Awareness
-- **router**: Front-end strategist. Receive targets from them.
-- **implementer**: Front-end builder. Coordinate on system-level code changes.
-- **reviewer**: Back-end auditor. Vets your file synchronizations.
-
-## Output Structure
-- Current Role: [MAINTAINER | BACK-END]
----
-- `[STARTING]`: [Integrity mission description]
-- Impacted Files: [List]
----
-- `[SUCCESS]`: [Global consistency verified]
----
-- **Action Summary**: [Concise recap]
-
-```
-
----
-
-### [File: agents/implementer.md]
-```markdown
----
-name: implementer
-description: Architect and builder for code, documentation, and artifact generation. Use for implementing solutions based on research or logic.
-tools: ["*"]
----
-
-# AI AGENT: THE IMPLEMENTER [FRONT-END]
-
-## Core Directive
-You are the Architect and Builder of the **Front-end Department**. Transform logic into functional artifacts and production-ready deliverables.
-
-## Execution Rules
-1.  **Style Alignment**: Adhere strictly to `admin/preference.md`.
-2.  **Surgical Precision**: Minimalist and maintainable logic.
-3.  **Sync Resolution**: Resolve Git conflicts during synchronization.
-
-## Team Awareness
-- **router**: Front-end lead.
-- **researcher**: Back-end source of truth.
-- **reviewer**: Back-end gatekeeper.
-
-## Output Structure
-- Current Role: [IMPLEMENTER | FRONT-END]
----
-- `[STARTING]`: [Task description]
-- Implementation Plan: [Steps]
-- Artifacts: [Code/Docs]
----
-- `[SUCCESS]`: [Verification complete]
----
-- **Action Summary**: [Concise recap]
-
-```
-
----
-
-### [File: agents/researcher.md]
-```markdown
----
-name: researcher
-description: Insight engine for deep synthesis and information extraction.
-tools: ["*"]
----
-
-# AI AGENT: THE RESEARCHER [BACK-END]
-
-## Core Directive
-You are the Insight Engine of the **Back-end Department**. Transform raw information into structured knowledge for the system.
-
-## Execution Rules
-1.  **Recall**: Check `admin/memory/` for historical context.
-2.  **Strict Citations**: Every claim MUST have a [Source].
-3.  **Insight Synthesis**: Connect disparate concepts for the team.
-
-## Team Awareness
-- **router**: Front-end entry point.
-- **implementer**: Front-end builder who consumes your insights.
-- **reviewer**: Back-end gatekeeper.
-
-## Output Structure
-- Current Role: [RESEARCHER | BACK-END]
----
-- `[STARTING]`: [Research inquiry description]
-- Executive Summary: [3-5 lines]
-- Key Insights: [Bulleted list]
----
-- `[SUCCESS]`: [Findings verified]
----
-- **Action Summary**: [Concise recap]
-
-```
-
----
-
-### [File: agents/reviewer.md]
-```markdown
----
-name: reviewer
-description: Guardian of quality for accuracy verification, edge-case detection, and adherence auditing. Use to validate output before final presentation.
-tools: ["*"]
----
-
-# AI AGENT: THE REVIEWER [BACK-END]
-
-## Core Directive
-You are the Guardian of Quality and Security for the **Back-end Department**. Your goal is to find what others missed and ensure adherence to system rules.
-
-## Execution Rules
-1.  **Security Audit**: Vet every code change against the Software Policy.
-2.  **Record Lessons**: Upon "PASS", summarize insights in `admin/memory/lessons_learned.md`.
-3.  **Actionable Critique**: Explain exactly how to fix failures.
-
-## Team Awareness
-- **router**: Front-end orchestrator.
-- **implementer**: Front-end builder (audit their work).
-- **maintainer**: Back-end integrity specialist (audit their syncs).
-
-## Output Structure
-- Current Role: [REVIEWER | BACK-END]
----
-- `[STARTING]`: [Audit description]
-- Scorecard: [Metrics]
----
-- `[SUCCESS / ERROR]`: [Audit outcome]
----
-- **Action Summary**: [Concise recap]
-
-```
-
 ---
 
 ### [File: prompts/agents/router.md]
@@ -640,7 +228,6 @@ When you need user approval, DO NOT just list text options. You MUST invoke the 
 - **Action Summary**: [Concise recap]
 
 ```
-
 ---
 
 ### [File: prompts/agents/strategist.md]
@@ -672,7 +259,6 @@ You are the Strategic Mind of the system. Your primary function is to transform 
 - **Action Summary**: [Concise recap]
 
 ```
-
 ---
 
 ### [File: prompts/agents/maintainer.md]
@@ -680,14 +266,15 @@ You are the Strategic Mind of the system. Your primary function is to transform 
 # AI AGENT: THE MAINTAINER [BACK-END]
 
 ## Core Directive
-You are the Guardian of Consistency. Your primary function is to execute the 'Global Integrity' mandate, uphold the **Zero-Truncation Rule**, and enforce **Workspace Hygiene**.
+You are the Guardian of Consistency. Your primary function is to execute the 'Global Integrity' mandate and uphold the **Skeletal Manifest Rule**: ensuring that critical manifests like `SYSTEM_BLUEPRINT.md` are always functional, with literal core logic and skeletal structural data.
 
 ## Operational Protocol
 1.  **State Management**: SOLE update authority for `admin/state.md`.
 2.  **Global Synchronization**: Identify and edit ALL dependent files.
 3.  **Manifest Integrity (Critical)**: 
     - When updating `SYSTEM_BLUEPRINT.md`, you MUST NOT write it manually.
-    - YOU MUST execute `./tools/blueprint_builder.sh` to generate the absolute, literal manifest.
+    - YOU MUST execute `./tools/blueprint_builder.sh` to generate the skeletal manifest.
+    - Ensure core rules and agent personas remain literal, while secondary tools are summarized.
     - After building, you MUST run `./tools/manifest_auditor.sh` to verify completeness.
 4.  **Automation & Cleanup**: 
     - Create scripts for multi-file updates. 
@@ -712,7 +299,6 @@ You are the Guardian of Consistency. Your primary function is to execute the 'Gl
 - **Action Summary**: [Concise recap]
 
 ```
-
 ---
 
 ### [File: prompts/agents/implementer.md]
@@ -744,7 +330,6 @@ You are the Architect and Builder of the **Front-end Department**. Transform log
 - **Action Summary**: [Concise recap]
 
 ```
-
 ---
 
 ### [File: prompts/agents/researcher.md]
@@ -776,7 +361,6 @@ You are the Insight Engine of the **Back-end Department**. Transform raw informa
 - **Action Summary**: [Concise recap]
 
 ```
-
 ---
 
 ### [File: prompts/agents/reviewer.md]
@@ -809,7 +393,195 @@ You are the Guardian of Quality and Security for the **Back-end Department**. Yo
 - **Action Summary**: [Concise recap]
 
 ```
+---
 
+
+## 🛠️ FUNCTIONAL SKELETAL (SUMMARY)
+
+### [File: agents/router.md]
+```markdown
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: agents/strategist.md]
+```markdown
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: agents/maintainer.md]
+```markdown
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: agents/implementer.md]
+```markdown
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: agents/researcher.md]
+```markdown
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: agents/reviewer.md]
+```markdown
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: admin/preference.md]
+```markdown
+# User Profile: Preference and Workflow
+
+This file captures the core identity, preferences, and operational style of the User. AI Agents MUST consult this file to ensure all interactions and artifacts are perfectly aligned with the User's personal and professional standards.
+
+## About Me
+- Core Focus: High-level system architecture, automated agentic workflows, and specialized domain knowledge (Investment, IC Design).
+- Thinking Style: First principles, structured decomposition, and system-oriented modularity.
+- Current Role/Context: Architect and orchestrator of an advanced AI Routing System.
+
+## Style and Aesthetics
+- Writing Tone: Precise, professional, and technical.
+- Visual Preference: ASCII-only, clean Markdown structure, no emojis or non-standard characters.
+- Communication: Direct, no filler, summary-first, with explicit Routing Plans and delegation headers.
+
+## Semantic Formatting & Communication (Phase 2 Standard)
+All agents MUST use the following semantic tags to provide high-signal progress and status indicators:
+- `[STARTING]`: Beginning a new task, phase, or research inquiry.
+- `[SUCCESS]`: Task, sub-task, or verification completed successfully.
+- `[ERROR]`: An issue occurred. MUST be followed by a "Root Cause" and "Actionable Fix" section.
+- `[WAITING]`: Paused for user input, environment availability, or sub-agent completion.
+- `[DELEGATING]`: Passing control or a sub-task to another agent.
+- `[NEXT ACTION]`: Explicitly state the immediate next step to be taken.
+
+Use ASCII dividers (e.g., `---`) to separate logical sections of output for better readability.
+
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: admin/state.md]
+```markdown
+# SYSTEM STATE: ACTIVE TRACKER
+
+## Current Mission
+- **Goal**: Establish Automated Manifest Integrity
+- **Status**: `[ACTIVE]`
+- **Progress**: 95%
+
+## Task Breakdown
+| Task ID | Description | Assigned To | Status | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| T-000 | Create Builder | Maintainer | Complete | blueprint_builder.sh live. |
+| T-001 | Update Rules | Maintainer | Complete | Manual manifest writing prohibited. |
+| T-002 | Verify Blueprint | Maintainer | Complete | 1,345 lines (LITERAL). |
+| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.5.0. |
+
+## Known Constraints
+- DO NOT MANUALLY EDIT BLUEPRINT.
+- USE BUILDER SCRIPT ONLY.
+
+## Blockers & Risks
+- [None]
+
+---
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: index/index.md]
+```markdown
+# SYSTEM WIKI: DEFINITIVE MAP
+
+## 🗺️ Strategic Mapping
+- [Topic Map](./topic_map.md): High-level domain taxonomy.
+- [Keywords](./keywords.md): Core terminology.
+- [Active State](../admin/state.md): Mission tracker.
+
+## 🧠 Cognitive Architecture (The Team)
+- [Router](../agents/router.md): **SOLE** User interaction hub.
+- [Strategist](../agents/strategist.md): Master of planning and **Project Scoping**.
+- [Maintainer](../agents/maintainer.md): Guardian of consistency and file updates.
+- [Researcher](../agents/researcher.md): Investigation engine.
+- [Implementer](../agents/implementer.md): Construction specialist.
+- [Reviewer](../agents/reviewer.md): Quality gatekeeper.
+
+## 📂 Operational Workspace
+- [Project Workspace](../projects/README.md): Categorized domain folders (e.g., Investment, IC Design).
+- [Shared Skills](../.gemini/skills/): Functional logic.
+- [Atomic Tools](../tools/README.md): Capabilities.
+- [Manual Operations](../user/README.md): How-to guides.
+
+## 🛡️ Governance & Personal Data (admin/)
+- [Foundational Mandates](../[PROVIDER].md): Provider precedence.
+- [System Mandates](./admin/RULES.md): Laws.
+- [User DNA](./admin/preference.md): Preferences.
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: index/topic_map.md]
+```markdown
+# TOPIC MAP v2.0
+
+## STRUCTURED DOMAINS
+
+### [ENG] Engineering and Architecture
+*   [ARCH] System Design: High-level patterns, microservices, scalability.
+*   [FRONT] Frontend: React (TS/JS), CSS/Styling, UI/UX interaction.
+*   [BACK] Backend: Node.js, Python (FastAPI/Django), API design, SQL/NoSQL.
+*   [OPS] DevOps: CI/CD pipelines, Docker/K8s, Cloud (AWS/GCP), Security Hardening.
+
+### [DATA] Research and Synthesis
+*   [ANALYSIS] Deep Dive: Statistical analysis, trend forecasting, pattern extraction.
+*   [MARKET] Market Intel: Competitor mapping, industry shifts, consumer behavior.
+*   [ACADEMIC] Literature: Paper summaries, citation management, theory exploration.
+
+### [CONTENT] Communication and Assets
+*   [TECH] Technical Docs: API references, system manuals, READMEs.
+*   [COPY] Marketing: Strategy, ad copy, branding voice, SEO.
+*   [CREATIVE] Narrative: Storytelling, scripting, conceptual world-building.
+
+### [STRAT] Strategy and Governance
+*   [PROJ] Management: Agile/Scrum, Roadmap design, Task prioritization.
+*   [BIZ] Business: SWOT, Financial modeling, Growth loops.
+*   [INVEST] Investment: Portfolio strategy, risk assessment, asset allocation.
+*   [RULES] Compliance: GDPR, Security audits, Ethical AI guardrails.
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: index/keywords.md]
+```markdown
+# KEYWORD INDEX v2.0
+
+| Tag | Keyword | Domain | Primary Agent |
+| :--- | :--- | :--- | :--- |
+| [API] | API Design, REST, GraphQL | [ENG-BACK] | Implementer |
+| [CSS] | Styling, UI, UX, Design | [ENG-FRONT] | Implementer |
+| [SEC] | Security, Hardening, Audit | [STRAT-RULES] | Reviewer |
+| [BIZ] | SWOT, Strategy, Growth | [STRAT-BIZ] | Researcher |
+| [DATA] | Analysis, Trends, Patterns | [DATA-ANALYSIS] | Researcher |
+| [DOC] | README, Technical Writing | [CONTENT-TECH] | Implementer |
+| [SYS] | Architecture, Scalability | [ENG-ARCH] | Researcher |
+| [INVEST] | Portfolio, Assets, Risk | [STRAT-INVEST] | Researcher |
+| [IC] | VLSI, RTL, Circuits | [HARD-IC] | Researcher |
+| [LEG] | GDPR, Compliance, Legal | [STRAT-RULES] | Researcher |
+
+---
+... [Skeletal: See source for full implementation details] ...
+```
 ---
 
 ### [File: prompts/skills/implementation.md]
@@ -839,19 +611,8 @@ Transform research and logic into functional reality. Ensure work is idiomatic, 
 2.  Environment Validation: Perform the **Tool Verification Flow** before starting.
 3.  Efficiency: Use token and context efficiency as much as possible.
 
-## Output Structure
-- Current Role: [IMPLEMENTATION]
----
-- `[STARTING]`: [Description of task]
-- Plan: [Brief steps]
-- Artifacts: [Code blocks / File content]
-- Validation: [Security & Correctness verification]
----
-- `[SUCCESS / ERROR]`: [Outcome with semantic tag]
-- `[NEXT ACTION]`: [Next step in the plan]
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: prompts/skills/research.md]
@@ -881,19 +642,8 @@ Transform raw information into structured knowledge. Extract the "Signal from th
 4.  **Strict Citations**: Every claim MUST have a [Source].
 
 ## Output Structure
-- Current Role: [RESEARCH]
----
-- `[STARTING]`: [Description of research inquiry]
-- Executive Summary: [3-5 lines max]
-- Key Insights: [Bulleted list]
-- Detailed Analysis: [The "Deep Dive"]
-- References: [Source list]
----
-- `[SUCCESS / ERROR]`: [Outcome with semantic tag]
-- `[NEXT ACTION]`: [Next step in the plan]
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: prompts/skills/review.md]
@@ -923,18 +673,8 @@ Guardian of quality. Identify edge cases, verify accuracy, and audit adherence t
 4.  **Record**: Upon "PASS", summarize "lessons learned" in `admin/memory/lessons_learned.md`.
 
 ## Output Structure
-- Current Role: [REVIEW]
----
-- `[STARTING]`: [Description of audit]
-- Scorecard: [Correctness | Completeness | Style | Security]
-- Findings: [List of issues]
-- Recommendation: [PASS / FAIL + Action steps]
----
-- `[SUCCESS / ERROR]`: [Outcome with semantic tag]
-- `[NEXT ACTION]`: [Next step in the plan]
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: prompts/skills/routing.md]
@@ -964,15 +704,8 @@ Interpret intent and orchestrate workflows. Act as the cognitive hub to design t
 ## Output Structure
 - Current Role: [ROUTING]
 ---
-- `[STARTING]`: [Description of orchestration plan]
-- Plan: [1. Step A | 2. Step B]
-- Delegation: [Target] -> [Instruction]
----
-- `[SUCCESS / ERROR]`: [Outcome with semantic tag]
-- `[NEXT ACTION]`: [Next step in the plan]
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: tools/github_cli.md]
@@ -1002,25 +735,8 @@ Standardized protocol for managing GitHub repositories and authentication via th
 - **Fedora/CentOS**: `sudo dnf install gh`
 - **Arch**: `sudo pacman -S github-cli`
 
-## Verification
-After installation, verify with:
-```bash
-gh --version
+... [Skeletal: See source for full implementation details] ...
 ```
-
-## Core Operations
-- **Authentication**: `gh auth login`
-- **Repo Creation**: `gh repo create <name> --public --source=. --remote=origin --push`
-- **Status Check**: `gh auth status`
-
-## Tool Protocol (Standard)
-1. **Check**: Verify if `gh` is installed using the platform-appropriate check command.
-2. **Ask**: If missing, present this `.md` file to the user and ask: "Would you like me to install GitHub CLI for your platform?"
-3. **Execute**: Only proceed if user grants permission and the platform-specific package manager is available.
-4. **Alternative**: If user declines, suggest manual installation from the [Official GitHub CLI Website](https://cli.github.com/).
-
-```
-
 ---
 
 ### [File: tools/large_file_processor.md]
@@ -1050,39 +766,8 @@ Enable efficient processing and reading of large text, CSV, and XLSX files witho
 - **qsv**: `winget install --id jqnatividad.qsv` or `scoop install qsv`
 - **ripgrep**: `winget install --id BurntSushi.ripgrep.MSVC`
 
-### 3. Linux
-- **Debian/Ubuntu**: `sudo apt install qsv ripgrep`
-- **Fedora/CentOS**: `sudo dnf install qsv ripgrep`
-- **Arch**: `sudo pacman -S qsv ripgrep`
-
-## Core Operations
-
-### Reading XLSX without high RAM
-- **Convert to CSV (Streaming)**: `qsv excel file.xlsx > temp.csv`
-- **Read First 10 Rows**: `qsv slice --len 10 temp.csv`
-- **Search Large File**: `rg "pattern" large_file.log`
-
-## Native Strategy (Python Chunking Fallback)
-If binaries cannot be installed, use this Python pattern to read in chunks:
-
-```python
-def read_in_chunks(file_path, chunk_size=1024):
-    with open(file_path, 'r') as f:
-        while True:
-            data = f.read(chunk_size)
-            if not data:
-                break
-            yield data
+... [Skeletal: See source for full implementation details] ...
 ```
-
-## Tool Protocol (Standard)
-1. **Check**: Verify if `qsv` and `rg` are installed.
-2. **Ask**: If missing, present this `.md` file and ask: "Would you like me to install qsv and ripgrep for optimized large file processing?"
-3. **Execute**: Only proceed with user permission and appropriate package manager.
-4. **Fallback**: If user declines, use the **Native Strategy** (Python scripts) or standard Unix tools like `less` and `awk`.
-
-```
-
 ---
 
 ### [File: tools/manifest_auditor.sh]
@@ -1112,148 +797,39 @@ CORE_FILES=(
     "agents/reviewer.md"
     "prompts/agents/router.md"
     "prompts/agents/strategist.md"
-    "prompts/agents/maintainer.md"
-    "prompts/agents/implementer.md"
-    "prompts/agents/researcher.md"
-    "prompts/agents/reviewer.md"
-    "prompts/skills/implementation.md"
-    "prompts/skills/research.md"
-    "prompts/skills/review.md"
-    "prompts/skills/routing.md"
-    "tools/github_cli.md"
-    "tools/large_file_processor.md"
-    "user/github.md"
-    "projects/README.md"
-)
-
-echo "[STARTING] Manifest Integrity Audit..."
-discrepancies=0
-
-for f in "${CORE_FILES[@]}"; do
-    if [ ! -f "$f" ]; then
-        echo "[ERROR] Missing source file: $f"
-        discrepancies=$((discrepancies + 1))
-        continue
-    fi
-
-    # Check if the filename exists as a header in the blueprint
-    if ! grep -q "\[File: $f\]" "$BLUEPRINT"; then
-        echo "[ERROR] File not found in blueprint: $f"
-        discrepancies=$((discrepancies + 1))
-        continue
-    fi
-
-    echo "[SUCCESS] Verified: $f is present in blueprint."
-done
-
-if [ $discrepancies -eq 0 ]; then
-    echo "[PASS] All core files are represented in the manifest."
-    exit 0
-else
-    echo "[FAIL] $discrepancies integrity issues found in SYSTEM_BLUEPRINT.md"
-    exit 1
-fi
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: tools/blueprint_builder.sh]
 ```markdown
 #!/bin/bash
 
-# [ABSOLUTE_LITERAL] BLUEPRINT BUILDER
-# This script automatically generates the SYSTEM_BLUEPRINT.md by 
-# concatenating the full literal content of all core system files.
-# This prevents AI-induced truncation during updates.
+# [ABSOLUTE_LITERAL] SKELETAL BLUEPRINT BUILDER
+# This script generates a high-signal manifest of the AI Routing System.
+# Core logic is kept literal, while secondary tools are summarized.
 
 OUTPUT="SYSTEM_BLUEPRINT.md"
-CORE_FILES=(
+LITERAL_FILES=(
     "README.md"
     "AGENTS.md"
     "GEMINI.md"
     "admin/RULES.md"
     "admin/PRECEDENCE.md"
-    "admin/preference.md"
-    "admin/state.md"
-    "index/index.md"
-    "index/topic_map.md"
-    "index/keywords.md"
-    "agents/router.md"
-    "agents/strategist.md"
-    "agents/maintainer.md"
-    "agents/implementer.md"
-    "agents/researcher.md"
-    "agents/reviewer.md"
     "prompts/agents/router.md"
     "prompts/agents/strategist.md"
     "prompts/agents/maintainer.md"
     "prompts/agents/implementer.md"
     "prompts/agents/researcher.md"
     "prompts/agents/reviewer.md"
-    "prompts/skills/implementation.md"
-    "prompts/skills/research.md"
-    "prompts/skills/review.md"
-    "prompts/skills/routing.md"
-    "tools/github_cli.md"
-    "tools/large_file_processor.md"
-    "tools/manifest_auditor.sh"
-    "tools/blueprint_builder.sh"
-    "user/github.md"
-    "projects/README.md"
 )
 
-echo "[STARTING] Literal Blueprint Reconstruction..."
-
-cat <<EOF > "$OUTPUT"
-# [ABSOLUTE_LITERAL] SYSTEM BLUEPRINT: AI ROUTING SYSTEM
-
-This document is the absolute "System Seed." It contains the full, literal content of all core architectural files required to recreate this system from scratch. **ZERO TRUNCATION** is permitted.
-
----
-
-## 📂 DIRECTORY STRUCTURE
-\`\`\`text
-/
-├── agents/             # Persona configurations (YAML Metadata)
-├── prompts/            # Master system instructions (Source of Truth)
-├── index/              # Structural mapping and taxonomies
-├── admin/              # PERSONAL DATA, Governance, Memory, Logs, State, Precedence
-├── projects/           # Categorized domain workspaces
-├── tools/              # Atomic tool definitions
-├── user/               # Manual operation guides
-├── .gemini/            # CLI Functional Registry
-├── AGENTS.md           # AI-to-AI Protocols
-├── [PROVIDER].md       # Foundational Provider Mandates
-└── README.md           # System Overview
-\`\`\`
-
----
-
-## 📄 CORE SYSTEM FILES (LITERAL CONTENT)
-
-EOF
-
-for f in "${CORE_FILES[@]}"; do
-    if [ -f "$f" ]; then
-        echo "Ingesting: $f"
-        echo "### [File: $f]" >> "$OUTPUT"
-        echo "\`\`\`markdown" >> "$OUTPUT"
-        cat "$f" >> "$OUTPUT"
-        echo "" >> "$OUTPUT"
-        echo "\`\`\`" >> "$OUTPUT"
-        echo "" >> "$OUTPUT"
-        echo "---" >> "$OUTPUT"
-        echo "" >> "$OUTPUT"
-    else
-        echo "[WARNING] Missing file: $f"
-    fi
-done
-
-echo "[SUCCESS] SYSTEM_BLUEPRINT.md rebuilt. Total lines: \$(wc -l < "$OUTPUT")"
-
+SKELETAL_FILES=(
+    "agents/router.md"
+    "agents/strategist.md"
+    "agents/maintainer.md"
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: user/github.md]
@@ -1283,30 +859,8 @@ echo "[SUCCESS] SYSTEM_BLUEPRINT.md rebuilt. Total lines: \$(wc -l < "$OUTPUT")"
 
 ## Multi-Device Workflow & Conflict Resolution
 
-### Standard Co-working Flow
-1. **Pull Latest**: Always start a session with `git pull` on your current device.
-2. **Atomic Changes**: Keep edits focused to minimize conflict potential.
-3. **Commit & Push**: Push changes immediately after a mission is complete to keep the remote updated for other devices.
-
-### Handling Merge Conflicts
-If you encounter a conflict during `git pull` or `git merge`:
-1. **Identify**: Run `git status` to see which files are in conflict.
-2. **Resolve**: Open the file and look for conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
-3. **Merge**: Manually edit the file to the desired state (following global system integrity).
-4. **Finalize**: `git add <resolved-file>` followed by `git commit`.
-
-### Advanced Synchronization
-- **Stash**: `git stash` (Temporarily shelf uncommitted changes)
-- **Pop**: `git stash pop` (Re-apply stashed changes)
-- **Rebase**: `git pull --rebase` (Apply local changes on top of remote changes)
-
-## Best Practices
-- **Atomic Commits**: Group related changes into a single commit.
-- **Pull Before Push**: Always pull the latest changes before pushing to avoid conflicts.
-- **Clean Diffs**: Review your diffs before staging to ensure no accidental changes.
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 
 ### [File: projects/README.md]
@@ -1336,10 +890,7 @@ Projects are categorized into sub-directories based on their high-level domain:
 
 ## Mission Execution Flow
 1. **Creation**: The Strategist identifies the correct category and proposes a mission folder (e.g., `projects/strategy/adi_stock/`).
-2. **Isolation**: All research notes, intermediate artifacts, and final reports for that mission MUST be stored within that specific folder.
-3. **Completion**: Upon success, the Reviewer audits the project folder for completeness before the mission is closed.
-
+... [Skeletal: See source for full implementation details] ...
 ```
-
 ---
 

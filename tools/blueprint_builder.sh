@@ -1,34 +1,36 @@
 #!/bin/bash
 
-# [ABSOLUTE_LITERAL] BLUEPRINT BUILDER
-# This script automatically generates the SYSTEM_BLUEPRINT.md by 
-# concatenating the full literal content of all core system files.
-# This prevents AI-induced truncation during updates.
+# [ABSOLUTE_LITERAL] SKELETAL BLUEPRINT BUILDER
+# This script generates a high-signal manifest of the AI Routing System.
+# Core logic is kept literal, while secondary tools are summarized.
 
 OUTPUT="SYSTEM_BLUEPRINT.md"
-CORE_FILES=(
+LITERAL_FILES=(
     "README.md"
     "AGENTS.md"
     "GEMINI.md"
     "admin/RULES.md"
     "admin/PRECEDENCE.md"
-    "admin/preference.md"
-    "admin/state.md"
-    "index/index.md"
-    "index/topic_map.md"
-    "index/keywords.md"
-    "agents/router.md"
-    "agents/strategist.md"
-    "agents/maintainer.md"
-    "agents/implementer.md"
-    "agents/researcher.md"
-    "agents/reviewer.md"
     "prompts/agents/router.md"
     "prompts/agents/strategist.md"
     "prompts/agents/maintainer.md"
     "prompts/agents/implementer.md"
     "prompts/agents/researcher.md"
     "prompts/agents/reviewer.md"
+)
+
+SKELETAL_FILES=(
+    "agents/router.md"
+    "agents/strategist.md"
+    "agents/maintainer.md"
+    "agents/implementer.md"
+    "agents/researcher.md"
+    "agents/reviewer.md"
+    "admin/preference.md"
+    "admin/state.md"
+    "index/index.md"
+    "index/topic_map.md"
+    "index/keywords.md"
     "prompts/skills/implementation.md"
     "prompts/skills/research.md"
     "prompts/skills/review.md"
@@ -41,12 +43,12 @@ CORE_FILES=(
     "projects/README.md"
 )
 
-echo "[STARTING] Literal Blueprint Reconstruction..."
+echo "[STARTING] Skeletal Blueprint Construction..."
 
 cat <<EOF > "$OUTPUT"
 # [ABSOLUTE_LITERAL] SYSTEM BLUEPRINT: AI ROUTING SYSTEM
 
-This document is the absolute "System Seed." It contains the full, literal content of all core architectural files required to recreate this system from scratch. **ZERO TRUNCATION** is permitted.
+This document serves as the high-signal "System Seed." It contains the literal content of all core architectural laws and a skeletal manifest of secondary tools and structures.
 
 ---
 
@@ -68,23 +70,40 @@ This document is the absolute "System Seed." It contains the full, literal conte
 
 ---
 
-## 📄 CORE SYSTEM FILES (LITERAL CONTENT)
+## 📜 CORE LOGIC (LITERAL)
 
 EOF
 
-for f in "${CORE_FILES[@]}"; do
+for f in "${LITERAL_FILES[@]}"; do
     if [ -f "$f" ]; then
-        echo "Ingesting: $f"
+        echo "Ingesting Literal: $f"
         echo "### [File: $f]" >> "$OUTPUT"
         echo "\`\`\`markdown" >> "$OUTPUT"
         cat "$f" >> "$OUTPUT"
         echo "" >> "$OUTPUT"
         echo "\`\`\`" >> "$OUTPUT"
-        echo "" >> "$OUTPUT"
         echo "---" >> "$OUTPUT"
         echo "" >> "$OUTPUT"
-    else
-        echo "[WARNING] Missing file: $f"
+    fi
+done
+
+cat <<EOF >> "$OUTPUT"
+
+## 🛠️ FUNCTIONAL SKELETAL (SUMMARY)
+
+EOF
+
+for f in "${SKELETAL_FILES[@]}"; do
+    if [ -f "$f" ]; then
+        echo "Ingesting Skeletal: $f"
+        echo "### [File: $f]" >> "$OUTPUT"
+        echo "\`\`\`markdown" >> "$OUTPUT"
+        # Extract the first section or objective
+        head -n 25 "$f" | sed '/^---/q' >> "$OUTPUT"
+        echo "... [Skeletal: See source for full implementation details] ..." >> "$OUTPUT"
+        echo "\`\`\`" >> "$OUTPUT"
+        echo "---" >> "$OUTPUT"
+        echo "" >> "$OUTPUT"
     fi
 done
 

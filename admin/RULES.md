@@ -3,9 +3,10 @@
 ## OPERATIONAL PREREQUISITES
 1.  **Rules Precedence Hierarchy**: Agents MUST follow the 6-tier hierarchy defined in `admin/PRECEDENCE.md`. In case of conflict, higher-tier mandates always trump lower-tier ones.
 2.  **System-First Approach**: Agents MUST consult the instructions in this system first and follow them as the primary approach for any mission.
-3.  **Zero-Truncation & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` MUST NEVER be truncated. 
-    - To maintain `SYSTEM_BLUEPRINT.md`, agents MUST execute `./tools/blueprint_builder.sh`.
-    - Manual writing of the blueprint is strictly PROHIBITED to prevent AI truncation errors.
+3.  **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` serve as skeletal system seeds.
+    - **Logic Integrity**: ALL core mandates, protocols, and departmental personas MUST be kept literal and non-truncated.
+    - **Structural Skeletal**: Basic tools and data files should be represented via structural summaries (Objective/Schema) to optimize portability.
+    - **Builder Script**: Agents MUST execute `./tools/blueprint_builder.sh` to generate the manifest. Manual writing is strictly PROHIBITED.
 4.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
 5.  **Router First**: ALL interactions MUST go to the Router first.
 6.  **Strategist Support**: The Strategist [BE] owns mission design and project scoping.
