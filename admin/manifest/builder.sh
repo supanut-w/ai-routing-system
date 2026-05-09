@@ -4,7 +4,10 @@
 # This script generates a high-signal manifest of the AI Routing System.
 # Core logic is kept literal, while secondary tools are summarized.
 
-OUTPUT="SYSTEM_BLUEPRINT.md"
+# Run from project root
+cd "$(dirname "$0")/../.."
+
+OUTPUT="admin/manifest/BLUEPRINT.md"
 LITERAL_FILES=(
     "README.md"
     "AGENTS.md"
@@ -39,9 +42,9 @@ SKELETAL_FILES=(
     "prompts/skills/routing.md"
     "tools/github_cli.md"
     "tools/large_file_processor.md"
-    "tools/html_reporter.md"
-    "tools/manifest_auditor.sh"
-    "tools/blueprint_builder.sh"
+    "tools/interactive_ui.md"
+    "admin/manifest/auditor.sh"
+    "admin/manifest/builder.sh"
     "user/github.md"
     "projects/README.md"
 )
@@ -62,6 +65,7 @@ This document serves as the high-signal "System Seed." It contains the literal c
 ├── prompts/            # Master system instructions (Source of Truth)
 ├── index/              # Structural mapping and taxonomies
 ├── admin/              # PERSONAL DATA, Governance, Memory, Logs, State, Precedence
+│   └── manifest/       # Specialized Manifest Tools & Seeds
 ├── projects/           # Categorized domain workspaces
 ├── tools/              # Atomic tool definitions
 ├── user/               # Manual operation guides
@@ -99,7 +103,7 @@ EOF
 for f in "${SKELETAL_FILES[@]}"; do
     if [ -f "$f" ]; then
         echo "Ingesting Skeletal: $f"
-        echo "### [File: $f]" >> "$OUTPUT"
+        echo "### [File: $f] (Skeletal)" >> "$OUTPUT"
         echo "\`\`\`markdown" >> "$OUTPUT"
         # Extract the first section or objective
         head -n 25 "$f" | sed '/^---/q' >> "$OUTPUT"
@@ -110,4 +114,4 @@ for f in "${SKELETAL_FILES[@]}"; do
     fi
 done
 
-echo "[SUCCESS] SYSTEM_BLUEPRINT.md rebuilt. Total lines: \$(wc -l < "$OUTPUT")"
+echo "[SUCCESS] BLUEPRINT.md rebuilt. Total lines: \$(wc -l < "$OUTPUT")"

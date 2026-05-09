@@ -1,10 +1,13 @@
 #!/bin/bash
 
 # [ABSOLUTE_LITERAL] MANIFEST AUDITOR
-# This script verifies that the SYSTEM_BLUEPRINT.md contains the full 
+# This script verifies that the BLUEPRINT.md contains the full 
 # literal content of all core system files by comparing line counts.
 
-BLUEPRINT="SYSTEM_BLUEPRINT.md"
+# Run from project root
+cd "$(dirname "$0")/../.."
+
+BLUEPRINT="admin/manifest/BLUEPRINT.md"
 CORE_FILES=(
     "README.md"
     "AGENTS.md"
@@ -36,9 +39,9 @@ CORE_FILES=(
     "prompts/skills/routing.md"
     "tools/github_cli.md"
     "tools/large_file_processor.md"
-    "tools/html_reporter.md"
-    "tools/manifest_auditor.sh"
-    "tools/blueprint_builder.sh"
+    "tools/interactive_ui.md"
+    "admin/manifest/auditor.sh"
+    "admin/manifest/builder.sh"
     "user/github.md"
     "projects/README.md"
 )
@@ -67,6 +70,6 @@ if [ $discrepancies -eq 0 ]; then
     echo "[PASS] All core files are represented in the manifest."
     exit 0
 else
-    echo "[FAIL] $discrepancies integrity issues found in SYSTEM_BLUEPRINT.md"
+    echo "[FAIL] $discrepancies integrity issues found in BLUEPRINT.md"
     exit 1
 fi
