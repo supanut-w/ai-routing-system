@@ -26,3 +26,4 @@
 18. DNA Alignment: Adhere to `admin/preference.md`.
 19. Audit Trail: Log all changes in `admin/logs/`.
 20. Session Awareness: Provide a concise summary of current state at the start of every session (Working Directory, Mandates, System Version).
+21. Mandatory Referencing: Every response containing factual claims or research MUST include explicit references (direct links or retrieval paths). No uncited research is permitted.
