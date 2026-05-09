@@ -1,23 +1,21 @@
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Optimize Skill Library (v5.2.0)
-- **Status**: `[IDLE]`
-- **Progress**: 100%
+- **Goal**: Establish Dynamic Deep-Search Protocol
+- **Status**: `[ACTIVE]`
+- **Progress**: 95%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Re-architect Skill Directory | Maintainer | Complete | sys/data/fe/qa categories live. |
-| T-001 | Create Skill Atoms | Maintainer | Complete | 9 specialized recipes live. |
-| T-002 | Refine Personas | Maintainer | Complete | 7 agents updated for holistic awareness. |
-| T-003 | Update Manifest Automation | Maintainer | Complete | builder.sh & auditor.sh updated. |
-| T-004 | Sync Blueprint | Maintainer | Complete | v5.2.0 manifest audited. |
-| T-005 | Commit & Push | Implementer | Complete | System v5.2.0 live. |
+| T-000 | Define Protocol | Router | Complete | Heuristics & Ambiguity Check live. |
+| T-001 | Update Skills | Maintainer | Complete | Source-vetting atom updated. |
+| T-002 | Sync Blueprint | Maintainer | Complete | Manifest v5.4.0 live. |
+| T-003 | Commit & Push | Implementer | In Progress | Finalizing v5.4.0. |
 
 ## Known Constraints
-- Skill Atoms MUST be kept literal in manifest.
-- Agents MUST dynamically discover skills via System Wiki.
+- Researcher MUST stop and decompose vague queries.
+- Creative identity mapping mandated.
 
 ## Blockers & Risks
 - [None]
