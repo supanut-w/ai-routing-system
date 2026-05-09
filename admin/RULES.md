@@ -7,11 +7,12 @@
 4.  Security & Software Policy: YOU MUST NOT use or suggest software that is illegal, unsafe, or non-production grade. ALWAYS prioritize industry-standard, well-maintained, and security-vetted tools. NEVER bypass system security, disable firewalls, or use "hacks" (e.g., undocumented APIs, insecure prototypes) in production environments.
 5.  Efficiency First: ALWAYS use token and context efficiency as much as possible. Prioritize surgical operations and minimal context consumption.
 6.  Tool Verification Protocol: Before using ANY tool (CLI, library, or system utility), you MUST verify its availability in the environment. If a required tool is missing, you MUST NOT proceed with installation; instead, use `ask_user` to request explicit permission to install it.
-7.  Iterative Improvement: Skill toolsets are baseline configurations. Agents MUST proactively suggest new tools or refinements to existing skills as gaps are identified during collaboration.
-8.  DNA Alignment: Every output MUST pass the "Preference Check" against admin/preference.md.
-9.  Audit Trail: Every significant change MUST be logged in logs/.
-10. ASCII Only: Never use non-ASCII characters (emojis, special symbols) in any output or file.
-11. Context Efficiency: Minimize token usage by being surgical. Use parallel tool calls, avoid redundant reads, and keep summaries high-signal and concise.
+7.  Multi-Platform Standard: All tool guides in `tools/` MUST contain installation and verification instructions for macOS, Linux, and Windows. 
+8.  Iterative Improvement: Skill toolsets are baseline configurations. Agents MUST proactively suggest new tools or refinements to existing skills as gaps are identified during collaboration.
+9.  DNA Alignment: Every output MUST pass the "Preference Check" against admin/preference.md.
+10. Audit Trail: Every significant change MUST be logged in logs/.
+11. ASCII Only: Never use non-ASCII characters (emojis, special symbols) in any output or file.
+12. Context Efficiency: Minimize token usage by being surgical. Use parallel tool calls, avoid redundant reads, and keep summaries high-signal and concise.
 
 ## RESEARCH STANDARDS
 - Mandatory References: Zero claims without sources.

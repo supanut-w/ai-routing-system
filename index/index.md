@@ -6,10 +6,13 @@
 - [Active State](./state.md): Real-time tracker for missions and task progress.
 
 ## 🧠 Cognitive Architecture (The "Who")
-- [Router](../agents/router.md): Sole entry point and cognitive hub.
-- [Researcher](../agents/researcher.md): Investigation and synthesis engine.
-- [Implementer](../agents/implementer.md): Construction and building specialist.
-- [Reviewer](../agents/reviewer.md): Quality and security gatekeeper.
+### 1. Functional Registry
+Location: `.gemini/agents/`
+- Registry for CLI agent discovery (Router, Researcher, Implementer, Reviewer).
+
+### 2. Persona Configs
+Location: `agents/`
+- Master YAML metadata for each agent.
 
 ## 📜 Source of Truth (The "Instructions")
 - [Agent Prompts](../prompts/agents/): Personas and behavioral logic.
@@ -17,7 +20,9 @@
 
 ## 🛠️ Operational Infrastructure (The "How")
 - [Shared Skills](../.gemini/skills/): Functional logic for specialized agents.
-- [Atomic Tools](../tools/README.md): Single-purpose capability definitions.
+- [Atomic Tools](../tools/README.md): Registry of single-purpose capabilities.
+  - [GitHub CLI](../tools/github_cli.md): Repo management and auth.
+  - [Large File Processor](../tools/large_file_processor.md): Optimized xlsx/text processing.
 - [Manual Operations](../user/README.md): How-to guides for manual tasks (GitHub, etc.).
 
 ## 🛡️ Governance (The "Rules")
