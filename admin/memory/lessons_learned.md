@@ -29,3 +29,8 @@
 - **Insight**: System improvement files (e.g., IDEAS.md) often default to a flat list, failing to reflect the "Triple-Departmental Structure" mandated in `admin/RULES.md`.
 - **Action**: Restructured the improvement backlog into explicit Front-end, Back-end Logic, and Back-end Quality sections.
 - **Outcome**: Improved architectural clarity and ensured all agent roles are considered in the system's growth roadmap.
+
+## 7. Dynamic System Evolution (Growth)
+- **Insight**: The User expects the system to "grow" and persist learned preferences across sessions by updating the core orchestration engine.
+- **Action**: Established a pattern of updating `admin/RULES.md` and creating corresponding log entries in `admin/logs/` when new mandates are requested.
+- **Outcome**: Transparent and persistent evolution of the AI Routing System's DNA.

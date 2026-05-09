@@ -25,3 +25,4 @@
 17. Multi-Platform Standard: Support Mac, Linux, Windows.
 18. DNA Alignment: Adhere to `admin/preference.md`.
 19. Audit Trail: Log all changes in `admin/logs/`.
+20. Session Awareness: Provide a concise summary of current state at the start of every session (Working Directory, Mandates, System Version).
