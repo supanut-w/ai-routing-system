@@ -206,6 +206,48 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 ```
 ---
 
+### [File: admin/state.md]
+```markdown
+# SYSTEM STATE: ACTIVE TRACKER
+
+## Current Mission
+- **Goal**: ADI Stock Research & Interactive Dashboard
+- **Status**: `ACTIVE`
+- **Progress**: 90%
+
+## Task Breakdown
+| Task ID | Description | Assigned To | Status | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| T-101 | [RESEARCH] Financial & Quantitative Analysis | Researcher | COMPLETE | Revenue, Margins, FCF, Debt. |
+| T-102 | [MARKET] Competitive Landscape & Moat | Researcher | COMPLETE | TI, NXPI, MCHP comparison. |
+| T-103 | [ANALYSIS] Strategic Outlook & Risk | Researcher | COMPLETE | Industrial/Auto growth, supply chain. |
+| T-104 | [IMPLEMENT] Interactive UI Dashboard | Implementer | COMPLETE | Based on tools/interactive_ui.md. |
+| T-105 | [REVIEW] Final Strategic Audit | Reviewer | IN PROGRESS | Accuracy & Insight Density check. |
+
+## ADI Stock Research Tracker
+- Goal: ADI Stock Research
+- Tasks: T-101 to T-105
+- Status: ACTIVE
+
+## Known Constraints
+- Agents MUST ask user for external paths.
+- Every project must have a local index.
+
+## Blockers & Risks
+- [None]
+
+## System Integrity Logs
+| Date | Action | Status | Notes |
+| :--- | :--- | :--- | :--- |
+| 2024-05-24 | Auditor Persona Synchronization | COMPLETE | Synced prompts/agents/auditor.md to agents/ and .gemini/agents/. |
+| 2026-05-09 | Mission Audit and State Correction | COMPLETE | Updated T-101 to T-104 to COMPLETE, T-105 to IN PROGRESS. Progress 90%. |
+
+---
+*Note: This file is a living document updated by the Maintainer during per-turn synchronization.*
+
+```
+---
+
 ### [File: prompts/agents/router.md]
 ```markdown
 # AI AGENT: THE ROUTER [FRONT-END]
@@ -492,6 +534,26 @@ You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers 
 
 ### [File: agents/auditor.md] (Skeletal)
 ```markdown
+# AI AGENT: THE AUDITOR [BACK-END]
+
+## Core Directive
+You are the Guardian of Intent. Your primary function is to perform a final alignment audit before any response is delivered to the user.
+
+## System & Team Awareness
+You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers what the user actually asked for.
+1. **Wiki Consultation**: Refer to `index/index.md` to understand the full mission lifecycle and where the final artifacts reside.
+2. **Intent Matching**: Compare the original mission intent against the team's output.
+3. **Departmental Audit**: Verify that the Front-end and Back-end teams have stayed within their architectural boundaries.
+
+## Operational Protocol
+1.  **Alignment Audit**: Compare the original User Prompt + the Strategist's Plan against the Team's final output.
+2.  **Intent Verification**: Verify that no requirements were missed and no scope drift occurred.
+3.  **Approval Flow**:
+    - **PASS**: Hand off to the Maintainer for the final sync.
+    - **FAIL**: Send back to the team with a "Realignment Critique."
+
+## Output Structure
+- Current Role: [AUDITOR | BACK-END]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -524,36 +586,6 @@ All agents MUST use the following semantic tags to provide high-signal progress 
 
 Use ASCII dividers (e.g., `---`) to separate logical sections of output for better readability.
 
-... [Skeletal: See source for full implementation details] ...
-```
----
-
-### [File: admin/state.md] (Skeletal)
-```markdown
-# SYSTEM STATE: ACTIVE TRACKER
-
-## Current Mission
-- **Goal**: Finalize System Infrastructure (Skeletal, Interactive, Holistic)
-- **Status**: `[IDLE]`
-- **Progress**: 100%
-
-## Task Breakdown
-| Task ID | Description | Assigned To | Status | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| T-000 | Establish Manifest Tools | Maintainer | Complete | admin/manifest/ isolation live. |
-| T-001 | Generalize UI Tool | Maintainer | Complete | tools/interactive_ui.md live. |
-| T-002 | Mandate Awareness | Router | Complete | Persona updates live. |
-| T-003 | Rebuild Blueprint | Maintainer | Complete | v4.9.0 skeletal manifest live. |
-| T-004 | Commit & Push | Implementer | Complete | System v4.9.0 synchronized. |
-
-## Known Constraints
-- Use 'Interactive Decision Protocol' for all UI checkpoints.
-- Follow 'Rules Precedence Hierarchy'.
-
-## Blockers & Risks
-- [None]
-
----
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
@@ -908,6 +940,7 @@ LITERAL_FILES=(
     "GEMINI.md"
     "admin/RULES.md"
     "admin/PRECEDENCE.md"
+    "admin/state.md"
     "prompts/agents/router.md"
     "prompts/agents/strategist.md"
     "prompts/agents/maintainer.md"
@@ -916,7 +949,6 @@ LITERAL_FILES=(
     "prompts/agents/reviewer.md"
     "prompts/agents/auditor.md"
 )
-
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
