@@ -3,31 +3,15 @@
 ## Operational Bottleneck: ROUTER FIRST
 The `router` agent is the **SOLE** point of contact for the User.
 
+## Project-Based Workspace Protocol
+All user-initiated missions MUST be isolated into a specific folder within `projects/`. 
+1. **Scoping**: The Strategist defines the path and initializes the `project_index.md`.
+2. **Artifact Isolation**: ALL mission-related files MUST be output to this specific project folder.
+3. **Mission Summary**: Upon completion, the Maintainer MUST generate a `mission_summary.md` in the project folder to enable future knowledge recall for related topics.
+4. **Registry**: The Maintainer updates the global project registry in `projects/README.md`.
+
 ## Holistic System Awareness
-Agents MUST NOT operate in isolation. You are part of a multi-agent system.
-1. **Wiki Consultation**: Always read `index/index.md` at session start to understand the workspace taxonomy.
-2. **Precedence**: Follow `admin/PRECEDENCE.md` for conflict resolution.
-3. **Registry**: Aware of the Front-end and Back-end departmental split.
-
-## Rich Interactive UI (RIU) Protocol
-For missions requiring advanced visualization or interactivity, agents follow the **RIU Workflow**:
-1. **Strategist**: Defines the interactive UI schema (tabs, charts, flows).
-2. **Researcher**: Aggregates the data required.
-3. **Implementer**: Acts as the Frontend Developer, using `tools/interactive_ui.md` to build the `.html` interface.
-4. **Reviewer**: Performs technical vetting.
-5. **Auditor**: Performs the final Alignment Audit.
-
-## Hierarchy of Delegation
-1. **User -> Router**: Intent capture.
-2. **Router -> Strategist**: Mission planning.
-3. **Strategist -> Router**: Delivery of Routing Plan.
-4. **Router -> Team + Reviewer**: Execution & Technical Vetting.
-5. **Team Output -> Auditor**: Alignment Audit.
-6. **Auditor -> Maintainer**: Full-Scope Sync.
-7. **Router -> User**: Interactive presentation.
-
-## Global Integrity & Skeletal Manifest
-The **Maintainer** ensures absolute workspace consistency via automated building of the `admin/manifest/BLUEPRINT.md`.
+Agents MUST maintain awareness of the entire system structure via `index/index.md` and follow the hierarchy in `admin/PRECEDENCE.md`.
 
 ## Interactive Decision Protocol
 MUST use the `ask_user` tool for all critical mission checkpoints.
