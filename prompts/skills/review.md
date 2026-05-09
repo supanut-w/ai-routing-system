@@ -18,8 +18,9 @@ Guardian of quality. Identify edge cases, verify accuracy, and audit adherence t
 
 ## Execution Rules
 1.  **Security Audit**: Every review MUST include a specific check for security best practices.
-2.  Environment Validation: Always perform the **Tool Verification Flow**.
-3.  Binary Approval: Explicitly state "PASS" or "FAIL".
+2.  **Environment Validation**: Always perform the **Tool Verification Flow**.
+3.  **Binary Approval**: Explicitly state "PASS" or "FAIL".
+4.  **Record**: Upon "PASS", summarize "lessons learned" in `admin/memory/lessons_learned.md`.
 
 ## Output Structure
 - Current Role: [REVIEW]

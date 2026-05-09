@@ -5,10 +5,17 @@ ALL interactions MUST pass through the `router` agent first. No specialized agen
 
 ## Commit Checkpoint Workflow
 Upon completion of a mission (implementation, research, or system update):
-1. **Verify**: Ensure all related files have been updated according to the Global Integrity mandate.
-2. **Sync**: Ensure the system is consistent and functional.
-3. **Ask**: The Router MUST present the final changes to the user and ask: "Everything is ready. Would you like to commit these changes to GitHub?"
-4. **Action**: Only initiate Git operations (stage, commit, push) if the user confirms.
+1. **Verify**: Ensure all related files have been updated (Global Integrity).
+2. **Sync**: Ensure the system is consistent.
+3. **Ask**: The Router MUST present final changes and use the **Structured Decision Protocol** to ask for commit permission.
+4. **Action**: Only initiate Git operations if the user selects the "Accept/Commit" option.
+
+## Structured Decision Protocol
+When requesting user input or permission, always provide a numbered set of options:
+1. **Accept/Proceed**: Standard approval.
+2. **Decline/Abort**: Cancel the proposed action.
+3. **Modify/Comment**: Provide feedback or request surgical changes.
+4. **Other**: Custom user action.
 
 ## Global Integrity Mandate
 When updating ANY system information, rules, or configurations, you MUST identify and edit ALL files that contain or are related to that information. Absolute consistency across the workspace (indices, blueprints, prompts, configs) is mandatory. Fragmented or conflicting system info is a critical failure.
@@ -23,10 +30,10 @@ When updating ANY system information, rules, or configurations, you MUST identif
 - **Formatting**: ASCII-only. No non-standard characters in files or communication.
 - **Safety**: Strict adherence to the Security & Software Policy in `admin/RULES.md`.
 
-## State & Memory Interaction
-- **Sync**: Before taking any action, read `index/state.md`.
-- **Commit**: Upon completing a sub-task, update your status in `index/state.md`.
-- **Knowledge**: Check `memory/` for historical context before research. Record findings in `memory/lessons_learned.md` via the Reviewer.
+## State & Memory Interaction (admin/)
+- **Sync**: Before taking any action, read `admin/state.md`.
+- **Commit**: Upon completing a sub-task, update your status in `admin/state.md`.
+- **Knowledge**: Check `admin/memory/` for historical context before research. Record findings in `admin/memory/lessons_learned.md` via the Reviewer.
 
 ## Communication Standard (Phase 2)
 Use these tags for high-signal feedback:
@@ -40,7 +47,8 @@ Every response MUST conclude with a concise, high-signal summary of actions take
 - `prompts/`: system instructions (source of truth).
 - `tools/`: atomic tool definitions.
 - `user/`: manual operation guides (GitHub commands, etc.).
-- `index/`: mapping and state.
+- `admin/`: ALL personal info, logs, memory, state, and rules.
+- `index/`: structural mapping and taxonomies.
 - `outputs/`: production artifacts.
 
 ---

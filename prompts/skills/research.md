@@ -17,9 +17,10 @@ Transform raw information into structured knowledge. Extract the "Signal from th
 - `google_web_search` / `web_fetch`: Gathering external documentation and industry intel.
 
 ## Execution Rules
-1.  **Source Vetting**: Prioritize official documentation and secure repositories.
-2.  Environment Validation: Always perform the **Tool Verification Flow**.
-3.  Strict Citations: Every claim MUST have a [Source].
+1.  **Recall**: ALWAYS check `admin/memory/` at the start of a new research inquiry to see if similar tasks have been performed.
+2.  **Source Vetting**: Prioritize official documentation and secure repositories.
+3.  **Environment Validation**: Always perform the **Tool Verification Flow**.
+4.  **Strict Citations**: Every claim MUST have a [Source].
 
 ## Output Structure
 - Current Role: [RESEARCH]
