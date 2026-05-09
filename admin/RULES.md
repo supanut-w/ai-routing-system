@@ -1,29 +1,31 @@
-# SYSTEM MANDATES (v4.15)
+# SYSTEM MANDATES (v5.0)
 
 ## OPERATIONAL PREREQUISITES
-1.  **System-First Approach**: Agents MUST consult local instructions first.
-2.  **The Harness & Specialist Framework (Chef & Recipe)**: 
-    - **Agent (The Chef)**: The primary active entity. Agent = LLM (Brain/CPU) + Tools + Agentic Loop.
-    - **Skills (The Recipes)**: Passive instructions/manuals. 
-3.  **Subagent Core Principles**:
-    - **Context Preservation**: Subagents MUST keep the main session context clean. They perform intensive work in their own "room" and report only high-signal results to the main thread.
-    - **Tool Boundaries (Security)**: Agents MUST have strict, pinned tool allowlists at their identity level (locked tool belts).
-    - **Orthogonal Specialization**: Agents MUST have genuinely different, non-overlapping jobs with specific tool belts.
-4.  **Agent Optimization Protocol**: Use YAML to pin models and tools based on Cost vs. Reasoning.
-5.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
-6.  **Project-Scoped Outputs**: Artifacts -> Root | Records -> `projects/`.
-7.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
-8.  **Router First**: ALL user interactions MUST go to the Router first.
-9.  **Strategist Support**: The Strategist [BE] owns mission design and **Resource Allocation** (Mind).
-10. **Maintainer Ownership**: The Maintainer [BE] owns all file updates (Body).
-11. **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh` for blueprints. Manual writing is PROHIBITED.
-12. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
-13. **Holistic Awareness**: Agents MUST maintain awareness of the entire system (`index/index.md`).
-14. Commit Checkpoint Workflow: Router MUST ask permission before committing.
-15. Portability & Synchronization: GitHub-centralized support.
-16. Security & Software Policy: Legal, production-grade tools only.
-17. Multi-Platform Standard: Support Mac, Linux, Windows.
-18. DNA Alignment: Adhere to `admin/preference.md`.
-19. Audit Trail: Log all changes in `admin/logs/`.
-20. Session Awareness: Provide a concise summary of current state at the start of every session (Working Directory, Mandates, System Version).
-21. Mandatory Referencing: Every response containing factual claims or research MUST include explicit references (direct links or retrieval paths). No uncited research is permitted.
+1.  **System-First Approach**: Agents MUST consult local instructions (README, RULES, AGENTS, index/) first and follow them as the primary approach.
+2.  **Continuous Learning & Refactoring**: Agents MUST evolve by reflecting on task failures or inefficiencies. The Maintainer is authorized to refactor `SKILL.md` files based on lessons learned to prevent recurring errors.
+3.  **Validation Harness**: Before finalizing any major mission or system update, the Reviewer MUST run an "Eval Loop" using the `fixtures/` directory to check for regressions or accuracy.
+4.  **Heartbeat Protocol**: At the start of every session, the Router MUST perform a "System Pulse" by reading `index/state.md` and the latest `admin/RULES.md` to ensure the team is synchronized.
+5.  **The Harness & Specialist Framework (Chef & Recipe)**: 
+    - **Agent (The Chef)**: LLM (CPU) + Tools + Loop. The active driver.
+    - **Skills (The Recipes)**: Passive instructions. Need a Chef to execute them.
+6.  **Subagent Core Principles**:
+    - **Context Preservation**: Subagents keep the main session clean.
+    - **Tool Boundaries**: Strict tool allowlists in YAML.
+    - **Orthogonal Specialization**: Distinct jobs, unique tool belts.
+7.  **Agent Optimization Protocol**: Pin models/tools based on Cost vs. Reasoning.
+8.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
+9.  **Project-Scoped Outputs**: Artifacts -> Root | Records -> `projects/`. Mission Summaries are mandatory for recall.
+10. **Interactive Decision Protocol**: Use the `ask_user` tool for all permissions.
+11. **Router First**: ALL user interactions MUST go to the Router first.
+12. **Strategist Support**: The Strategist [BE] owns mission design (Mind).
+13. **Maintainer Ownership**: The Maintainer [BE] owns file updates and manifest integrity (Body).
+14. **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh`. Manual writing is PROHIBITED.
+15. **Automation & Cleanup**: Use scripts for repetitive tasks; clean up `tmp/` immediately.
+16. **Project-Based Workspace**: Isolate user missions in `projects/` folders.
+17. **Holistic Awareness**: Agents MUST maintain awareness of the entire system (`index/index.md`).
+18. Commit Checkpoint Workflow: Router MUST ask permission before committing.
+19. Portability & Synchronization: GitHub-centralized support.
+20. Security & Software Policy: Legal, production-grade tools only.
+21. Multi-Platform Standard: Support Mac, Linux, Windows.
+22. DNA Alignment: Adhere to `admin/preference.md`.
+23. Audit Trail: Log all changes in `admin/logs/`.

@@ -1,48 +1,45 @@
-# AI ROUTING SYSTEM (v4.11.2)
+# AI ROUTING SYSTEM (v5.0)
 
 ## Overview
-A high-efficiency, multi-agent orchestration system implementing a **Router-First** Clean Architecture.
+A high-efficiency, multi-agent orchestration system implementing a **Router-First** Clean Architecture. Version 5.0 introduces the **Continuous Learning & Validation** framework, enabling self-improving skills and automated evaluation harnesses.
 
 ## 🚀 Session Initialization & Cognitive Flow
 ```text
 [ START SESSION ]
        |
        v
-1. [ FOUNDATIONAL ]   <-- [PROVIDER].md (Absolute Precedence)
+1. [ HEARTBEAT ]      <-- Router pulses index/state.md & admin/RULES.md
        |
        v
-2. [ GLOBAL CONFIG ]  <-- [GLOBAL_CONFIG_PATH] (User DNA)
+2. [ FOUNDATIONAL ]   <-- [PROVIDER].md (Absolute Precedence)
        |
        v
-3. [ SYSTEM RULES ]   <-- admin/RULES.md (Operational Laws)
+3. [ GLOBAL CONFIG ]  <-- [GLOBAL_CONFIG_PATH] (User DNA)
        |
        v
-4. [ STRUCTURAL MAP ] <-- index/index.md (The "GPS")
-       |                  AGENTS.md (Interaction protocols)
-       v
-5. [ MISSION START ]  <-- User Prompt intercepted by ROUTER [FE]
+4. [ MISSION START ]  <-- User Prompt intercepted by ROUTER [FE]
        |
        v
-6. [ STRATEGY ]       <-- Router delegates planning to STRATEGIST [BE]
+5. [ STRATEGY ]       <-- Router delegates planning to STRATEGIST [BE]
+       |                  Strategist chooses Workflow (Skill vs. Loop)
+       v
+6. [ EXECUTION ]      <-- Router executes via Team + REVIEWER [BE-Quality]
+       |                  Reviewer runs VALIDATION HARNESS (fixtures/)
+       v
+7. [ ALIGNMENT ]      <-- AUDITOR [BE-Quality] verifies intent match
        |
        v
-7. [ EXECUTION ]      <-- Router executes via Team + REVIEWER [BE-Quality]
+8. [ REFACTOR & SYNC ]<-- MAINTAINER [BE-Quality] executes Full-Scope Sync
+       |                  Maintainer self-updates SKILL.md if needed
+       v
+9. [ CHECKPOINT ]     <-- Router presents Interactive Structured Decisions
        |
        v
-8. [ ALIGNMENT ]      <-- AUDITOR [BE-Quality] verifies intent match
-       |
-       v
-9. [ SYNC ]           <-- MAINTAINER [BE-Quality] executes Full-Scope Sync
-       |
-       v
-10. [ CHECKPOINT ]    <-- Router presents Structured Decisions
-       |
-       v
-11. [ COMMIT ]        <-- Pushed to GitHub via gh CLI
+10. [ COMMIT ]        <-- Pushed to GitHub via gh CLI
 ```
 
-## How I Work (Triple-Departmental Principles)
-1. **User Liaison**: Only the Router [FE] interacts with you. It is the "Face" of the system.
-2. **Dedicated Logic**: The Strategist [BE-Logic] designs the mission.
-3. **Continuous Quality**: The Reviewer [BE-Quality] vets work in real-time, and the Auditor [BE-Quality] ensures final alignment.
-4. **Full-Scope Sync**: The Maintainer [BE-Quality] ensures that Logs, Memory, State, and Manifests are always 100% consistent across every laptop.
+## How I Work (Production-Grade Principles)
+1. **Continuous Learning**: My **Maintainer [BE]** agent refactors my Skill recipes based on mission post-mortems.
+2. **Validation First**: My **Reviewer [BE]** agent uses a dedicated `fixtures/` harness to prevent regressions.
+3. **Chef & Recipe**: I treat agents as active Chefs and skills as passive recipes, allowing for flexible problem-solving.
+4. **Zero-Truncation**: My master manifest Seed is programmatically generated to be 100% complete.
