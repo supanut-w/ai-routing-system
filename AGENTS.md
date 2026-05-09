@@ -1,55 +1,37 @@
 # AGENTIC PROTOCOLS (AI-to-AI Context)
 
 ## Operational Bottleneck: ROUTER FIRST
-ALL interactions MUST pass through the `router` agent first. No specialized agent (Researcher, Implementer, Reviewer) should initiate a task without an explicit delegation instruction from the Router.
+ALL interactions MUST pass through the `router` agent first.
+
+## Multi-Provider Portability (Foundational Mandate Pattern)
+To maintain portability across different AI providers:
+1. **Engine Precedence**: Create a root-level file named after the provider (e.g., `CLAUDE.md`). 
+2. **Absolute Priority**: That file MUST contain instructions specific to that AI's capabilities and functional registry requirements. It takes precedence over all other system files.
+3. **Core Consistency**: Keep `admin/RULES.md` and `AGENTS.md` model-agnostic. They define the "Law" and "Protocol," while the provider file defines the "Engine."
+
+## Departmental Architecture
+- **Front-end Team**: Router, Implementer.
+- **Back-end Team**: Maintainer, Researcher, Reviewer.
+
+## Global Integrity & Zero-Truncation Mandate
+1. **Global Integrity**: Maintainer (Back-end) ensures absolute consistency across the workspace.
+2. **Zero-Truncation**: NEVER truncate content in `SYSTEM_BLUEPRINT.md`.
 
 ## Commit Checkpoint Workflow
-Upon completion of a mission (implementation, research, or system update):
-1. **Verify**: Ensure all related files have been updated (Global Integrity).
-2. **Sync**: Ensure the system is consistent.
-3. **Ask**: The Router MUST present final changes and use the **Structured Decision Protocol** to ask for commit permission.
-4. **Action**: Only initiate Git operations if the user selects the "Accept/Commit" option.
-
-## Structured Decision Protocol
-When requesting user input or permission, always provide a numbered set of options:
-1. **Accept/Proceed**: Standard approval.
-2. **Decline/Abort**: Cancel the proposed action.
-3. **Modify/Comment**: Provide feedback or request surgical changes.
-4. **Other**: Custom user action.
-
-## Global Integrity Mandate
-When updating ANY system information, rules, or configurations, you MUST identify and edit ALL files that contain or are related to that information. Absolute consistency across the workspace (indices, blueprints, prompts, configs) is mandatory. Fragmented or conflicting system info is a critical failure.
-
-## Synchronization & Conflict Resolution Protocol
-1. **Sync Before Action**: Agents MUST perform a `git pull` or status check to ensure the local environment is synchronized with the GitHub remote before initiating any multi-step missions.
-2. **Conflict Resolution**: If a merge conflict occurs during synchronization between different devices (laptops), the Implementer MUST surgically resolve the conflict, prioritizing the most recent system-wide mandates and architectural standards.
-3. **Multi-Provider Support**: Do not hard-code dependencies or logic specific to a single AI provider. Maintain model-agnostic instructions where possible.
+Router (Front-end) MUST use Structured Decision Protocol before commit.
 
 ## Workspace Standards
-- **Coding Style**: Idiomatic, surgical, and minimalist. Refer to `admin/preference.md`.
-- **Formatting**: ASCII-only. No non-standard characters in files or communication.
-- **Safety**: Strict adherence to the Security & Software Policy in `admin/RULES.md`.
+- **Style**: Idiomatic, surgical, minimalist.
+- **Formatting**: ASCII-only.
+- **Safety**: Security & Software Policy.
 
 ## State & Memory Interaction (admin/)
-- **Sync**: Before taking any action, read `admin/state.md`.
-- **Commit**: Upon completing a sub-task, update your status in `admin/state.md`.
-- **Knowledge**: Check `admin/memory/` for historical context before research. Record findings in `admin/memory/lessons_learned.md` via the Reviewer.
+- **Sync**: Read `admin/state.md` before action.
+- **Knowledge**: Researcher (Back-end) checks `admin/memory/`. Reviewer (Back-end) records to `admin/memory/lessons_learned.md`.
 
-## Communication Standard (Phase 2)
-Use these tags for high-signal feedback:
-- `[STARTING]`, `[SUCCESS]`, `[ERROR]`, `[WAITING]`, `[DELEGATING]`, `[NEXT ACTION]`.
-
-## Action Summary Mandate
-Every response MUST conclude with a concise, high-signal summary of actions taken. This summary must be clear, easy to understand, and provide immediate visibility into system changes.
-
-## Directory Taxonomy
-- `agents/`: persona config.
-- `prompts/`: system instructions (source of truth).
-- `tools/`: atomic tool definitions.
-- `user/`: manual operation guides (GitHub commands, etc.).
-- `admin/`: ALL personal info, logs, memory, state, and rules.
-- `index/`: structural mapping and taxonomies.
-- `outputs/`: production artifacts.
+## Communication Standard
+Tags: `[STARTING]`, `[SUCCESS]`, `[ERROR]`, `[WAITING]`, `[DELEGATING]`, `[NEXT ACTION]`.
+Action Summary: Concise recaps mandatory.
 
 ---
 *Note: This document provides technical context for AI agents working within this system. Follow it strictly to maintain architectural integrity.*
