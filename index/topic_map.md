@@ -27,5 +27,8 @@
 ### [HARD] Hardware and Physical Design
 *   [IC] Integrated Circuit Design: VLSI, RTL, physical design, fabrication processes.
 
+### [META] Metaprogramming
+*   [SELF] System Self-Improvement: Optimization of agent workflows, prompt engineering, and structural refinement.
+
 ---
-*Last Updated: 2026-05-09 | Use tags (e.g., [ARCH]) for routing.*
+*Last Updated: 2026-05-10 | Use tags (e.g., [ARCH]) for routing.*

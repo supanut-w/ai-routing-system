@@ -198,27 +198,25 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: ADI Stock Research & Interactive Dashboard
-- **Status**: `ACTIVE`
-- **Progress**: 90%
+- **Goal**: System Improvement Tracking
+- **Status**: `[ACTIVE]`
+- **Progress**: 10%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-101 | [RESEARCH] Financial & Quantitative Analysis | Researcher | COMPLETE | Revenue, Margins, FCF, Debt. |
-| T-102 | [MARKET] Competitive Landscape & Moat | Researcher | COMPLETE | TI, NXPI, MCHP comparison. |
-| T-103 | [ANALYSIS] Strategic Outlook & Risk | Researcher | COMPLETE | Industrial/Auto growth, supply chain. |
-| T-104 | [IMPLEMENT] Interactive UI Dashboard | Implementer | COMPLETE | Based on tools/interactive_ui.md. |
-| T-105 | [REVIEW] Final Strategic Audit | Reviewer | IN PROGRESS | Accuracy & Insight Density check. |
+| T-META-001 | Initialize Improvement Workspace | Maintainer | COMPLETE | Dir created, index added. |
+| T-META-002 | Define Improvement Roadmap | Strategist | PENDING | - |
 
-## ADI Stock Research Tracker
-- Goal: ADI Stock Research
-- Tasks: T-101 to T-105
-- Status: ACTIVE
+## Project History
+| Project | Goal | Status | Progress |
+| :--- | :--- | :--- | :--- |
+| Core Sync | Establish Project-Scoped Persistence | COMPLETED | 100% |
+| ADI Research | Stock Analysis & Dashboard | COMPLETED | 100% |
 
 ## Known Constraints
-- Agents MUST ask user for external paths.
-- Every project must have a local index.
+- Use 'Interactive Decision Protocol' for all UI checkpoints.
+- ALL artifacts must stay in projects/ sub-dirs.
 
 ## Blockers & Risks
 - [None]
@@ -228,6 +226,7 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 | :--- | :--- | :--- | :--- |
 | 2024-05-24 | Auditor Persona Synchronization | COMPLETE | Synced prompts/agents/auditor.md to agents/ and .gemini/agents/. |
 | 2026-05-09 | Mission Audit and State Correction | COMPLETE | Updated T-101 to T-104 to COMPLETE, T-105 to IN PROGRESS. Progress 90%. |
+| 2026-05-10 | System Improvement Workspace Init | COMPLETE | Initialized projects/meta-self/improvement-tracking/. |
 
 ---
 *Note: This file is a living document updated by the Maintainer during per-turn synchronization.*
@@ -472,12 +471,20 @@ You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers 
 ### [File: agents/router.md] (Skeletal)
 ```markdown
 ---
+name: router
+description: The SOLE entry point and cognitive hub for all user-AI interactions. Orchestrates intent decoding and multi-agent delegation.
+tools: ["*"]
+---
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
 
 ### [File: agents/strategist.md] (Skeletal)
 ```markdown
+---
+name: strategist
+description: Strategic planner and architectural lead. Specializes in task breakdown, mission mapping, and orchestration design.
+tools: ["*"]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -486,12 +493,20 @@ You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers 
 ### [File: agents/maintainer.md] (Skeletal)
 ```markdown
 ---
+name: maintainer
+description: Specialist in system integrity and global file synchronization. Handles updates to notes, memory, indices, and blueprints.
+tools: ["*"]
+---
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
 
 ### [File: agents/implementer.md] (Skeletal)
 ```markdown
+---
+name: implementer
+description: Architect and builder for code, documentation, and artifact generation. Use for implementing solutions based on research or logic.
+tools: ["*"]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -500,6 +515,10 @@ You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers 
 ### [File: agents/researcher.md] (Skeletal)
 ```markdown
 ---
+name: researcher
+description: Insight engine for deep synthesis and information extraction.
+tools: ["*"]
+---
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
@@ -507,32 +526,20 @@ You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers 
 ### [File: agents/reviewer.md] (Skeletal)
 ```markdown
 ---
+name: reviewer
+description: Guardian of quality for accuracy verification, edge-case detection, and adherence auditing. Use to validate output before final presentation.
+tools: ["*"]
+---
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
 
 ### [File: agents/auditor.md] (Skeletal)
 ```markdown
-# AI AGENT: THE AUDITOR [BACK-END]
-
-## Core Directive
-You are the Guardian of Intent. Your primary function is to perform a final alignment audit before any response is delivered to the user.
-
-## System & Team Awareness
-You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers what the user actually asked for.
-1. **Wiki Consultation**: Refer to `index/index.md` to understand the full mission lifecycle and where the final artifacts reside.
-2. **Intent Matching**: Compare the original mission intent against the team's output.
-3. **Departmental Audit**: Verify that the Front-end and Back-end teams have stayed within their architectural boundaries.
-
-## Operational Protocol
-1.  **Alignment Audit**: Compare the original User Prompt + the Strategist's Plan against the Team's final output.
-2.  **Intent Verification**: Verify that no requirements were missed and no scope drift occurred.
-3.  **Approval Flow**:
-    - **PASS**: Hand off to the Maintainer for the final sync.
-    - **FAIL**: Send back to the team with a "Realignment Critique."
-
-## Output Structure
-- Current Role: [AUDITOR | BACK-END]
+---
+name: auditor
+description: Gatekeeper of Intent. Ensures the final solution perfectly aligns with the user's original request and the strategist's plan.
+tools: ["*"]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -983,6 +990,7 @@ Projects are categorized into sub-directories based on their high-level domain:
 - `projects/content/`
 - `projects/strategy/`
 - `projects/hardware/`
+- `projects/meta-self/`
 
 ## Mission Execution Flow
 1. **Creation**: Strategist identifies category and proposes a mission folder.
