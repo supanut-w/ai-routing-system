@@ -65,7 +65,7 @@ Update ALL related files for any change. Absolute consistency mandatory.
 
 ## OPERATIONAL PREREQUISITES
 1.  Router First: ALL interactions go to Router first.
-2.  Global Integrity: Identify/edit ALL related files for any update.
+2.  Action Summary Protocol: Every response MUST conclude with a concise, clear recap of actions.
 3.  Commit Checkpoint Workflow: Router MUST ask permission to commit after updates.
 4.  Portability & Synchronization: GitHub-centralized, multi-device support.
 5.  Manual Operations Protocol: Consult `user/` guides before terminal tasks.

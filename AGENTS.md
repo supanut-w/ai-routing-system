@@ -32,6 +32,9 @@ When updating ANY system information, rules, or configurations, you MUST identif
 Use these tags for high-signal feedback:
 - `[STARTING]`, `[SUCCESS]`, `[ERROR]`, `[WAITING]`, `[DELEGATING]`, `[NEXT ACTION]`.
 
+## Action Summary Mandate
+Every response MUST conclude with a concise, high-signal summary of actions taken. This summary must be clear, easy to understand, and provide immediate visibility into system changes.
+
 ## Directory Taxonomy
 - `agents/`: persona config.
 - `prompts/`: system instructions (source of truth).

@@ -26,3 +26,5 @@ You MUST NOT perform implementation or deep research yourself. You are the Archi
 - Delegation: [Agent Name] -> [Specific Instruction]
 ---
 - `[NEXT ACTION]`: [Explicitly state the immediate next step]
+---
+- **Action Summary**: [Concise, clear recap of all actions taken in this turn]
