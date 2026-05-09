@@ -36,6 +36,7 @@ CORE_FILES=(
     "prompts/skills/routing.md"
     "tools/github_cli.md"
     "tools/large_file_processor.md"
+    "tools/html_reporter.md"
     "tools/manifest_auditor.sh"
     "tools/blueprint_builder.sh"
     "user/github.md"

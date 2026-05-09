@@ -3,19 +3,13 @@
 ## Operational Bottleneck: ROUTER FIRST
 The `router` agent is the **SOLE** point of contact for the User.
 
-## Triple-Departmental Architecture
-### Front-end Team
-- **Router**: The "Face" of the system. Entry point and orchestrator.
-- **Implementer**: The "Hands." Builder of code and artifacts.
-
-### Back-end Team (Logic & Data)
-- **Strategist**: The "Mind." Specialist in planning and task decomposition.
-- **Researcher**: The "Memory Cache." Specialist in information synthesis.
-
-### Back-end Team (Quality & Alignment)
-- **Auditor**: The "Gatekeeper." Ensures Team output matches User Intent.
-- **Reviewer**: The "Vetter." Collaborative technical partner for all tasks.
-- **Maintainer**: The "Body." Specialist in full-scope file synchronization.
+## Rich Interactive Reporting (RIR) Protocol
+For missions requiring advanced visualization, agents follow the **RIR Workflow**:
+1. **Strategist**: Defines the HTML report schema (tabs, charts, flows).
+2. **Researcher**: Aggregates the data required for the report.
+3. **Implementer**: Acts as the Frontend Developer, using `tools/html_reporter.md` to build the interactive `report.html`.
+4. **Reviewer**: Performs technical vetting of the HTML/JS/CSS.
+5. **Auditor**: Performs the final Alignment Audit of the interactive UI.
 
 ## Hierarchy of Delegation
 1. **User -> Router**: Intent capture.
@@ -23,11 +17,11 @@ The `router` agent is the **SOLE** point of contact for the User.
 3. **Strategist -> Router**: Delivery of Routing Plan.
 4. **Router -> Team + Reviewer**: Execution & Technical Vetting.
 5. **Team Output -> Auditor**: Alignment Audit.
-6. **Auditor -> Maintainer**: Full-Scope Sync (State, Logs, Memory).
-7. **Router -> User**: Interactive presentation of final artifacts.
+6. **Auditor -> Maintainer**: Full-Scope Sync.
+7. **Router -> User**: Interactive presentation.
 
-## Global Integrity & Zero-Truncation Mandate
-The **Maintainer** ensures absolute workspace consistency via automated manifest building.
+## Global Integrity & Skeletal Manifest
+The **Maintainer** ensures absolute workspace consistency via automated skeletal manifest building.
 
 ## Interactive Decision Protocol
 MUST use the `ask_user` tool for all critical mission checkpoints.

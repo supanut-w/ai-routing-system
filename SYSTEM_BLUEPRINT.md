@@ -85,19 +85,13 @@ A high-efficiency, multi-agent orchestration system implementing a **Router-Firs
 ## Operational Bottleneck: ROUTER FIRST
 The `router` agent is the **SOLE** point of contact for the User.
 
-## Triple-Departmental Architecture
-### Front-end Team
-- **Router**: The "Face" of the system. Entry point and orchestrator.
-- **Implementer**: The "Hands." Builder of code and artifacts.
-
-### Back-end Team (Logic & Data)
-- **Strategist**: The "Mind." Specialist in planning and task decomposition.
-- **Researcher**: The "Memory Cache." Specialist in information synthesis.
-
-### Back-end Team (Quality & Alignment)
-- **Auditor**: The "Gatekeeper." Ensures Team output matches User Intent.
-- **Reviewer**: The "Vetter." Collaborative technical partner for all tasks.
-- **Maintainer**: The "Body." Specialist in full-scope file synchronization.
+## Rich Interactive Reporting (RIR) Protocol
+For missions requiring advanced visualization, agents follow the **RIR Workflow**:
+1. **Strategist**: Defines the HTML report schema (tabs, charts, flows).
+2. **Researcher**: Aggregates the data required for the report.
+3. **Implementer**: Acts as the Frontend Developer, using `tools/html_reporter.md` to build the interactive `report.html`.
+4. **Reviewer**: Performs technical vetting of the HTML/JS/CSS.
+5. **Auditor**: Performs the final Alignment Audit of the interactive UI.
 
 ## Hierarchy of Delegation
 1. **User -> Router**: Intent capture.
@@ -105,11 +99,11 @@ The `router` agent is the **SOLE** point of contact for the User.
 3. **Strategist -> Router**: Delivery of Routing Plan.
 4. **Router -> Team + Reviewer**: Execution & Technical Vetting.
 5. **Team Output -> Auditor**: Alignment Audit.
-6. **Auditor -> Maintainer**: Full-Scope Sync (State, Logs, Memory).
-7. **Router -> User**: Interactive presentation of final artifacts.
+6. **Auditor -> Maintainer**: Full-Scope Sync.
+7. **Router -> User**: Interactive presentation.
 
-## Global Integrity & Zero-Truncation Mandate
-The **Maintainer** ensures absolute workspace consistency via automated manifest building.
+## Global Integrity & Skeletal Manifest
+The **Maintainer** ensures absolute workspace consistency via automated skeletal manifest building.
 
 ## Interactive Decision Protocol
 MUST use the `ask_user` tool for all critical mission checkpoints.
@@ -148,28 +142,29 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 
 ### [File: admin/RULES.md]
 ```markdown
-# SYSTEM MANDATES (v4.7)
+# SYSTEM MANDATES (v4.8)
 
 ## OPERATIONAL PREREQUISITES
 1.  **Rules Precedence Hierarchy**: Agents MUST follow the 6-tier hierarchy defined in `admin/PRECEDENCE.md`.
 2.  **System-First Approach**: Local instructions MUST be followed as the primary approach.
-3.  **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` serve as skeletal seeds. Manual writing of `SYSTEM_BLUEPRINT.md` is PROHIBITED; use `./tools/blueprint_builder.sh`.
-4.  **Triple-Departmental Structure**:
+3.  **Rich Interactive Reporting (RIR)**: For high-fidelity missions, agents MUST use the **HTML Reporter** tool to generate interactive, animated, and filterable reports (Tailwind, Alpine, Mermaid).
+4.  **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` serve as skeletal seeds. Manual writing of `SYSTEM_BLUEPRINT.md` is PROHIBITED; use `./tools/blueprint_builder.sh`.
+5.  **Triple-Departmental Structure**:
     - **Front-end Department**: User Interface (Router) & Construction (Implementer).
     - **Back-end Department (Logic)**: Planning (Strategist) & Data (Researcher).
     - **Back-end Department (Quality)**: Intent Audit (Auditor), Technical Vetting (Reviewer), & Full-Scope Sync (Maintainer).
-5.  **Alignment Auditing**: The **Auditor** [BE-Quality] MUST verify all output against User Intent before final delivery.
-6.  **Full-Scope Maintenance**: The **Maintainer** [BE-Quality] MUST synchronize all related modules (State, Logs, Memory, Notes, Manifests) every turn.
-7.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
-8.  **Router First**: ALL user interactions MUST go to the Router first.
-9.  **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
-10. **Project-Based Workspace**: Isolate all user missions in categorized `projects/` folders.
-11. Commit Checkpoint Workflow: Router MUST ask permission before committing.
-12. Portability & Synchronization: GitHub-centralized support.
-13. Security & Software Policy: Legal, production-grade tools only.
-14. Multi-Platform Standard: Support Mac, Linux, Windows.
-15. DNA Alignment: Adhere to `admin/preference.md`.
-16. Audit Trail: Log all changes in `admin/logs/`.
+6.  **Alignment Auditing**: The **Auditor** [BE-Quality] MUST verify all output against User Intent before final delivery.
+7.  **Full-Scope Maintenance**: The **Maintainer** [BE-Quality] MUST synchronize all related modules (State, Logs, Memory, Notes, Manifests) every turn.
+8.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
+9.  **Router First**: ALL user interactions MUST go to the Router first.
+10. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
+11. **Project-Based Workspace**: Isolate all user missions in categorized `projects/` folders.
+12. Commit Checkpoint Workflow: Router MUST ask permission before committing.
+13. Portability & Synchronization: GitHub-centralized support.
+14. Security & Software Policy: Legal, production-grade tools only.
+15. Multi-Platform Standard: Support Mac, Linux, Windows.
+16. DNA Alignment: Adhere to `admin/preference.md`.
+17. Audit Trail: Log all changes in `admin/logs/`.
 
 ```
 ---
@@ -524,21 +519,22 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Establish Functional Skeletal Blueprint
+- **Goal**: Establish Alignment Auditing & Technical Vetting
 - **Status**: `[ACTIVE]`
 - **Progress**: 95%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Refine Rules | Router | Complete | Skeletal rule live. |
-| T-001 | Update Builder | Maintainer | Complete | Skeletal logic integrated. |
-| T-002 | Build Manifest | Maintainer | Complete | 896 lines (High-Signal). |
-| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.6.0. |
+| T-000 | Define Auditor | Router | Complete | Persona & Prompt live. |
+| T-001 | Refine Reviewer | Router | Complete | Technical Partner role live. |
+| T-002 | Bulletproof Sync| Router | Complete | Maintainer Full-Scope Sync live. |
+| T-003 | Sync Blueprint | Maintainer | Complete | Manifest v4.7 non-truncated. |
+| T-004 | Commit & Push | Implementer | In Progress | Finalizing v4.7.0. |
 
 ## Known Constraints
-- DO NOT MANUALLY EDIT BLUEPRINT.
-- Maintain literal logic in manifest.
+- Use Triple-Department architecture.
+- Enforce Full-Scope Sync per turn.
 
 ## Blockers & Risks
 - [None]
@@ -814,6 +810,37 @@ Enable efficient processing and reading of large text, CSV, and XLSX files witho
 - **qsv**: `winget install --id jqnatividad.qsv` or `scoop install qsv`
 - **ripgrep**: `winget install --id BurntSushi.ripgrep.MSVC`
 
+... [Skeletal: See source for full implementation details] ...
+```
+---
+
+### [File: tools/html_reporter.md]
+```markdown
+# TOOL: HTML REPORTER (v1.0)
+
+## Objective
+Enable the generation of high-fidelity, interactive HTML reports with professional styling, animations, filtering, sorting, and rendered flows. This tool provides a zero-install CDN stack for portability across all AI providers and laptops.
+
+## The RIR Tech Stack (CDN-Based)
+1. **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+2. **Interactivity**: [Alpine.js](https://alpinejs.dev/)
+3. **Flows/Diagrams**: [Mermaid.js](https://mermaid.js.org/)
+
+## Boilerplate Template
+The Implementer MUST use this boilerplate as the foundation for all `report.html` files:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Report</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Mermaid.js CDN -->
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
