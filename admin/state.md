@@ -1,21 +1,21 @@
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Establish Chef & Recipe Framework
+- **Goal**: Refine Subagent Architecture (Security & Context)
 - **Status**: `[ACTIVE]`
 - **Progress**: 95%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Define Framework | Router | Complete | Chef/Recipe analogy integrated. |
+| T-000 | Define Principles | Router | Complete | Context/Security rules live. |
 | T-001 | Update Protocols | Maintainer | Complete | AGENTS/RULES synchronized. |
-| T-002 | Sync Blueprint | Maintainer | Complete | Manifest v4.13 non-truncated. |
-| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.13.0. |
+| T-002 | Sync Blueprint | Maintainer | Complete | Manifest v4.15 non-truncated. |
+| T-003 | Commit & Push | Implementer | In Progress | Finalizing v4.15.0. |
 
 ## Known Constraints
-- Use 'Interactive Decision Protocol' for all UI checkpoints.
-- Agents are Chefs; Skills are Recipes.
+- Enforce 'Locked Tool Belts'.
+- Subagents must preserve main context.
 
 ## Blockers & Risks
 - [None]

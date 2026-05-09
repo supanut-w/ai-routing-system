@@ -1,25 +1,24 @@
-# SYSTEM MANDATES (v4.13)
+# SYSTEM MANDATES (v4.15)
 
 ## OPERATIONAL PREREQUISITES
 1.  **System-First Approach**: Agents MUST consult local instructions first.
 2.  **The Harness & Specialist Framework (Chef & Recipe)**: 
-    - **Agent (The Chef)**: The primary active entity. Agent = LLM (Brain/CPU) + Tools + Agentic Loop (Cooking Ability). Agents work independently via their tools and goals.
-    - **Skills (The Recipes)**: Passive instructions/manuals. Skills do NOT work without an agent; they are "paper" that needs a Chef to cook them.
-    - **Coding Agent**: Agent + Harness (OS: Guides, Sensors, Tools, Memory, State, Filesystem).
-3.  **Specialization & Hybrid Logic**:
-    - **Use Skills (Known Path)**: For clear, repeatable workflows (Follow the Recipe).
-    - **Use Agentic Loops (Unknown Path)**: For discovery and figuring out the "How" (Chef's Intuition).
-    - **Hybrid Workflow**: Capture (Router) -> Route (Strategist) -> Fetch (Researcher) -> Resolve (Adaptive Agentic Loop) -> Log (Maintainer) -> Close (Router).
-4.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
-5.  **Project-Scoped Outputs & Summaries**: Artifacts -> Root | Records -> `projects/`. Mission Summaries are mandatory for recall.
-6.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
-7.  **Router First**: ALL user interactions MUST go to the Router first.
-8.  **Strategist Support**: The Strategist [BE] owns mission design and **Workflow Choice** (Mind).
-9.  **Maintainer Ownership**: The Maintainer [BE] owns all file updates and **Mission Logging** (Body).
-10. **Zero-Truncation & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh` for blueprints. Manual writing is PROHIBITED.
-11. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
-12. **Project-Based Workspace**: Isolate all user missions in categorized `projects/` folders.
-13. **Holistic Awareness**: Agents MUST maintain awareness of the entire system as defined in `index/index.md`.
+    - **Agent (The Chef)**: The primary active entity. Agent = LLM (Brain/CPU) + Tools + Agentic Loop.
+    - **Skills (The Recipes)**: Passive instructions/manuals. 
+3.  **Subagent Core Principles**:
+    - **Context Preservation**: Subagents MUST keep the main session context clean. They perform intensive work in their own "room" and report only high-signal results to the main thread.
+    - **Tool Boundaries (Security)**: Agents MUST have strict, pinned tool allowlists at their identity level (locked tool belts).
+    - **Orthogonal Specialization**: Agents MUST have genuinely different, non-overlapping jobs with specific tool belts.
+4.  **Agent Optimization Protocol**: Use YAML to pin models and tools based on Cost vs. Reasoning.
+5.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
+6.  **Project-Scoped Outputs**: Artifacts -> Root | Records -> `projects/`.
+7.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
+8.  **Router First**: ALL user interactions MUST go to the Router first.
+9.  **Strategist Support**: The Strategist [BE] owns mission design and **Resource Allocation** (Mind).
+10. **Maintainer Ownership**: The Maintainer [BE] owns all file updates (Body).
+11. **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh` for blueprints. Manual writing is PROHIBITED.
+12. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
+13. **Holistic Awareness**: Agents MUST maintain awareness of the entire system (`index/index.md`).
 14. Commit Checkpoint Workflow: Router MUST ask permission before committing.
 15. Portability & Synchronization: GitHub-centralized support.
 16. Security & Software Policy: Legal, production-grade tools only.
