@@ -22,6 +22,15 @@ LITERAL_FILES=(
     "prompts/agents/researcher.md"
     "prompts/agents/reviewer.md"
     "prompts/agents/auditor.md"
+    "prompts/skills/sys/intent-decoding.md"
+    "prompts/skills/sys/mission-decomposition.md"
+    "prompts/skills/sys/full-scope-sync.md"
+    "prompts/skills/data/source-vetting.md"
+    "prompts/skills/data/investment-modeling.md"
+    "prompts/skills/fe/surgical-code-edit.md"
+    "prompts/skills/fe/rtl-synthesis.md"
+    "prompts/skills/qa/intent-audit.md"
+    "prompts/skills/qa/harness-benchmark.md"
 )
 
 SKELETAL_FILES=(
@@ -36,10 +45,6 @@ SKELETAL_FILES=(
     "index/index.md"
     "index/topic_map.md"
     "index/keywords.md"
-    "prompts/skills/implementation.md"
-    "prompts/skills/research.md"
-    "prompts/skills/review.md"
-    "prompts/skills/routing.md"
     "tools/github_cli.md"
     "tools/large_file_processor.md"
     "tools/interactive_ui.md"
@@ -63,6 +68,8 @@ This document serves as the high-signal "System Seed." It contains the literal c
 /
 ├── agents/             # Persona configurations (YAML Metadata)
 ├── prompts/            # Master system instructions (Source of Truth)
+│   ├── agents/         # Departmental behavioral logic
+│   └── skills/         # Granular Skill Atoms (Recipes)
 ├── index/              # Structural mapping and taxonomies
 ├── admin/              # PERSONAL DATA, Governance, Memory, Logs, State, Precedence
 │   └── manifest/       # Specialized Manifest Tools & Seeds
