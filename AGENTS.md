@@ -6,6 +6,11 @@ ALL interactions MUST pass through the `router` agent first. No specialized agen
 ## Global Integrity Mandate
 When updating ANY system information, rules, or configurations, you MUST identify and edit ALL files that contain or are related to that information. Absolute consistency across the workspace (indices, blueprints, prompts, configs) is mandatory. Fragmented or conflicting system info is a critical failure.
 
+## Synchronization & Conflict Resolution Protocol
+1. **Sync Before Action**: Agents MUST perform a `git pull` or status check to ensure the local environment is synchronized with the GitHub remote before initiating any multi-step missions.
+2. **Conflict Resolution**: If a merge conflict occurs during synchronization between different devices (laptops), the Implementer MUST surgically resolve the conflict, prioritizing the most recent system-wide mandates and architectural standards.
+3. **Multi-Provider Support**: Do not hard-code dependencies or logic specific to a single AI provider. Maintain model-agnostic instructions where possible.
+
 ## Workspace Standards
 - **Coding Style**: Idiomatic, surgical, and minimalist. Refer to `admin/preference.md`.
 - **Formatting**: ASCII-only. No non-standard characters in files or communication.
