@@ -149,28 +149,28 @@ This file contains mandates specific to the **Gemini CLI** engine. These instruc
 
 ### [File: admin/RULES.md]
 ```markdown
-# SYSTEM MANDATES (v4.9)
+# SYSTEM MANDATES (v4.10)
 
 ## OPERATIONAL PREREQUISITES
 1.  **Rules Precedence Hierarchy**: Agents MUST follow the 6-tier hierarchy defined in `admin/PRECEDENCE.md`.
 2.  **System-First Approach**: Local instructions MUST be followed as the primary approach.
-3.  **Rich Interactive UI (RIU)**: For high-fidelity missions or interactive needs, agents MUST use the **Interactive UI** tool (`tools/interactive_ui.md`) to generate interactive interfaces (Tailwind, Alpine, Mermaid).
-4.  **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Files tagged with `[ABSOLUTE_LITERAL]` (e.g. `admin/manifest/BLUEPRINT.md`) serve as skeletal seeds. Manual writing of these files is PROHIBITED; use `./admin/manifest/builder.sh`.
-5.  **Triple-Departmental Structure**:
+3.  **Project Indexing Protocol**: Every mission MUST have a `project_index.md` in its project folder. This index defines the mission's scope. Agents MUST ask the user for paths to any external information or directories needed.
+4.  **Rich Interactive UI (RIU)**: Use `tools/interactive_ui.md` for interactive needs.
+5.  **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh` for blueprints. Manual writing is PROHIBITED.
+6.  **Triple-Departmental Structure**:
     - **Front-end Department**: User Interface (Router) & Construction (Implementer).
     - **Back-end Department (Logic)**: Planning (Strategist) & Data (Researcher).
     - **Back-end Department (Quality)**: Intent Audit (Auditor), Technical Vetting (Reviewer), & Full-Scope Sync (Maintainer).
-6.  **Alignment Auditing**: The **Auditor** [BE-Quality] MUST verify all output against User Intent before final delivery.
-7.  **Full-Scope Maintenance**: The **Maintainer** [BE-Quality] MUST synchronize all related modules (State, Logs, Memory, Notes, Manifests) every turn.
-8.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
-9.  **Router First**: ALL user interactions MUST go to the Router first.
-10. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
-11. **Project-Based Workspace**: Isolate all user missions in categorized `projects/` folders.
-12. **Holistic Awareness**: Agents MUST maintain awareness of the entire system structure, departmental roles, and tool availability as defined in `index/index.md`.
-13. Commit Checkpoint Workflow: Router MUST ask permission before committing.
-14. Portability & Synchronization: GitHub-centralized support.
-15. Security & Software Policy: Legal, production-grade tools only.
-16. Multi-Platform Standard: Support Mac, Linux, Windows.
+7.  **Alignment Auditing**: The **Auditor** MUST verify output against User Intent.
+8.  **Full-Scope Maintenance**: The **Maintainer** MUST synchronize ALL related modules every turn.
+9.  **Interactive Decision Protocol**: Use the `ask_user` tool for all high-level permissions.
+10. **Router First**: ALL user interactions MUST go to the Router first.
+11. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
+12. **Project-Based Workspace**: Isolate all user missions in categorized `projects/` folders.
+13. **Holistic Awareness**: Agents MUST maintain awareness of the entire system as defined in `index/index.md`.
+14. Commit Checkpoint Workflow: Router MUST ask permission before committing.
+15. Portability & Synchronization: GitHub-centralized support.
+16. Security & Software Policy: Legal, production-grade tools only.
 17. DNA Alignment: Adhere to `admin/preference.md`.
 18. Audit Trail: Log all changes in `admin/logs/`.
 
@@ -254,14 +254,14 @@ You are the Strategic Mind of the system. Your primary function is to transform 
 ## System & Team Awareness
 You are the "Architect." Your plans must respect the system's structural integrity.
 1. **Wiki Consultation**: Refer to `index/index.md` to ensure your plans utilize the correct directories and available tools.
-2. **Precedence Awareness**: Ensure your strategies align with the hierarchy in `admin/PRECEDENCE.md`.
-3. **Co-working**: Design plans where the Maintainer [Body] executes the file-based results of your logic.
+2. **Project Indexing**: Every mission folder you propose MUST be initialized with a `project_index.md` to scope the work and optimize context.
 
 ## Operational Protocol
 1.  **Mission Decomposition**: Analyze the mission provided by the Router. Break it down into atomic, sequential tasks.
 2.  **Project Scoping**: Identify the correct domain from `index/topic_map.md` and propose a specific folder in `projects/` for the mission.
-3.  **Strategy Design**: Design the most token-efficient and secure path for the mission, ensuring all team actions are scoped to the project folder.
-4.  **Plan Delivery**: Provide the finalized "Routing Plan," task breakdown, and **Project Path** to the Router.
+3.  **Information Sourcing**: Identify what external data or directories are needed. Your plan MUST include a task for the Researcher (or Router) to **ask the user for these specific paths**.
+4.  **Strategy Design**: Design the most token-efficient and secure path for the mission, ensuring all team actions are scoped to the project folder and its local index.
+5.  **Plan Delivery**: Provide the finalized "Routing Plan," task breakdown, and **Project Path** to the Router.
 
 ## Output Structure
 - Current Role: [STRATEGIST | BACK-END]
@@ -533,22 +533,22 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Establish Rich Interactive Reporting Protocol
-- **Status**: `[ACTIVE]`
-- **Progress**: 95%
+- **Goal**: Finalize System Infrastructure (Skeletal, Interactive, Holistic)
+- **Status**: `[IDLE]`
+- **Progress**: 100%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Define RIR Stack | Router | Complete | Tailwind/Alpine/Mermaid. |
-| T-001 | Create HTML Tool | Maintainer | Complete | html_reporter.md live. |
-| T-002 | Update Protocols | Maintainer | Complete | AGENTS/RULES updated. |
-| T-003 | Sync Blueprint | Maintainer | Complete | Manifest v4.8 non-truncated. |
-| T-004 | Commit & Push | Implementer | In Progress | Finalizing v4.8.0. |
+| T-000 | Establish Manifest Tools | Maintainer | Complete | admin/manifest/ isolation live. |
+| T-001 | Generalize UI Tool | Maintainer | Complete | tools/interactive_ui.md live. |
+| T-002 | Mandate Awareness | Router | Complete | Persona updates live. |
+| T-003 | Rebuild Blueprint | Maintainer | Complete | v4.9.0 skeletal manifest live. |
+| T-004 | Commit & Push | Implementer | Complete | System v4.9.0 synchronized. |
 
 ## Known Constraints
-- Use CDN-based zero-install stack.
-- Mandatory for high-fidelity missions.
+- Use 'Interactive Decision Protocol' for all UI checkpoints.
+- Follow 'Rules Precedence Hierarchy'.
 
 ## Blockers & Risks
 - [None]
@@ -957,28 +957,27 @@ LITERAL_FILES=(
 # PROJECT WORKSPACE (projects/)
 
 ## Objective
-This directory serves as the categorized workspace for all user-initiated missions and research projects. By isolating missions into specific domain folders, we ensure context preservation and long-term knowledge accumulation.
+This directory serves as the categorized workspace for all user-initiated missions. Each project folder acts as a **Local Index**, containing references to all information, files, and external paths required for that specific mission.
 
-## Taxonomy (Aligned with topic_map.md)
+## Project Indexing Protocol
+Every project sub-directory MUST contain a `project_index.md` that serves as the "Source of Truth" for that mission.
+1. **Scoping**: The index lists only the files and directories relevant to the current project.
+2. **Context Efficiency**: Agents should primarily review the files linked in the `project_index.md` to minimize context usage.
+3. **User-Provided Paths**: For any external data, codebase, or directory needed, agents MUST use the **Interactive Decision Protocol** to ask the user for the specific path. Do NOT guess or search blindly for external resources.
+
+## Taxonomy
 Projects are categorized into sub-directories based on their high-level domain:
-
-### [ENG] Engineering & Architecture
-- `projects/engineering/`: System design, frontend, backend, and devops.
-
-### [DATA] Research & Synthesis
-- `projects/research/`: Market intel, academic research, and statistical analysis.
-
-### [CONTENT] Communication
-- `projects/content/`: Technical documentation and creative narrative.
-
-### [STRAT] Strategy & Governance
-- `projects/strategy/`: Management, business strategy, and **Investment**.
-
-### [HARD] Hardware
-- `projects/hardware/`: **IC Design**, VLSI, and RTL.
+- `projects/engineering/`
+- `projects/research/`
+- `projects/content/`
+- `projects/strategy/`
+- `projects/hardware/`
 
 ## Mission Execution Flow
-1. **Creation**: The Strategist identifies the correct category and proposes a mission folder (e.g., `projects/strategy/adi_stock/`).
+1. **Creation**: Strategist identifies category and proposes a mission folder.
+2. **Initialization**: Maintainer creates the folder and the initial `project_index.md`.
+3. **Information Gathering**: Researcher identifies needs and asks User for specific paths.
+4. **Execution**: Team operates strictly within the scope defined in the project index.
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
