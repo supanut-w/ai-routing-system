@@ -6,28 +6,17 @@
 - [Active State](../admin/state.md): Mission tracker.
 
 ## 🧠 Cognitive Architecture (The Team)
-
-### Front-end Department (User Interface)
-- [Router](../agents/router.md): **SOLE** User interaction and orchestration hub.
-- [Implementer](../agents/implementer.md): Construction and building specialist.
-
-### Back-end Department (Logic & Data)
-- [Strategist](../agents/strategist.md): Master of planning and task decomposition.
+- [Router](../agents/router.md): **SOLE** User interaction hub.
+- [Strategist](../agents/strategist.md): Master of planning and **Project Scoping**.
 - [Maintainer](../agents/maintainer.md): Guardian of consistency and file updates.
-- [Researcher](../agents/researcher.md): Investigation and synthesis engine.
-- [Reviewer](../agents/reviewer.md): Quality and security gatekeeper.
+- [Researcher](../agents/researcher.md): Investigation engine.
+- [Implementer](../agents/implementer.md): Construction specialist.
+- [Reviewer](../agents/reviewer.md): Quality gatekeeper.
 
-### Functional Registry
-Location: `.gemini/agents/`
-- CLI discovery registry for all specialized agents.
-
-## 📜 Source of Truth (The "Instructions")
-- [Agent Prompts](../prompts/agents/): Personas and behavioral logic.
-- [Skill Prompts](../prompts/skills/): Capabilities.
-
-## 🛠️ Operational Infrastructure (The "How")
+## 📂 Operational Workspace
+- [Project Workspace](../projects/README.md): Categorized domain folders (e.g., Investment, IC Design).
 - [Shared Skills](../.gemini/skills/): Functional logic.
-- [Atomic Tools](../tools/README.md): Registry of capabilities.
+- [Atomic Tools](../tools/README.md): Capabilities.
 - [Manual Operations](../user/README.md): How-to guides.
 
 ## 🛡️ Governance & Personal Data (admin/)
