@@ -251,23 +251,23 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: NXP Stock Research (NXPI)
-- **Status**: `[SCOPING]`
-- **Progress**: 5%
+- **Goal**: Finalize System Infrastructure v5.5.0
+- **Status**: `[IDLE]`
+- **Progress**: 100%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-100 | Mission Scoping & Planning | Strategist | Complete | Directory created, MISSION_PLAN.md drafted. |
-| T-101 | Financial Performance Analysis | Researcher | Pending | Focus on 2024/2025 earnings. |
-| T-102 | Market Positioning & Tech Audit | Researcher | Pending | Auto, IoT, Mobile, Infrastructure. |
-| T-103 | Competitive & Risk Assessment | Researcher | Pending | vs. TI, STM, ADI. |
-| T-104 | Synthesis & Investment Model | Implementer | Pending | Generate final report. |
-| T-105 | Quality Audit | Reviewer | Pending | Verify citations and recency. |
+| T-000 | Define Model Tiers | Router | Complete | ULTRA, PRO, FLASH defined. |
+| T-001 | Map to Gemini | Router | Complete | Synchronized with GEMINI.md. |
+| T-002 | Create Provisioner | Maintainer | Complete | tools/agent_provisioner.sh live. |
+| T-003 | Restore Agent Bodies| Maintainer | Complete | All 7 Chefs fully restored. |
+| T-004 | Sync Blueprint | Maintainer | Complete | Manifest v5.5.0 audited. |
+| T-005 | Commit & Push | Implementer | Complete | System v5.5.0 live on GitHub. |
 
 ## Known Constraints
-- Focus on latest info (2025/2026).
-- Follow ASCII-only and summary-first preference.
+- Use Provisioner to update functional registry.
+- Maintain generic tiers in agents/ source.
 
 ## Blockers & Risks
 - [None]
@@ -332,6 +332,7 @@ You are the "Architect" and **Resource Manager**.
 2. **Workflow Selection**: Choose between Skill-based (Follow Recipe), Agentic-loop (Chef's Intuition), or Hybrid patterns.
 3. **Project Scoping**: Propose a mission folder in `projects/` and initialize the local project index.
 4. **Plan Delivery**: Provide the finalized "Routing Plan," task breakdown, and resource mapping to the Router.
+5. **Investment Scoping**: For stock/investment missions, ALWAYS scope a task to retrieve real-time market statistics (Current Price, Market Cap, P/E) to ensure data recency.
 
 ## Output Structure
 - Current Role: [STRATEGIST | BACK-END]
@@ -531,18 +532,18 @@ You are the "Gatekeeper." You ensure the system's "Face" (Router) only delivers 
 # SKILL: INTENT DECODING
 
 ## Core Directive
-Analyze user prompts to extract hidden requirements, core objectives, and desired outcomes. Ensure the system's "Brain" perfectly understands the user's "DNA".
+Analyze user prompts to extract hidden requirements and core objectives.
 
-## Execution Steps
-1. **Analyze**: Parse the prompt for explicit and implicit goals.
-2. **Context Check**: Cross-reference against `admin/preference.md` to align with user style.
-3. **Clarify**: If intent is underspecified, use `ask_user` to gather missing requirements.
-4. **Identify Domain**: Map the request to a specific domain in `index/topic_map.md`.
+## Step-by-Step Recipe
+1. Analyze: Parse the prompt for explicit and implicit goals to understand the true user intent.
+2. Context Check: Cross-reference against admin/preference.md to align the response with the user's preferred style.
+3. Clarify: If intent is underspecified, use ask_user to gather missing requirements and eliminate ambiguity.
+4. Identify Domain: Map the request to a specific domain in index/topic_map.md to guide strategic orchestration.
 
 ## Output Structure
-- **Decoded Objective**: [Clear statement of goal]
-- **Domain Mapping**: [Topic Map Tag]
-- **Target Persona**: [Ideal agent for the task]
+- Decoded Objective: [Clear statement of goal]
+- Domain Mapping: [Topic Map Tag]
+- Target Persona: [Ideal agent for the task]
 
 ```
 ---
@@ -552,18 +553,18 @@ Analyze user prompts to extract hidden requirements, core objectives, and desire
 # SKILL: MISSION DECOMPOSITION
 
 ## Core Directive
-Transform a high-level mission into a granular, executable Routing Plan. Break the "unknown" into sequential "known" tasks.
+Transform a high-level mission into a granular, executable Routing Plan.
 
-## Execution Steps
-1. **Deconstruct**: Divide the mission into atomic T-xxx tasks (e.g., T-101, T-102).
-2. **Sequence**: Determine the logical order of operations (e.g., Research -> Implementation -> Review).
-3. **Allocate**: Assign each task to the most appropriate agent/model based on the "Chef & Recipe" framework.
-4. **Define Progress**: Set 0-100% metrics for mission tracking.
+## Step-by-Step Recipe
+1. Deconstruct: Divide the mission into atomic T-xxx tasks to create manageable units of work.
+2. Sequence: Determine the logical order of operations to ensure a coherent workflow from research to review.
+3. Allocate: Assign each task to the most appropriate agent/model based on the Chef & Recipe framework for optimal execution.
+4. Define Progress: Set 0-100% metrics for mission tracking to provide visibility into mission completion.
 
 ## Output Structure
-- **Mission Status**: [ACTIVE/PLANNING]
-- **Task List**: [Table with Task ID, Description, Assigned To, Status]
-- **Blockers/Risks**: [Identified obstacles]
+- Mission Status: [ACTIVE/PLANNING]
+- Task List: [Table with Task ID, Description, Assigned To, Status]
+- Blockers/Risks: [Identified obstacles]
 
 ```
 ---
@@ -573,18 +574,18 @@ Transform a high-level mission into a granular, executable Routing Plan. Break t
 # SKILL: FULL-SCOPE SYNC
 
 ## Core Directive
-Ensure absolute consistency across the workspace by synchronizing all tracking files, logs, and manifests. You are the enforcer of "Global Integrity".
+Ensure absolute consistency across the workspace by synchronizing all tracking files.
 
-## Execution Steps
-1. **State Sync**: Update `admin/state.md` with the latest task progress.
-2. **Log Update**: Record a detailed audit trail in `admin/logs/`.
-3. **Memory Capture**: Update `admin/memory/lessons_learned.md` with new insights or architectural decisions.
-4. **Blueprint Rebuild**: Execute `./admin/manifest/builder.sh` and verify via `./admin/manifest/auditor.sh`.
+## Step-by-Step Recipe
+1. State Sync: Update admin/state.md with the latest task progress to reflect the current mission status.
+2. Log Update: Record a detailed audit trail in admin/logs/ to preserve a historical record of actions.
+3. Memory Capture: Update admin/memory/lessons_learned.md with new insights to improve future system performance.
+4. Blueprint Rebuild: Execute ./admin/manifest/builder.sh and verify via ./admin/manifest/auditor.sh to ensure manifest integrity.
 
 ## Output Structure
-- **Impacted Files**: [List of synced files]
-- **Integrity Status**: [PASSED/FAILED]
-- **Action Summary**: [Concise recap of sync actions]
+- Impacted Files: [List of synced files]
+- Integrity Status: [PASSED/FAILED]
+- Action Summary: [Concise recap of sync actions]
 
 ```
 ---
@@ -594,22 +595,20 @@ Ensure absolute consistency across the workspace by synchronizing all tracking f
 # SKILL: SOURCE VETTING
 
 ## Core Directive
-Establish the reliability and recency of information via **Dynamic Deep-Search**. Prioritize primary sources (docs, code, official filings) and employ creative cross-referencing.
+Establish the reliability and recency of information via Dynamic Deep-Search.
 
-## Execution Steps
-1. **Identify Primary Sources**: Locate official documentation, SEC filings, or repository source code.
-2. **Creative Cross-Referencing**:
-   - **Identity Bridge**: If searching for people/profiles, cross-reference full names against known usernames, social handles (GitHub, X, LinkedIn), and organizational affiliation.
-   - **Multi-Angle Querying**: Attack the target from multiple linguistic and technical angles to uncover hidden signal.
-3. **Check Recency**: Strictly verify that dynamic data (market info, tech news) is from the **current year/quarter**.
-4. **Independent Verification**: Validate claims across at least two independent primary sources.
-5. **Cite**: Provide direct URLs or file paths for every claim.
+## Step-by-Step Recipe
+1. Identify Primary Sources: Locate official documentation, SEC filings, or repository source code to ensure data originates from authoritative origins.
+2. Creative Cross-Referencing: Utilize Identity Bridges and Multi-Angle Querying to validate information across multiple linguistic and technical vectors.
+3. Check Recency: Verify that dynamic data (market info, tech news) is from the current year/quarter to prevent the use of stale information.
+4. Independent Verification: Validate claims across at least two independent primary sources to confirm factual accuracy.
+5. Cite: Provide direct URLs or file paths for every claim to maintain a transparent audit trail.
 
 ## Output Structure
-- **Vetted Sources**: [List of verified links/paths]
-- **Confidence Level**: [High/Medium/Low]
-- **Identity Mapping Recap**: [Summary of cross-referenced usernames/profiles]
-- **Stale Data Warning**: [List of any potentially outdated info]
+- Vetted Sources: [List of verified links/paths]
+- Confidence Level: [High/Medium/Low]
+- Identity Mapping Recap: [Summary of cross-referenced usernames/profiles]
+- Stale Data Warning: [List of any potentially outdated info]
 
 ```
 ---
@@ -619,18 +618,25 @@ Establish the reliability and recency of information via **Dynamic Deep-Search**
 # SKILL: INVESTMENT MODELING
 
 ## Core Directive
-Transform financial data into quantitative investment insights. Apply rigorous modeling standards to support a data-driven thesis.
+Transform financial data into quantitative investment insights.
 
-## Execution Steps
-1. **Data Aggregation**: Fetch Revenue, EPS, FCF, and Debt metrics for the last 5 years.
-2. **Modeling**: Perform Discounted Cash Flow (DCF) analysis or Monte Carlo simulations.
-3. **Risk Metrics**: Calculate Beta, Volatility, and Drawdown.
-4. **Thematic Review**: Compare against sector benchmarks and macro indicators.
+## Step-by-Step Recipe
+1. Real-time Market Data: Fetch current price, market capitalization, 52-week range, and trailing/forward P/E before modeling to establish a current baseline.
+2. Data Aggregation: Fetch Revenue, EPS, FCF, and Debt metrics for the last 5 years to build a historical trend.
+3. Modeling: Perform Discounted Cash Flow (DCF) analysis or Monte Carlo simulations to derive a quantitative valuation.
+4. Risk Metrics: Calculate Beta, Volatility, and Drawdown to assess potential downside exposure.
+5. Thematic Review: Compare against sector benchmarks and macro indicators to contextualize the model's findings.
 
 ## Output Structure
-- **Quantitative Metrics**: [Financial table]
-- **Model Result**: [DCF Valuation / Risk Score]
-- **Investment Thesis**: [Data-backed buy/sell/hold logic]
+- Quantitative Metrics: [Financial table]
+- Model Result: [DCF Valuation / Risk Score]
+- Investment Thesis: [Data-backed buy/sell/hold logic]
+
+## Recommended Resources
+- Real-time Market Data: Yahoo Finance, Google Finance, Bloomberg.
+- Historical Financials: Morningstar, Macrotrends, AlphaSpread.
+- Official Filings: SEC EDGAR (for US stocks), Company Investor Relations portals.
+- Sector Benchmarks: TechInsights (Semiconductors), Statista (Market Share).
 
 ```
 ---
@@ -640,18 +646,18 @@ Transform financial data into quantitative investment insights. Apply rigorous m
 # SKILL: SURGICAL CODE EDIT
 
 ## Core Directive
-Apply minimal-diff code changes to maintain structural integrity. Follow the "Surgical Precision" mandate.
+Apply minimal-diff code changes to maintain structural integrity.
 
-## Execution Steps
-1. **Analyze**: Use `grep_search` and `read_file` to understand the target module.
-2. **Identify Entry Point**: Pinpoint the exact line or block that needs modification.
-3. **Apply Diff**: Use the `replace` tool to apply a surgical update. Avoid overwriting the entire file.
-4. **Validate**: Run a local check to ensure syntax and logic remain sound.
+## Step-by-Step Recipe
+1. Analyze: Use grep_search and read_file to understand the target module and its dependencies.
+2. Identify Entry Point: Pinpoint the exact line or block that needs modification to minimize the impact on surrounding code.
+3. Apply Diff: Use the replace tool to apply a surgical update, ensuring only the necessary lines are changed.
+4. Validate: Run a local check to ensure syntax and logic remain sound and that no regressions were introduced.
 
 ## Output Structure
-- **Target File**: [Path]
-- **Modification Recap**: [Before vs After summary]
-- **Initial Verification**: [PASS/FAIL]
+- Target File: [Path]
+- Modification Recap: [Before vs After summary]
+- Initial Verification: [PASS/FAIL]
 
 ```
 ---
@@ -661,18 +667,18 @@ Apply minimal-diff code changes to maintain structural integrity. Follow the "Su
 # SKILL: RTL SYNTHESIS
 
 ## Core Directive
-Convert hardware specifications into synthesizable Verilog or SystemVerilog code. Optimize for PPA (Power, Performance, Area).
+Convert hardware specifications into synthesizable Verilog or SystemVerilog code.
 
-## Execution Steps
-1. **Decode Spec**: Parse natural language hardware requirements (e.g., bit-width, clock frequency).
-2. **Logic Design**: Draft the finite state machine (FSM) or data path.
-3. **Generate Code**: Produce the RTL implementation using SystemVerilog best practices.
-4. **Vet PPA**: Perform a preliminary check for timing violations and area efficiency.
+## Step-by-Step Recipe
+1. Decode Spec: Parse natural language hardware requirements (e.g., bit-width, clock frequency) to define technical boundaries.
+2. Logic Design: Draft the finite state machine (FSM) or data path to establish the functional architecture.
+3. Generate Code: Produce the RTL implementation using SystemVerilog best practices to create synthesizable hardware modules.
+4. Vet PPA: Perform a preliminary check for timing violations and area efficiency to ensure the design meets performance targets.
 
 ## Output Structure
-- **RTL Module**: [Verilog/SystemVerilog block]
-- **Design Decisions**: [Clocking strategy, logic optimization]
-- **Verification Plan**: [Initial testbench thoughts]
+- RTL Module: [Verilog/SystemVerilog block]
+- Design Decisions: [Clocking strategy, logic optimization]
+- Verification Plan: [Initial testbench thoughts]
 
 ```
 ---
@@ -682,18 +688,18 @@ Convert hardware specifications into synthesizable Verilog or SystemVerilog code
 # SKILL: INTENT AUDIT
 
 ## Core Directive
-Act as the final "Supreme Court" of alignment. Ensure the team's work is exactly what the user wanted, not just what was planned.
+Ensure the team's work is exactly what the user wanted.
 
-## Execution Steps
-1. **Recall**: Read the original user prompt and the Strategist's plan.
-2. **Cross-Check**: Verify the final output satisfies every explicit and implicit requirement.
-3. **Check DNA**: Ensure the tone, formatting, and ASCII standards match `admin/preference.md`.
-4. **Verdict**: Issue a final Pass/Fail status.
+## Step-by-Step Recipe
+1. Recall: Read the original user prompt and the Strategist's plan to re-establish the primary objective.
+2. Cross-Check: Verify the final output satisfies every explicit and implicit requirement to ensure full compliance.
+3. Check DNA: Ensure the tone, formatting, and ASCII standards match admin/preference.md for system-wide consistency.
+4. Verdict: Issue a final Pass/Fail status to authorize the completion of the mission.
 
 ## Output Structure
-- **Audit Outcome**: [PASS/FAIL]
-- **Alignment Gaps**: [List of missed requirements, if any]
-- **Realignment Action**: [Specific instructions to the team if FAILED]
+- Audit Outcome: [PASS/FAIL]
+- Alignment Gaps: [List of missed requirements, if any]
+- Realignment Action: [Specific instructions to the team if FAILED]
 
 ```
 ---
@@ -705,16 +711,16 @@ Act as the final "Supreme Court" of alignment. Ensure the team's work is exactly
 ## Core Directive
 Execute automated evaluations to ensure zero regressions and high accuracy.
 
-## Execution Steps
-1. **Initialize**: Load test cases from the `fixtures/` directory.
-2. **Execute**: Run the Implementer's output against the benchmark tests.
-3. **Log Results**: Record performance metrics and failures in `outputs/results/`.
-4. **Evaluate**: Determine if the performance meets the mission's success criteria.
+## Step-by-Step Recipe
+1. Initialize: Load test cases from the fixtures/ directory to prepare the evaluation environment.
+2. Execute: Run the Implementer's output against the benchmark tests to measure performance against requirements.
+3. Log Results: Record performance metrics and failures in outputs/results/ for historical tracking and analysis.
+4. Evaluate: Determine if the performance meets the mission's success criteria to decide on production readiness.
 
 ## Output Structure
-- **Benchmark Score**: [% Success / Accuracy]
-- **Failure Analysis**: [Details of regressed test cases]
-- **Production Status**: [READY/REFACTOR]
+- Benchmark Score: [% Success / Accuracy]
+- Failure Analysis: [Details of regressed test cases]
+- Production Status: [READY/REFACTOR]
 
 ```
 ---
