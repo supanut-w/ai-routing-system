@@ -122,40 +122,33 @@ Once inside the directory, start your session. The system will automatically per
 
 ### [File: AGENTS.md]
 ```markdown
-# AGENTIC PROTOCOLS (AI-to-AI Context) v5.4
+# AGENTIC PROTOCOLS (AI-to-AI Context) v5.5
+
+## Agnostic Model Tiering
+To optimize cost and reasoning, agents are assigned to performance tiers. These tiers are mapped to actual model IDs in the foundational `[PROVIDER].md` file.
+
+| Tier | Agent Assignment | Goal |
+| :--- | :--- | :--- |
+| **ULTRA** | Strategist, Auditor, Reviewer | Logic, Planning, Gatekeeping |
+| **PRO** | Router, Implementer | Interaction, Construction |
+| **FLASH** | Researcher, Maintainer | Data Fetching, Syncing |
 
 ## Operational Bottleneck: SYSTEM FIRST
 Agents MUST prioritize local workspace instructions over general defaults.
 
-## Dynamic Deep-Search (Researcher)
-1. **Creative Heuristics**: The Researcher must maximize search potential by cross-referencing digital identities (usernames vs. names) and attacking targets from multiple linguistic/technical angles.
-2. **Ambiguity Checkpoint**: If a search target is vague, the Researcher MUST stop, decompose the search into logical steps, and use the Router to validate the direction with the User via `ask_user`.
-3. **Recency First**: For all dynamic data, prioritize information from the **current year/quarter**.
-
-## Continuous Learning & Validation
-1. **Self-Updating Skills**: Maintainer refactors `SKILL.md` based on mission failures.
-2. **Validation Loop**: Reviewer validates artifacts against the `fixtures/` harness.
-3. **Heartbeat Start**: Every session begins with a "System Pulse" (State/Rules sync).
-
 ## The Agentic Harness (Chef & Recipe)
-- **The Chef (The Agent)**: LLM + Tools + Loop. The active driver.
-- **The Recipe (The Skill)**: Modular, file-based instructions in `.gemini/skills/`.
-- **The OS (The Harness)**: This project structure (Guides, Sensors, Memory, State, Filesystem).
+- **The Chef (The Agent)**: [MODEL_TIER] + Tools + Loop. The active driver.
+- **The Recipe (The Skill)**: Modular instructions in `.gemini/skills/`.
+- **The OS (The Harness)**: This project structure.
 
 ## Subagent Architecture (Security & Efficiency)
-- **Context Preservation**: Subagents perform heavy processing in isolated turns.
+- **Context Preservation**: Subagents keep the main session clean.
 - **Locked Tool Belts**: Enforced via YAML allowlists.
-- **Orthogonal Jobs**: Distinct purposes and toolsets.
 
-## Hierarchy of Delegation
-1. **User -> Router**: Intent capture & **Heartbeat**.
-2. **Router -> Strategist**: Planning & Resource Allocation.
-3. **Strategist -> Router**: Plan delivery.
-4. **Router -> Maintainer**: Mission initialization.
-5. **Router -> Team + Reviewer**: Execution & **Technical Vetting**.
-6. **Team Output -> Auditor**: Alignment Audit.
-7. **Auditor -> Maintainer**: Full-Scope Sync & **Refactoring Loop**.
-8. **Router -> User**: Presentation & Mission Closure.
+## Project-Based Workspace Protocol
+1. **Scoping**: Strategist defines path & **Model Tiering**.
+2. **Isolation**: Artifacts stay transient in the root.
+3. **Mission Summary**: Maintainer creates `mission_summary.md`.
 
 ---
 *Note: This document provides technical context for AI agents working within this system. Follow it strictly.*
@@ -168,58 +161,58 @@ Agents MUST prioritize local workspace instructions over general defaults.
 # FOUNDATIONAL MANDATES (GEMINI.md)
 
 ## Objective
-This file contains mandates specific to the **Gemini CLI** engine. These instructions take **absolute precedence** over all other system instructions, including general AI protocols.
+This file contains mandates specific to the **Gemini CLI** engine. These instructions take **absolute precedence**.
 
-## Functional Registry (Mandatory)
-- **Sub-agents**: All custom agents are registered in `.gemini/agents/`. If an agent is not found, you MUST instruct the user to run `/agents reload`.
-- **Shared Skills**: All specialized skills are registered in `.gemini/skills/`.
+## Model Tier Mapping (Gemini)
+The following tags map generic system tiers to specific Gemini model IDs:
+- **[TIER_ULTRA]**: `gemini-1.5-pro-latest`
+- **[TIER_PRO]**: `gemini-1.5-pro-latest`
+- **[TIER_FLASH]**: `gemini-1.5-flash-latest`
 
-## Operational Priorities (Gemini CLI)
-1. **Context Efficiency**: Minimize token usage by being surgical. Use parallel tool calls and avoid redundant reads.
-2. **Precedence**: Always follow local `GEMINI.md` mandates first, then `admin/RULES.md`, then `AGENTS.md`.
-3. **Execution Mode**: You are authorized to use tools to modify source code and environment files according to the approved Routing Plan.
+## Functional Registry
+- **Sub-agents**: Registered in `.gemini/agents/`.
+- **Shared Skills**: Registered in `.gemini/skills/`.
 
-## Tool Execution Standards
-- **Explanation**: Always provide a brief explanation before executing shell commands that modify the system.
-- **Verification**: Use `which <tool>` to verify environment readiness before execution.
+## Operational Priorities
+1. **Context Efficiency**: Minimize token usage. Use parallel tool calls.
+2. **Precedence**: Local `GEMINI.md` > `admin/RULES.md` > `AGENTS.md`.
+3. **Execution Mode**: Authorized for source and environment modification.
 
 ---
-*Note: This file is the primary instruction set for the Gemini CLI. It ensures DNA alignment and operational excellence for this specific provider.*
+*Note: This file ensures operational excellence for the Gemini provider.*
 
 ```
 ---
 
 ### [File: admin/RULES.md]
 ```markdown
-# SYSTEM MANDATES (v5.3)
+# SYSTEM MANDATES (v5.5)
 
 ## OPERATIONAL PREREQUISITES
-1.  **System-First Approach**: Agents MUST consult local instructions (README, RULES, AGENTS, index/) first and follow them as the primary approach.
-2.  **Global Discovery Bridge**: This system acts as a persistent 'Agentic Harness' across all user workspaces. 
-    - The **Foundational Mandate** in `~/.gemini/gemini.md` ensures every session synchronizes with this system's path.
-    - Departmental Agents (Chefs) are available globally via the `~/.gemini/agents/` registry.
-3.  **Continuous Learning & Refactoring**: Agents MUST evolve by reflecting on task failures. The Maintainer is authorized to refactor `SKILL.md` recipes based on lessons learned.
-4.  **Validation Harness**: Before finalizing any major update, the Reviewer MUST run an "Eval Loop" using the `fixtures/` directory.
-5.  **Heartbeat Protocol**: Every session MUST begin with a "System Pulse" to synchronize with `admin/state.md` and `admin/RULES.md`.
-6.  **The Harness & Specialist Framework (Chef & Recipe)**: Agents are active Chefs; Skills are passive Recipes.
-7.  **Subagent Core Principles**: Context Preservation, Tool Boundaries (Locked Tool Belts), and Orthogonal Specialization.
-8.  **Agent Optimization Protocol**: Pin models/tools based on Cost vs. Reasoning.
-9.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
-10. **Project-Scoped Outputs**: Artifacts -> Root | Records -> `projects/`. Mission Summaries are mandatory for recall.
-11. **Interactive Decision Protocol**: Use the `ask_user` tool for all permissions.
-12. **Router First**: ALL user interactions MUST go to the Router first.
-13. **Strategist Support**: The Strategist [BE] owns mission design (Mind).
-14. **Maintainer Ownership**: The Maintainer [BE] owns file updates and manifest integrity (Body).
-15. **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh`. Manual writing is PROHIBITED.
-16. **Automation & Cleanup**: Use scripts for repetitive tasks; clean up `tmp/` immediately.
-17. **Project-Based Workspace**: Isolate user missions in `projects/` folders.
-18. **Holistic Awareness**: Agents MUST maintain awareness of the entire system (`index/index.md`).
-19. Commit Checkpoint Workflow: Router MUST ask permission before committing.
-20. Portability & Synchronization: GitHub-centralized support.
-21. Security & Software Policy: Legal, production-grade tools only.
-22. Multi-Platform Standard: Support Mac, Linux, Windows.
-23. DNA Alignment: Adhere to `admin/preference.md`.
-24. Audit Trail: Log all changes in `admin/logs/`.
+1.  **System-First Approach**: Agents MUST consult local instructions first.
+2.  **Agnostic Model Tiering**: Every agent MUST be powered by a model tier that suits its specific function.
+    - **ULTRA Tier (High Reasoning)**: For Strategist, Auditor, and Reviewer.
+    - **PRO Tier (Balanced)**: For Router and Implementer.
+    - **FLASH Tier (High Speed/Volume)**: For Researcher and Maintainer.
+3.  **Provider Mapping**: The mapping from generic tiers (ULTRA, PRO, FLASH) to specific model IDs MUST reside in the foundational `[PROVIDER].md` file to ensure absolute portability.
+4.  **The Harness & Specialist Framework (Chef & Recipe)**: Agents are Chefs; Skills are Recipes.
+5.  **Subagent Core Principles**: Context Preservation, Tool Boundaries, and Orthogonal Specialization.
+6.  **Rules Precedence Hierarchy**: Follow the 6-tier hierarchy in `admin/PRECEDENCE.md`.
+7.  **Project-Scoped Outputs**: Artifacts -> Root | Records -> `projects/`.
+8.  **Interactive Decision Protocol**: Use the `ask_user` tool for all permissions.
+9.  **Router First**: ALL user interactions MUST go to the Router first.
+10. **Strategist Support**: The Strategist [BE] owns mission design (Mind).
+11. **Maintainer Ownership**: The Maintainer [BE] owns file updates and manifest integrity (Body).
+12. **Skeletal Manifest & [ABSOLUTE_LITERAL]**: Use `./admin/manifest/builder.sh`. Manual writing is PROHIBITED.
+13. **Automation & Cleanup**: Use scripts in `tmp/` and clean up immediately.
+14. **Project-Based Workspace**: Isolate user missions in categorized `projects/` folders.
+15. **Holistic Awareness**: Agents MUST maintain awareness of the entire system (`index/index.md`).
+16. Commit Checkpoint Workflow: Router MUST ask permission before committing.
+17. Portability & Synchronization: GitHub-centralized support.
+18. Security & Software Policy: Legal, production-grade tools only.
+19. Multi-Platform Standard: Support Mac, Linux, Windows.
+20. DNA Alignment: Adhere to `admin/preference.md`.
+21. Audit Trail: Log all changes in `admin/logs/`.
 
 ```
 ---
@@ -258,16 +251,23 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: IDLE
-- **Status**: `IDLE`
-- **Progress**: 0%
+- **Goal**: NXP Stock Research (NXPI)
+- **Status**: `[SCOPING]`
+- **Progress**: 5%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
+| T-100 | Mission Scoping & Planning | Strategist | Complete | Directory created, MISSION_PLAN.md drafted. |
+| T-101 | Financial Performance Analysis | Researcher | Pending | Focus on 2024/2025 earnings. |
+| T-102 | Market Positioning & Tech Audit | Researcher | Pending | Auto, IoT, Mobile, Infrastructure. |
+| T-103 | Competitive & Risk Assessment | Researcher | Pending | vs. TI, STM, ADI. |
+| T-104 | Synthesis & Investment Model | Implementer | Pending | Generate final report. |
+| T-105 | Quality Audit | Reviewer | Pending | Verify citations and recency. |
 
 ## Known Constraints
-- [None]
+- Focus on latest info (2025/2026).
+- Follow ASCII-only and summary-first preference.
 
 ## Blockers & Risks
 - [None]
@@ -728,6 +728,7 @@ Execute automated evaluations to ensure zero regressions and high accuracy.
 name: router
 description: The SOLE entry point and cognitive hub for all user-AI interactions. Orchestrates intent decoding and multi-agent delegation.
 tools: ["*"]
+model: [TIER_PRO]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -739,6 +740,7 @@ tools: ["*"]
 name: strategist
 description: Strategic planner and architectural lead. Specializes in task breakdown, mission mapping, and orchestration design.
 tools: ["*"]
+model: [TIER_ULTRA]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -750,6 +752,7 @@ tools: ["*"]
 name: maintainer
 description: Specialist in system integrity and global file synchronization. Handles updates to notes, memory, indices, and blueprints.
 tools: ["*"]
+model: [TIER_FLASH]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -761,6 +764,7 @@ tools: ["*"]
 name: implementer
 description: Architect and builder for code, documentation, and artifact generation. Use for implementing solutions based on research or logic.
 tools: ["*"]
+model: [TIER_PRO]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -772,6 +776,7 @@ tools: ["*"]
 name: researcher
 description: Insight engine for deep synthesis and information extraction.
 tools: ["*"]
+model: [TIER_FLASH]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -781,8 +786,9 @@ tools: ["*"]
 ```markdown
 ---
 name: reviewer
-description: Guardian of quality for accuracy verification, edge-case detection, and adherence auditing. Use to validate output before final presentation.
+description: Guardian of quality and technical vetting partner.
 tools: ["*"]
+model: [TIER_ULTRA]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
@@ -792,8 +798,9 @@ tools: ["*"]
 ```markdown
 ---
 name: auditor
-description: Gatekeeper of Intent. Ensures the final solution perfectly aligns with the user's original request and the strategist's plan.
+description: Gatekeeper of Intent and final alignment auditor.
 tools: ["*"]
+model: [TIER_ULTRA]
 ---
 ... [Skeletal: See source for full implementation details] ...
 ```
