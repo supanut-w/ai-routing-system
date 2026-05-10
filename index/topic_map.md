@@ -12,6 +12,7 @@
 *   [ANALYSIS] Deep Dive: Statistical analysis, trend forecasting, pattern extraction.
 *   [MARKET] Market Intel: Competitor mapping, industry shifts, consumer behavior.
 *   [ACADEMIC] Literature: Paper summaries, citation management, theory exploration.
+*   [IDENTITY] Profile Mapping: Digital footprint synthesis, professional background research, public contribution mapping.
 
 ### [CONTENT] Communication and Assets
 *   [TECH] Technical Docs: API references, system manuals, READMEs.

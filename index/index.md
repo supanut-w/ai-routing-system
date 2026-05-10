@@ -14,7 +14,7 @@
 - [Reviewer](../agents/reviewer.md): Quality gatekeeper.
 
 ## 📂 Operational Workspace
-- [Project Workspace](../projects/README.md): Categorized domain folders (e.g., Investment, IC Design).
+- [Project Workspace](../projects/README.md): Categorized domain folders.
 - [Shared Skills](../.gemini/skills/): Functional logic.
 - [Atomic Tools](../tools/README.md): Capabilities.
 - [Manual Operations](../user/README.md): How-to guides.

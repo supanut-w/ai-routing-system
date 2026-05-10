@@ -258,23 +258,16 @@ Before executing any action, agents MUST mentally evaluate the relevant mandates
 # SYSTEM STATE: ACTIVE TRACKER
 
 ## Current Mission
-- **Goal**: Optimize Skill Library (v5.2.0)
-- **Status**: `[IDLE]`
-- **Progress**: 100%
+- **Goal**: IDLE
+- **Status**: `IDLE`
+- **Progress**: 0%
 
 ## Task Breakdown
 | Task ID | Description | Assigned To | Status | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| T-000 | Re-architect Skill Directory | Maintainer | Complete | sys/data/fe/qa categories live. |
-| T-001 | Create Skill Atoms | Maintainer | Complete | 9 specialized recipes live. |
-| T-002 | Refine Personas | Maintainer | Complete | 7 agents updated for holistic awareness. |
-| T-003 | Update Manifest Automation | Maintainer | Complete | builder.sh & auditor.sh updated. |
-| T-004 | Sync Blueprint | Maintainer | Complete | v5.2.0 manifest audited. |
-| T-005 | Commit & Push | Implementer | Complete | System v5.2.0 live. |
 
 ## Known Constraints
-- Skill Atoms MUST be kept literal in manifest.
-- Agents MUST dynamically discover skills via System Wiki.
+- [None]
 
 ## Blockers & Risks
 - [None]
@@ -855,7 +848,7 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 - [Reviewer](../agents/reviewer.md): Quality gatekeeper.
 
 ## 📂 Operational Workspace
-- [Project Workspace](../projects/README.md): Categorized domain folders (e.g., Investment, IC Design).
+- [Project Workspace](../projects/README.md): Categorized domain folders.
 - [Shared Skills](../.gemini/skills/): Functional logic.
 - [Atomic Tools](../tools/README.md): Capabilities.
 - [Manual Operations](../user/README.md): How-to guides.
@@ -884,6 +877,7 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 *   [ANALYSIS] Deep Dive: Statistical analysis, trend forecasting, pattern extraction.
 *   [MARKET] Market Intel: Competitor mapping, industry shifts, consumer behavior.
 *   [ACADEMIC] Literature: Paper summaries, citation management, theory exploration.
+*   [IDENTITY] Profile Mapping: Digital footprint synthesis, professional background research, public contribution mapping.
 
 ### [CONTENT] Communication and Assets
 *   [TECH] Technical Docs: API references, system manuals, READMEs.
@@ -894,7 +888,6 @@ Use ASCII dividers (e.g., `---`) to separate logical sections of output for bett
 *   [PROJ] Management: Agile/Scrum, Roadmap design, Task prioritization.
 *   [BIZ] Business: SWOT, Financial modeling, Growth loops.
 *   [INVEST] Investment: Portfolio strategy, risk assessment, asset allocation.
-*   [RULES] Compliance: GDPR, Security audits, Ethical AI guardrails.
 ... [Skeletal: See source for full implementation details] ...
 ```
 ---
